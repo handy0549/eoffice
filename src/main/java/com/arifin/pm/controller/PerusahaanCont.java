@@ -10,6 +10,7 @@ import com.arifin.model.Kecematan;
 import com.arifin.model.Kelurahan;
 import com.arifin.model.Provinsi;
 import com.arifin.pm.dao.PerusahaanDao;
+import com.arifin.pm.model.Perusahaam_kategori;
 import com.arifin.pm.model.Perusahaan;
 import com.arifin.pm.service.PerusahaanService;
 import org.slf4j.Logger;
@@ -43,6 +44,7 @@ public class PerusahaanCont {
             Kecematan kecematan = (Kecematan) row[2];
             Kabkot kabkot = (Kabkot) row[3];
             Provinsi provinsi = (Provinsi) row[4];
+            Perusahaam_kategori kategori= (Perusahaam_kategori) row[5];
 
             Map<String, Object> dummyData = new HashMap<>();
             dummyData.put("perusahaan", perusahaan);
@@ -50,6 +52,7 @@ public class PerusahaanCont {
             dummyData.put("kecematan", kecematan);
             dummyData.put("kabkot", kabkot);
             dummyData.put("provinsi", provinsi);
+            dummyData.put("kategori", kategori);
 
             out.add(dummyData);
         }
