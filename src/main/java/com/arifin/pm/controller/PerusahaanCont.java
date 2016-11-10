@@ -9,6 +9,7 @@ import com.arifin.model.Kabkot;
 import com.arifin.model.Kecematan;
 import com.arifin.model.Kelurahan;
 import com.arifin.model.Provinsi;
+import com.arifin.pm.PmApp;
 import com.arifin.pm.dao.PerusahaanDao;
 import com.arifin.pm.model.Perusahaam_kategori;
 import com.arifin.pm.model.Perusahaan;
@@ -33,7 +34,7 @@ public class PerusahaanCont {
     @Autowired
     private PerusahaanDao perusahaanDao;
 
-    @GetMapping("/pm/perusahaan")
+    @GetMapping( "/pm/perusahaan")
     public ResponseEntity<List<Map<String, Object>>> getData() {
 
         List<Map<String, Object>> out = new ArrayList<>();
