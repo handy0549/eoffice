@@ -1,6 +1,7 @@
 package com.arifin.pm.dao;
 
 import com.arifin.abstrac.AbstractDao;
+import com.arifin.helper.ToSql;
 import com.arifin.model.Kabkot;
 import com.arifin.model.Kecematan;
 import com.arifin.model.Kelurahan;
@@ -11,10 +12,12 @@ import com.arifin.pm.model.Project;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ojiepermana on 11/10/2016.
@@ -22,9 +25,14 @@ import java.util.List;
 @Transactional
 @Repository
 public class ProjectDaoImp extends AbstractDao<Integer,Project> implements ProjectDao   {
+
+    @Autowired
+    ToSql toSql;
+
     @Override
-    public List  getAll() {
-         String Sql = "Select  a.*, " +
+    public List  getAll(Map<String,String > param, Boolean page) {
+         String Sql = "Select  ROWNUM rn," +
+                 "a.*, " +
                  "b.nama_kel," +
                  "c.nama_kec," +
                  "d.nama_kabkot," +
@@ -56,7 +64,9 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
                  "and a.id_kontraktor =x.id_perusahaan " +
                  "and a.id_supervisi = y.id_perusahaan ";
 
-                String Sql2 = "Select  * from pm_project";
+        Sql=toSql.Where(Sql, param,"a", page);
+
+
         SQLQuery query = getSession().createSQLQuery(Sql);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
         List rows = query.list();
@@ -65,7 +75,11 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
     }
 
     @Override
-    public void create(Project project) {
-
+    public boolean create(Project project) {
+         if(persist(project))
+         {
+            return true;
+         }
+         return false;
     }
 }

@@ -1,6 +1,8 @@
 package com.arifin.pm.controller;
 
+import com.arifin.helper.MappingCore;
 import com.arifin.pm.dao.ProjectDao;
+import com.arifin.pm.model.Project;
 import com.arifin.pm.model.Project_jenis;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -9,12 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,14 +28,30 @@ public class ProjectCont {
     @Autowired
     ProjectDao projectDao;
 
-    @GetMapping("/pm/projects")
-    public ResponseEntity<String> getProjects()
+
+    @GetMapping("/pm/project")
+    public ResponseEntity<MappingCore> getProjectFilter(@RequestParam Map<String,String> param)
     {
-        List datas = projectDao.getAll();
-        JSONObject obj = new JSONObject();
-        obj.put("data",datas);
-        return new ResponseEntity<String>(obj.toString(), HttpStatus.OK);
+        List TOTAL = projectDao.getAll(param,false);
+        List datas = projectDao.getAll(param,true);
+        MappingCore obj = new MappingCore();
+
+        obj.setDatas(datas);
+        obj.setJumlah(datas.size());
+        obj.setTotal(TOTAL.size());
+        obj.setParam(param);
+
+        return new ResponseEntity<MappingCore>(obj, HttpStatus.OK);
     }
+
+    @GetMapping(value = "/pm/project/{id}")
+    public ResponseEntity<String> detailProject(@PathVariable Integer id_project)
+    {
+        String param = "ASd" + id_project;
+        return new ResponseEntity<String>(param, HttpStatus.OK);
+    }
+
+
 
     @GetMapping(value = "/pm/project/add")
     public ResponseEntity<String> addProject(@RequestParam Map<String,String> json)
@@ -47,11 +61,23 @@ public class ProjectCont {
         return new ResponseEntity<String>(param, HttpStatus.OK);
     }
 
+//    @RequestBody -> string, map, bisa hashmap / @
     @PostMapping(value = "/pm/project/add")
-    public ResponseEntity<String> saveProject(@ModelAttribute Map<String,Object> json)
+    public ResponseEntity saveProject(@RequestBody Project json)
     {
-        System.out.print("ss"  + json.get("jumlah") + json.size());
-        String param = "ASd";
+        if(!projectDao.create(json))
+        {
+            return new ResponseEntity ("error", HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity (json, HttpStatus.CREATED);
+    }
+
+    public ResponseEntity<String> editProject(@RequestBody Map<String,String> json)
+    {
+//        System.out.print("ss"  + json.get("jumlah") + json.size());
+        String param = "ASd" + json;
         return new ResponseEntity<String>(param, HttpStatus.OK);
     }
+
+
 }
