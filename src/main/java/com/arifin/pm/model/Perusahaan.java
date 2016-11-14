@@ -35,6 +35,8 @@ public class Perusahaan implements Serializable {
     private String web;
     private String status_perusahaan;
 
+    private int id_perusahaan_kategori;
+
 
     @Temporal(TemporalType.DATE)
     @Column(name="CREATED_AT")
@@ -176,5 +178,13 @@ public class Perusahaan implements Serializable {
 
     public void setId_perusahaan(int id_perusahaan) {
         this.id_perusahaan = id_perusahaan;
+    }
+
+    public int getId_perusahaan_kategori() {
+        return id_perusahaan_kategori;
+    }
+
+    public void setId_perusahaan_kategori(int id_perusahaan_kategori) {
+        this.id_perusahaan_kategori = id_perusahaan_kategori;
     }
 }

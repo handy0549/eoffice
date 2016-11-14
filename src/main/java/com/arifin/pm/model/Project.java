@@ -23,20 +23,28 @@ public class Project implements Serializable {
     private int id_owner;
     private int id_user;
     private Date tanggal_mulai;
-    private Date tanggal_selesdai;
+    private Date tanggal_selesai;
     private Date batas_waktu;
     private long id_penanggung_jawab;
     private String lokasi_project;
-    private String id_jenis_project;
+    private String id_project_jenis;
+    private String id_project_paket;
     private String anggaran_pagu;
     private String anggaran_nilai;
     private String lon;
     private String lat;
     private int id_kec;
     private int id_kel;
-    private int id_kab;
+    private int id_kabkot;
     private int id_prov;
     private String status_project;
     private long progres_project;
+
+    private String sumber_anggaran;
+    private long pagu_anggaran;
     private Date created_at;
+
+
+
+
 }

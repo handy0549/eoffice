@@ -25,9 +25,6 @@ import java.util.HashMap;
 public class DokumenCont {
     private final Logger LOG = LoggerFactory.getLogger(DokumenCont.class);
 
-//    @Autowired
-//    private DokumenService dokumenService;
-
     @Autowired
     private DokumenDao dokumenDao;
 
@@ -36,12 +33,7 @@ public class DokumenCont {
 
         List<Map<String, Object>> out = new ArrayList<>();
         List<Dokumen> datas = dokumenDao.getList();
-//        for (Object[] row : datas) {
-//            Dokumen dokumen = (Dokumen) row[0];
-//
-//            Map<String, Object> dummyData = new
-//
-//       }
+
         return new  ResponseEntity<List<Dokumen>>(datas, HttpStatus.OK);
 
     }
