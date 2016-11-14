@@ -1,5 +1,6 @@
 package com.arifin.pm.controller;
 
+import com.arifin.helper.MappingCore;
 import com.arifin.pm.dao.TaskDao;
 import com.arifin.pm.model.Task;
 import org.slf4j.Logger;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -25,11 +27,17 @@ public class TaskCont {
     private TaskDao taskDao;
 
     @GetMapping("/pm/task")
-    public ResponseEntity<List<Task>> getData() {
+    public ResponseEntity<MappingCore> getTaskFilter (@RequestParam Map<String,String> param) {
 
-        List<Map<String, Object>> out = new ArrayList<>();
-        List<Task> datas = taskDao.getList();
+        List TOTAL = taskDao.getAll(param, false);
+        List datas = taskDao.getAll(param, true);
+        MappingCore obj = new MappingCore();
 
-        return new ResponseEntity<List<Task>>(datas, HttpStatus.OK);
+        obj.setDatas(datas);
+        obj.setJumlah(datas.size());
+        obj.setTotal(TOTAL.size());
+        obj.setParam(param);
+
+        return new ResponseEntity<MappingCore>(obj, HttpStatus.OK);
     }
 }

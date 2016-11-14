@@ -24,14 +24,20 @@ public abstract class AbstractDao<PK extends Serializable, T> {
     protected Session getSession(){
         return sessionFactory.getCurrentSession();
     }
+    public boolean update(T entity)
+    {
+        getSession().update(entity);
+        return true;
+    }
 
     @SuppressWarnings("unchecked")
     public T getByKey(PK key) {
         return (T) getSession().get(persistentClass, key);
     }
 
-    public void persist(T entity) {
+    public boolean persist(T entity) {
         getSession().persist(entity);
+        return true;
     }
 
     public void delete(T entity) {

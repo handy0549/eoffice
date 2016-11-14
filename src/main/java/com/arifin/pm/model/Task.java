@@ -33,7 +33,9 @@ public class Task implements Serializable {
     private String task_jenis;
     private long task_auto_update;
     private long task_progress;
-    private Date created_at_task;
+    private String task_progress_realisasi;
+    private long task_fee;
+    private long task_nilai;
 
 
     public int getId_task() {
@@ -156,12 +158,28 @@ public class Task implements Serializable {
         this.task_progress = task_progress;
     }
 
-    public Date getCreated_at_task() {
-        return created_at_task;
+    public String getTask_progress_realisasi() {
+        return task_progress_realisasi;
     }
 
-    public void setCreated_at_task(Date created_at_task) {
-        this.created_at_task = created_at_task;
+    public void setTask_progress_realisasi(String task_progress_realisasi) {
+        this.task_progress_realisasi = task_progress_realisasi;
+    }
+
+    public long getTask_fee() {
+        return task_fee;
+    }
+
+    public void setTask_fee(long task_fee) {
+        this.task_fee = task_fee;
+    }
+
+    public long getTask_nilai() {
+        return task_nilai;
+    }
+
+    public void setTask_nilai(long task_nilai) {
+        this.task_nilai = task_nilai;
     }
 }
 
