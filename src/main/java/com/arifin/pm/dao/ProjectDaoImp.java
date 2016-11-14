@@ -82,4 +82,27 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
          }
          return false;
     }
+
+    @Override
+    public boolean update(int id, Project project) {
+        if(update(project))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public Project detail(int id)
+    {
+        Project project =null;
+        try {
+            project = (Project) getSession().get(Project.class, id);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return  project;
+    }
 }

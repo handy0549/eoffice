@@ -45,21 +45,15 @@ public class ProjectCont {
     }
 
     @GetMapping(value = "/pm/project/{id}")
-    public ResponseEntity<String> detailProject(@PathVariable Integer id_project)
+    public ResponseEntity<Project> detailProject(@PathVariable("id") Integer id_project)
     {
-        String param = "ASd" + id_project;
-        return new ResponseEntity<String>(param, HttpStatus.OK);
+        Project project = projectDao.detail(id_project);
+        return new ResponseEntity<Project>(project, HttpStatus.OK);
     }
 
 
 
-    @GetMapping(value = "/pm/project/add")
-    public ResponseEntity<String> addProject(@RequestParam Map<String,String> json)
-    {
-        System.out.print("ss"  + json.get("jumlah"));
-        String param = "ASd";
-        return new ResponseEntity<String>(param, HttpStatus.OK);
-    }
+
 
 //    @RequestBody -> string, map, bisa hashmap / @
     @PostMapping(value = "/pm/project/add")
@@ -71,13 +65,18 @@ public class ProjectCont {
         }
         return new ResponseEntity (json, HttpStatus.CREATED);
     }
-
-    public ResponseEntity<String> editProject(@RequestBody Map<String,String> json)
+    @PostMapping(value = "/pm/project/edit/{id_project}")
+    public ResponseEntity editProject(@PathVariable int id_project, @RequestBody Project json)
     {
-//        System.out.print("ss"  + json.get("jumlah") + json.size());
-        String param = "ASd" + json;
-        return new ResponseEntity<String>(param, HttpStatus.OK);
+        if(!projectDao.update(id_project, json))
+        {
+            return new ResponseEntity ("error", HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity (json, HttpStatus.CREATED);
     }
+
+
+
 
 
 }

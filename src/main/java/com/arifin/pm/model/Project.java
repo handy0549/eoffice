@@ -1,9 +1,9 @@
 package com.arifin.pm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -16,19 +16,27 @@ import java.util.Date;
 public class Project implements Serializable {
 
     @Id
+//    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PM_PROJECT_SEQ")
+    @SequenceGenerator(name="PM_PROJECT_SEQ", sequenceName="PM_PROJECT_SEQ")
+
     private int id_project;
     private int id_kontraktor;
     private int id_supervisi;
     private int id_owner;
     private int id_user;
+
+//    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date tanggal_mulai;
+
     private Date tanggal_selesai;
     private Date batas_waktu;
     private long id_penanggung_jawab;
     private String lokasi_project;
     private String id_project_jenis;
     private String id_project_paket;
-    private String anggaran_pagu;
+    private String nama_project;
     private String anggaran_nilai;
     private String lon;
     private String lat;
@@ -92,7 +100,7 @@ public class Project implements Serializable {
         this.tanggal_mulai = tanggal_mulai;
     }
 
-    public Date getTanggal_selesai() {
+    public Date getTanggal_selesai() { 
         return tanggal_selesai;
     }
 
@@ -234,5 +242,13 @@ public class Project implements Serializable {
 
     public void setCreated_at(Date created_at) {
         this.created_at = created_at;
+    }
+
+    public String getNama_project() {
+        return nama_project;
+    }
+
+    public void setNama_project(String nama_project) {
+        this.nama_project = nama_project;
     }
 }

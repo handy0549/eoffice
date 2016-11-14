@@ -31,7 +31,8 @@ public class Task implements Serializable {
     private String task_desk;
     private String task_catatan;
     private String task_jenis;
-    private long task_auto_update;
+    private long nilai_satuan;
+    private long jumlah_satuan;
     private String task_progres;
     private Date created_at_task;
 

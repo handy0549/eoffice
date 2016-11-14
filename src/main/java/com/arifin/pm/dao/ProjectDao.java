@@ -8,4 +8,6 @@ import java.util.Map;
 public interface ProjectDao {
     List<Object[]> getAll(Map<String,String > param,Boolean page);
     boolean create(Project project);
+    boolean update(int id, Project project);
+    Project detail(int id);
 }
