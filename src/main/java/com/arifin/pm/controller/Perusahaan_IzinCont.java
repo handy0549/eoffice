@@ -1,6 +1,6 @@
 package com.arifin.pm.controller;
 
-import com.arifin.pm.dao.Perusaahaan_IzinDao;
+import com.arifin.pm.dao.perusahaan.Perusaahaan_IzinDao;
 import com.arifin.pm.model.Perusahaan_Izin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

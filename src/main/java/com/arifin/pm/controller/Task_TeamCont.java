@@ -1,6 +1,6 @@
 package com.arifin.pm.controller;
 
-import com.arifin.pm.dao.Task_TeamDao;
+import com.arifin.pm.dao.task.Task_TeamDao;
 import com.arifin.pm.model.Task_Team;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

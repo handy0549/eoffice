@@ -1,10 +1,15 @@
 package com.arifin.pm.model;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by ojiepermana on 11/10/2016.
  */
+
+@Entity
+@Table(name = "PM_PROJECT_JENIS")
 public class Project_jenis {
     @Id
     private int id_project_jenis;

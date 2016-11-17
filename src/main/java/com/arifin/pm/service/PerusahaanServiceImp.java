@@ -1,7 +1,6 @@
 package com.arifin.pm.service;
 
-import com.arifin.pm.dao.PerusahaanDao;
-import com.arifin.pm.model.Perusahaan;
+import com.arifin.pm.dao.perusahaan.PerusahaanDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

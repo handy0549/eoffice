@@ -1,10 +1,8 @@
 package com.arifin.pm.controller;
 
 import com.arifin.helper.MappingCore;
-import com.arifin.pm.dao.ProjectDao;
+import com.arifin.pm.dao.project.ProjectDao;
 import com.arifin.pm.model.Project;
-import com.arifin.pm.model.Project_jenis;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -12,9 +12,11 @@ import javax.persistence.Table;
 public class Perusahaam_kategori {
     @Id
     private int id_perusahaan_kategori;
-
+    private String keyword;
     private String kategori;
-    private int status;
+    private String deskripsi;
+    private String status;
+
 
     public int getId_perusahaan_kategori() {
         return id_perusahaan_kategori;
@@ -22,6 +24,14 @@ public class Perusahaam_kategori {
 
     public void setId_perusahaan_kategori(int id_perusahaan_kategori) {
         this.id_perusahaan_kategori = id_perusahaan_kategori;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
 
     public String getKategori() {
@@ -32,11 +42,19 @@ public class Perusahaam_kategori {
         this.kategori = kategori;
     }
 
-    public int getStatus() {
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
+
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }

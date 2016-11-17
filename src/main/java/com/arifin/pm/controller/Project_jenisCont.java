@@ -1,6 +1,6 @@
 package com.arifin.pm.controller;
 
-import com.arifin.pm.dao.Project_jenisDao;
+import com.arifin.pm.dao.project.Project_jenisDao;
 import com.arifin.pm.model.Project_jenis;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
