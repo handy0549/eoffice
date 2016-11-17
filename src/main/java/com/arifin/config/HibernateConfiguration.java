@@ -28,7 +28,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] { "com.arifin.model" , "com.arifin.pm.model"});
+        sessionFactory.setPackagesToScan(new String[] { "com.arifin.model" , "com.arifin.pm.model",  "com.arifin.security.model"});
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
      }

@@ -25,7 +25,10 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     protected Filter[] getServletFilters() {
-        Filter [] singleton = { new CORSFilter()};
+        Filter [] singleton = {
+                new CORSFilter()
+                //new AuthenticationTokenFilter()
+        };
         return singleton;
     }
 }
