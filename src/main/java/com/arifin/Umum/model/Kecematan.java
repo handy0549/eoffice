@@ -1,4 +1,4 @@
-package com.arifin.model;
+package com.arifin.Umum.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,7 +8,7 @@ import javax.persistence.Table;
  * Created by etos on 11/2/2016.
  */
 @Entity
-@Table(name = "T_KECEMETAN")
+@Table(name = "T_KECAMATAN")
 public class Kecematan {
 
     @Id

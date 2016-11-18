@@ -9,5 +9,6 @@ import java.util.List;
  */
 public interface PerusahaanDao {
     List<java.lang.Object[]> getAll();
-    void create(Perusahaan perusahaan);
+    Object getDetail(int id);
+    boolean create(Perusahaan perusahaan);
 }

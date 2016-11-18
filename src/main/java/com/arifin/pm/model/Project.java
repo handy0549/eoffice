@@ -16,7 +16,6 @@ import java.util.Date;
 public class Project implements Serializable {
 
     @Id
-//    @GeneratedValue(strategy=GenerationType.AUTO)
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PM_PROJECT_SEQ")
     @SequenceGenerator(name="PM_PROJECT_SEQ", sequenceName="PM_PROJECT_SEQ")
 
@@ -34,8 +33,8 @@ public class Project implements Serializable {
     private Date batas_waktu;
     private long id_penanggung_jawab;
     private String lokasi_project;
-    private String id_project_jenis;
-    private String id_project_paket;
+    private int id_project_jenis;
+    private int id_project_paket;
     private String nama_project;
     private String anggaran_nilai;
     private String lon;
@@ -100,7 +99,7 @@ public class Project implements Serializable {
         this.tanggal_mulai = tanggal_mulai;
     }
 
-    public Date getTanggal_selesai() { 
+    public Date getTanggal_selesai() {
         return tanggal_selesai;
     }
 
@@ -132,19 +131,19 @@ public class Project implements Serializable {
         this.lokasi_project = lokasi_project;
     }
 
-    public String getId_project_jenis() {
+    public int getId_project_jenis() {
         return id_project_jenis;
     }
 
-    public void setId_project_jenis(String id_project_jenis) {
+    public void setId_project_jenis(int id_project_jenis) {
         this.id_project_jenis = id_project_jenis;
     }
 
-    public String getId_project_paket() {
+    public int getId_project_paket() {
         return id_project_paket;
     }
 
-    public void setId_project_paket(String id_project_paket) {
+    public void setId_project_paket(int id_project_paket) {
         this.id_project_paket = id_project_paket;
     }
 

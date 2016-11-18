@@ -1,8 +1,6 @@
 package com.arifin.pm.model;
 
 
-import com.arifin.model.Kecematan;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -15,17 +13,19 @@ import java.util.Date;
 public class Perusahaan implements Serializable {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PM_PRUSAHAAN_SEQ")
+    @SequenceGenerator(name="PM_PRUSAHAAN_SEQ", sequenceName="PM_PRUSAHAAN_SEQ")
     private int id_perusahaan;
 
     private String nama_perusahaan;
     private String alamat_perusahaan;
     private String email_perusahaan;
     private String telfon_perusahaan;
-    private String direkur_perusahaan;
+    private String direktur_perusahaan;
 
-    private int id_kec;
-    private int id_kabkot;
-    private int id_prov;
+    private long id_kec;
+    private long id_kabkot;
+    private long id_prov;
     private  long id_kel;
 
     private int id_user;
@@ -43,6 +43,13 @@ public class Perusahaan implements Serializable {
     private Date createdAt;
 
 
+    public int getId_perusahaan() {
+        return id_perusahaan;
+    }
+
+    public void setId_perusahaan(int id_perusahaan) {
+        this.id_perusahaan = id_perusahaan;
+    }
 
     public String getNama_perusahaan() {
         return nama_perusahaan;
@@ -76,35 +83,35 @@ public class Perusahaan implements Serializable {
         this.telfon_perusahaan = telfon_perusahaan;
     }
 
-    public String getDirekur_perusahaan() {
-        return direkur_perusahaan;
+    public String getDirektur_perusahaan() {
+        return direktur_perusahaan;
     }
 
-    public void setDirekur_perusahaan(String direkur_perusahaan) {
-        this.direkur_perusahaan = direkur_perusahaan;
+    public void setDirektur_perusahaan(String direktur_perusahaan) {
+        this.direktur_perusahaan = direktur_perusahaan;
     }
 
-    public int getId_kec() {
+    public long getId_kec() {
         return id_kec;
     }
 
-    public void setId_kec(int id_kec) {
+    public void setId_kec(long id_kec) {
         this.id_kec = id_kec;
     }
 
-    public int getId_kabkot() {
+    public long getId_kabkot() {
         return id_kabkot;
     }
 
-    public void setId_kabkot(int id_kabkot) {
+    public void setId_kabkot(long id_kabkot) {
         this.id_kabkot = id_kabkot;
     }
 
-    public int getId_prov() {
+    public long getId_prov() {
         return id_prov;
     }
 
-    public void setId_prov(int id_prov) {
+    public void setId_prov(long id_prov) {
         this.id_prov = id_prov;
     }
 
@@ -164,27 +171,19 @@ public class Perusahaan implements Serializable {
         this.status_perusahaan = status_perusahaan;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public int getId_perusahaan() {
-        return id_perusahaan;
-    }
-
-    public void setId_perusahaan(int id_perusahaan) {
-        this.id_perusahaan = id_perusahaan;
-    }
-
     public int getId_perusahaan_kategori() {
         return id_perusahaan_kategori;
     }
 
     public void setId_perusahaan_kategori(int id_perusahaan_kategori) {
         this.id_perusahaan_kategori = id_perusahaan_kategori;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 }

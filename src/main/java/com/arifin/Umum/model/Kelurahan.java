@@ -1,4 +1,4 @@
-package com.arifin.model;
+package com.arifin.Umum.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

@@ -1,14 +1,15 @@
-package com.arifin.pm.dao.project;
+package com.arifin.pm.dao.perusahaan;
 
 import com.arifin.abstrac.AbstractDao;
-import com.arifin.model.Kabkot;
-import com.arifin.model.Kecematan;
-import com.arifin.model.Kelurahan;
-import com.arifin.model.Provinsi;
-import com.arifin.pm.dao.perusahaan.PerusahaanDao;
+import com.arifin.Umum.model.Kabkot;
+import com.arifin.Umum.model.Kecematan;
+import com.arifin.Umum.model.Kelurahan;
+import com.arifin.Umum.model.Provinsi;
 import com.arifin.pm.model.Perusahaam_kategori;
 import com.arifin.pm.model.Perusahaan;
+import org.hibernate.Criteria;
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -54,9 +55,44 @@ public class PerusahaanDaoImp extends AbstractDao<Integer, Perusahaan> implement
     }
 
     @Override
-    public void create(Perusahaan perusahaan) {
-        persist(perusahaan);
-//        return true;
+    public boolean create(Perusahaan perusahaan) {
+        if(persist(perusahaan))
+        {
+            return true;
+        }
+        return false;
     }
+
+    @Override
+    public Object getDetail(int id) {
+
+        String Sql = "Select  ROWNUM rn," +
+                "a.*, " +
+                "b.nama_kel," +
+                "c.nama_kec," +
+                "d.nama_kabkot," +
+                "e.nama_prov," +
+                "x.kategori " +
+
+                " from PM_PERUSAHAAN a, "+
+                "t_kelurahan b, " +
+                "t_kecamatan c, " +
+                "t_kabkot d, " +
+                "t_provinsi e, " +
+                "PM_PERUSAHAAN_KATEGORI x " +
+
+                "where  a.id_kel=b.id_kel "  +
+                "and a.id_kec = c.id_kec " +
+                "and a.id_kabkot=d.id_kabkot "   +
+                "and a.id_prov = e.id_prov " +
+                "and a.id_perusahaan_kategori=x.id_perusahaan_kategori " +
+                "and a.id_perusahaan = " + id;
+
+        SQLQuery query = getSession().createSQLQuery(Sql);
+        query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+
+        return query.uniqueResult();
+    }
+
 
 }

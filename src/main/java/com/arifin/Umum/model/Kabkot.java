@@ -1,4 +1,4 @@
-package com.arifin.model;
+package com.arifin.Umum.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,10 +11,9 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "t_kabkot")
-public class Kabkot implements Serializable {
+public class Kabkot {
     @Id
     private long id_kabkot;
-
     private long id_prov;
     private String nama_kabkot;
 

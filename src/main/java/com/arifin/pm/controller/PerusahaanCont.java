@@ -5,10 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.arifin.model.Kabkot;
-import com.arifin.model.Kecematan;
-import com.arifin.model.Kelurahan;
-import com.arifin.model.Provinsi;
+import com.arifin.Umum.dao.LokasiDao;
+import com.arifin.Umum.model.Kabkot;
+import com.arifin.Umum.model.Kecematan;
+import com.arifin.Umum.model.Kelurahan;
+import com.arifin.Umum.model.Provinsi;
+import com.arifin.helper.QueryHelp;
 import com.arifin.pm.dao.perusahaan.PerusahaanDao;
 import com.arifin.pm.model.Perusahaam_kategori;
 import com.arifin.pm.model.Perusahaan;
@@ -23,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Created by etos on 11/2/2016.
  */
+@RequestMapping(value = "/pm/perusahaan")
 @RestController
 public class PerusahaanCont {
     private final Logger LOG = LoggerFactory.getLogger(PerusahaanCont.class);
@@ -31,9 +34,15 @@ public class PerusahaanCont {
     private PerusahaanService perusahaanService;
 
     @Autowired
+    private LokasiDao lokasiDao;
+
+    @Autowired
     private PerusahaanDao perusahaanDao;
 
-    @GetMapping( "/pm/perusahaan")
+    @Autowired
+    QueryHelp queryHelp;
+
+    @GetMapping( "")
     public ResponseEntity<List<Map<String, Object>>> getData() {
 
         List<Map<String, Object>> out = new ArrayList<>();
@@ -60,19 +69,27 @@ public class PerusahaanCont {
         return new ResponseEntity<List<Map<String, Object>>>(out, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/customers")
-    public ResponseEntity createCustomer(@RequestBody Perusahaan perusahaan) {
 
-//        if (perusahaanDao.create(perusahaan))
-//        {
-//
-//        }
-//        {
-//            LOG.info("Gagal Simpan");
-//            return new ResponseEntity<Perusahaan>(HttpStatus.NOT_FOUND);
-//        }
 
-        return new ResponseEntity(perusahaan, HttpStatus.OK);
+    @GetMapping(value = "/detail/{id_perusahaan}")
+    public ResponseEntity getDetail(@PathVariable int id_perusahaan)
+    {
+        Object perusahaan = perusahaanDao.getDetail(id_perusahaan);
+        if(perusahaan != null)
+        {
+            return new ResponseEntity(perusahaan,HttpStatus.OK);
+        }
+        return new ResponseEntity("data Kosong",HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/add")
+    public ResponseEntity addPerusahaan(@RequestBody Perusahaan json)
+    {
+        if(!perusahaanDao.create(json))
+        {
+            return new ResponseEntity ("error", HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity (json, HttpStatus.CREATED);
     }
 
 
