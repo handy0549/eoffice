@@ -12,6 +12,8 @@ import org.hibernate.criterion.Subqueries;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by ojiepermana on 11/18/2016.
  */
@@ -19,14 +21,31 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 public class LokasiDao extends AbstractDao<Integer,Kabkot> {
 
+    public List allProv()
+    {
+        List list =  getSession().createSQLQuery("select * from t_provinsi").addEntity(Provinsi.class).list();
+        return  list;
+    }
+
+    public List allKabkot(long id)
+    {
+        List list =  getSession().createSQLQuery("select * from t_kabkot where ID_PROV=" + id).addEntity(Kabkot.class).list();
+        return  list;
+    }
+    public List allKecematan(long id)
+    {
+        List list =  getSession().createSQLQuery("select * from t_kecamatan where id_kabkot=" + id).addEntity(Kecematan.class).list();
+        return  list;
+    }
+    public List allKelurahan(long id)
+    {
+        List list =  getSession().createSQLQuery("select * from t_kelurahan where id_kec=" + id).addEntity(Kelurahan.class).list();
+        return  list;
+    }
+
     public Kabkot getKabKot(long id)
     {
         Kabkot data = (Kabkot) getSession().get(Kabkot.class,id);
-
-//        Criteria criteria = getSession().createCriteria(Kabkot.class);
-//        Kabkot yourObject = (Kabkot) criteria.add(Restrictions.eq("id_kabkot", id))
-//                .uniqueResult();
-
         return data;
     }
     public Kecematan getKecematan(long id)

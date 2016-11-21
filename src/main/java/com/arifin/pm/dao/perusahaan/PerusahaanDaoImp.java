@@ -7,9 +7,11 @@ import com.arifin.Umum.model.Kelurahan;
 import com.arifin.Umum.model.Provinsi;
 import com.arifin.pm.model.Perusahaam_kategori;
 import com.arifin.pm.model.Perusahaan;
+import com.arifin.pm.model.Perusahaan_Pegawai;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -63,6 +65,8 @@ public class PerusahaanDaoImp extends AbstractDao<Integer, Perusahaan> implement
         return false;
     }
 
+
+
     @Override
     public Object getDetail(int id) {
 
@@ -93,6 +97,9 @@ public class PerusahaanDaoImp extends AbstractDao<Integer, Perusahaan> implement
 
         return query.uniqueResult();
     }
+
+
+
 
 
 }

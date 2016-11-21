@@ -2,6 +2,7 @@ package com.arifin.pm.controller;
 
 import com.arifin.pm.dao.master.PmMasterDao;
 import com.arifin.pm.model.Perusahaam_kategori;
+import com.arifin.pm.model.Perusahaan_jabatan;
 import com.arifin.pm.model.Project_jenis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,6 +35,13 @@ public class PmMasterCont {
     {
         List<Project_jenis> perusahaam_kategoris = pmMasterDao.listProjectJenis();
         return new ResponseEntity(perusahaam_kategoris, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/pm/master/jabatan_perusahaan")
+    public ResponseEntity getjabatanPerusahaan()
+    {
+        List<Perusahaan_jabatan> perusahaan_jabaten = pmMasterDao.listPerusahaanJabatan();
+        return new ResponseEntity(perusahaan_jabaten, HttpStatus.OK);
     }
 
 

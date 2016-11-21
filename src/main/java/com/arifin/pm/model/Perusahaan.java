@@ -96,7 +96,15 @@ public class Perusahaan implements Serializable {
     }
 
     public void setId_kec(long id_kec) {
-        this.id_kec = id_kec;
+        if(id_kec < 1)
+        {
+            this.id_kec=0;
+        }
+        else
+        {
+            this.id_kec = id_kec;
+        }
+
     }
 
     public long getId_kabkot() {
@@ -104,7 +112,14 @@ public class Perusahaan implements Serializable {
     }
 
     public void setId_kabkot(long id_kabkot) {
-        this.id_kabkot = id_kabkot;
+        if(id_kabkot < 1)
+        {
+            this.id_kabkot=0;
+        }
+        else
+        {
+            this.id_kabkot = id_kabkot;
+        }
     }
 
     public long getId_prov() {
@@ -112,7 +127,14 @@ public class Perusahaan implements Serializable {
     }
 
     public void setId_prov(long id_prov) {
-        this.id_prov = id_prov;
+        if(id_prov < 1)
+        {
+            this.id_prov=0;
+        }
+        else
+        {
+            this.id_prov = id_prov;
+        }
     }
 
     public long getId_kel() {
@@ -120,7 +142,14 @@ public class Perusahaan implements Serializable {
     }
 
     public void setId_kel(long id_kel) {
-        this.id_kel = id_kel;
+        if(id_kel < 1)
+        {
+            this.id_kel=0;
+        }
+        else
+        {
+            this.id_kel = id_kel;
+        }
     }
 
     public int getId_user() {

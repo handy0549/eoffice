@@ -10,10 +10,13 @@ import com.arifin.Umum.model.Kabkot;
 import com.arifin.Umum.model.Kecematan;
 import com.arifin.Umum.model.Kelurahan;
 import com.arifin.Umum.model.Provinsi;
+import com.arifin.helper.MappingCore;
 import com.arifin.helper.QueryHelp;
 import com.arifin.pm.dao.perusahaan.PerusahaanDao;
+import com.arifin.pm.dao.perusahaan.Perusahaan_PegawaiDao;
 import com.arifin.pm.model.Perusahaam_kategori;
 import com.arifin.pm.model.Perusahaan;
+import com.arifin.pm.model.Perusahaan_Pegawai;
 import com.arifin.pm.service.PerusahaanService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +35,9 @@ public class PerusahaanCont {
 
     @Autowired
     private PerusahaanService perusahaanService;
+
+    @Autowired
+    private Perusahaan_PegawaiDao perusahaan_pegawaiDao;
 
     @Autowired
     private LokasiDao lokasiDao;
@@ -91,9 +97,6 @@ public class PerusahaanCont {
         }
         return new ResponseEntity (json, HttpStatus.CREATED);
     }
-
-
-
 
 
 

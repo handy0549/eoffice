@@ -1,6 +1,7 @@
 package com.arifin.pm.dao.perusahaan;
 
 import com.arifin.pm.model.Perusahaan;
+import com.arifin.pm.model.Perusahaan_Pegawai;
 
 import java.util.List;
 
@@ -11,4 +12,5 @@ public interface PerusahaanDao {
     List<java.lang.Object[]> getAll();
     Object getDetail(int id);
     boolean create(Perusahaan perusahaan);
+
 }

@@ -1,8 +1,6 @@
 package com.arifin.pm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -17,6 +15,8 @@ public class Perusahaan_Pegawai implements Serializable{
 
 
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PM_PRUSAHAAN_PEGAWAI_SEQ")
+    @SequenceGenerator(name="PM_PRUSAHAAN_PEGAWAI_SEQ", sequenceName="PM_PRUSAHAAN_PEGAWAI_SEQ")
     private int id_perusahaan_pegawai;
     private int id_perusahaan;
     private String nama_pegawai_p;
@@ -28,9 +28,10 @@ public class Perusahaan_Pegawai implements Serializable{
     private String email_p;
     private Date tgl_lahir_p;
     private String tempat_lahir_p;
-    private long b_bidang_p;
+    private String bagian_bidang_p;
     private String kode_pos_p;
     private String status_perusahaan_p;
+    private String nip;
 
 
     public int getId_perusahaan_pegawai() {
@@ -62,7 +63,14 @@ public class Perusahaan_Pegawai implements Serializable{
     }
 
     public void setId_jabatan_p(int id_jabatan_p) {
-        this.id_jabatan_p = id_jabatan_p;
+        if(id_jabatan_p < 1)
+        {
+            this.id_jabatan_p = 0;
+        }
+        else
+        {
+            this.id_jabatan_p = id_jabatan_p;
+        }
     }
 
     public String getJenis_identitas_p() {
@@ -121,12 +129,12 @@ public class Perusahaan_Pegawai implements Serializable{
         this.tempat_lahir_p = tempat_lahir_p;
     }
 
-    public long getB_bidang_p() {
-        return b_bidang_p;
+    public String getB_bidang_p() {
+        return bagian_bidang_p;
     }
 
-    public void setB_bidang_p(long b_bidang_p) {
-        this.b_bidang_p = b_bidang_p;
+    public void setB_bidang_p(String b_bidang_p) {
+        this.bagian_bidang_p = b_bidang_p;
     }
 
     public String getKode_pos_p() {
@@ -143,5 +151,13 @@ public class Perusahaan_Pegawai implements Serializable{
 
     public void setStatus_perusahaan_p(String status_perusahaan_p) {
         this.status_perusahaan_p = status_perusahaan_p;
+    }
+
+    public String getNip() {
+        return nip;
+    }
+
+    public void setNip(String nip) {
+        this.nip = nip;
     }
 }
