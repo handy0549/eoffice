@@ -9,8 +9,12 @@ import java.util.Map;
  * Created by Handy on 10/11/2016.
  */
 public interface TaskDao {
-    List<Object[]> getAll(Map<String, String> param, Boolean page);
+    List<Object> getAllProject( Map<String, String> param,int id_project);
+    List<Task> getAllModul(int id_modul);
     boolean create(Task task);
-    boolean update(int id, Task task);
-    Task detail(int id);
+    boolean edit(Task task);
+    Object detail(int id_task);
+    Task detailLite(int id);
+    Object detailPreAdd(int id);
+
 }

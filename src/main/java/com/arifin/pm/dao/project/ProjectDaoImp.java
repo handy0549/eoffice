@@ -93,8 +93,19 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
                 "c.nama_kec," +
                 "d.nama_kabkot," +
                 "e.nama_prov," +
-                "" +
-                "f.nama_paket, " +
+
+                "f.NAMA_PAKET , " +
+                "f.KETERANGAN_PAKET , " +
+                "f.INDUK_PAKET , " +
+                "f.TAHUN_ANGGARAN_PAKET , " +
+                "f.PAGU_ANGGARAN_PAKET , " +
+                "f.NILAI_KONTRAK , " +
+                "f.NO_KONTRAK , " +
+                "f.TGL_KONTRAK , " +
+                "f.PPK , " +
+                "f.ID_KONTRAKTOR_PAKET , " +
+                "f.ID_SUPERVISI_PAKET, " +
+
                 "g.project_jenis, " +
                 "x.nama_perusahaan as kontraktor, " +
                 "y.nama_perusahaan as supervisi " +
@@ -120,6 +131,48 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
                 "and a.id_kontraktor =x.id_perusahaan " +
                 "and a.id_supervisi = y.id_perusahaan " +
                 "and a.id_project=" + id +" ";
+
+        SQLQuery query = getSession().createSQLQuery(Sql);
+        query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+
+        return query.uniqueResult();
+    }
+
+    @Override
+    public Project detailLite(int id) {
+        return (Project) getSession().get(Project.class,id);
+    }
+
+
+
+    //TOOOLSS>>>>>>>>>>>>>>>>>>>>>
+    @Override
+    public Object getProjectPerusahaan(int id_project) {
+        String Sql = "SELECT\n" +
+                "  x.NAMA_PERUSAHAAN as k_NAMA_PERUSAHAAN ,\n" +
+                "  x.DIREKTUR_PERUSAHAAN as k_DIREKTUR_PERUSAHAAN,\n" +
+                "  x.EMAIL_PERUSAHAAN as k_EMAIL_PERUSAHAAN,\n" +
+                "  x.TELFON_PERUSAHAAN as k_TELFON_PERUSAHAAN,\n" +
+                "  x.ALAMAT_PERUSAHAAN as k_ALAMAT_PERUSAHAAN ,\n" +
+                "\n" +
+                "  y.NAMA_PERUSAHAAN as s_NAMA_PERUSAHAAN,\n" +
+                "  y.DIREKTUR_PERUSAHAAN as s_DIREKTUR_PERUSAHAAN ,\n" +
+                "  y.EMAIL_PERUSAHAAN as s_EMAIL_PERUSAHAAN,\n" +
+                "  y.TELFON_PERUSAHAAN as s_TELFON_PERUSAHAAN,\n" +
+                "  y.ALAMAT_PERUSAHAAN as s_ALAMAT_PERUSAHAAN\n" +
+                "\n" +
+                "FROM PM_PROJECT a,\n" +
+                "  PM_MODUL b,\n" +
+                "  PM_TASK c,\n" +
+                "PM_PERUSAHAAN x,\n" +
+                "  PM_PERUSAHAAN y\n" +
+                "\n" +
+                "WHERE a.ID_PROJECT=b.ID_PROJECT\n" +
+                "  and b.ID_MODUL=c.ID_MODUL\n" +
+                "  and a.ID_KONTRAKTOR=x.ID_PERUSAHAAN\n" +
+                "and a.ID_SUPERVISI=y.ID_PERUSAHAAN\n" +
+                "\n" +
+                "and c.ID_TASK="+ id_project +" ";
 
         SQLQuery query = getSession().createSQLQuery(Sql);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);

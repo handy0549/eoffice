@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.arifin.config" })
+@ComponentScan({ "com.arifin" })
 @PropertySource(value = { "classpath:application.properties" })
 public class HibernateConfiguration {
  

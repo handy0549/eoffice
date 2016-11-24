@@ -1,8 +1,6 @@
 package com.arifin.pm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -18,14 +16,17 @@ public class Task implements Serializable {
 
 
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PM_TASK_SEQ")
+    @SequenceGenerator(name="PM_TASK_SEQ", sequenceName="PM_TASK_SEQ")
     private int id_task;
     private int id_modul;
     private int id_user;
-    private int induk;
+    private int is_deleted=0;
     private Date task_start;
     private Date task_end;
-    private String status_task;
-    private long prioritas;
+    private String status_task="open";
+    private long prioritas=0;
+
     private Date task_selesai;
     private String task;
     private String task_desk;
@@ -33,7 +34,7 @@ public class Task implements Serializable {
     private String task_jenis;
     private long task_auto_update;
     private long task_progress;
-    private String task_progress_realisasi;
+    private long task_progress_realisasi=0;
     private long task_fee;
     private long task_nilai;
 
@@ -62,12 +63,12 @@ public class Task implements Serializable {
         this.id_user = id_user;
     }
 
-    public int getInduk() {
-        return induk;
+    public int getis_deleted() {
+        return is_deleted;
     }
 
-    public void setInduk(int induk) {
-        this.induk = induk;
+    public void setis_deleted(int is_deleted) {
+        this.is_deleted = is_deleted;
     }
 
     public Date getTask_start() {
@@ -158,11 +159,11 @@ public class Task implements Serializable {
         this.task_progress = task_progress;
     }
 
-    public String getTask_progress_realisasi() {
+    public long getTask_progress_realisasi() {
         return task_progress_realisasi;
     }
 
-    public void setTask_progress_realisasi(String task_progress_realisasi) {
+    public void setTask_progress_realisasi(long task_progress_realisasi) {
         this.task_progress_realisasi = task_progress_realisasi;
     }
 

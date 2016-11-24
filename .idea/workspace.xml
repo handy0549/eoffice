@@ -2,65 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a98750d1-7c31-4b58-a7b1-ec77fc589cc2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/controller/MasterCont.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan_jabatan.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanServiceImp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/master/PmMasterDaoImp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/service/PerusahaanServiceImp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/master/PmMasterDaoImp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/service/PerusahaanServiceImp.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/master/PmMasterDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/master/PmMasterDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_CheckCOnt.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskCheckDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task_check.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/ModuleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/TaskService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/ModulDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/ModulDaoImp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/ModulDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/ModulDaoImp.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/ModulDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ModulDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/ModulDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ModulDaoImp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list url 2.docx" afterPath="$PROJECT_DIR$/list url 2.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/Umum/dao/LokasiDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/Umum/dao/LokasiDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/config/CORSFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/config/CORSFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/config/HibernateConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/config/HibernateConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/ModulCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/ModulCont.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/PerusahaanCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/PerusahaanCont.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/Perusahaan_PegawaiCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/Perusahaan_PegawaiCont.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/PmMasterCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/PmMasterCont.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/ProjectCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/ProjectCont.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/master/PmMasterDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/master/PmMasterDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/Project_paketCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/Project_paketCont.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/TaskCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/TaskCont.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/Task_ReportCont.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/controller/Task_ReportCont.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/PerusahaanDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/PerusahaanDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDaoImp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/ProjectDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/ProjectDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/ProjectDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/ProjectDaoImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Perusahaan.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Perusahaan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Perusahaan_Pegawai.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Perusahaan_Pegawai.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/service/PerusahaanService.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/service/PerusahaanService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/Project_paketDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/Project_paketDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/Project_paketDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/project/Project_paketDaoImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/TaskDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/TaskDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/TaskDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/TaskDaoImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/Task_ReportDao.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/Task_ReportDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/Task_ReportDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/dao/task/Task_ReportDaoImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Modul.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Modul.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Project.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Project.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Project_paket.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Project_paket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Task.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Task_Report.class" afterPath="$PROJECT_DIR$/target/classes/com/arifin/pm/model/Task_Report.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/Umum/dao/LokasiDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/Umum/dao/LokasiDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/config/CORSFilter.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/config/CORSFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/config/HibernateConfiguration.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/config/HibernateConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/ModulCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/ModulCont.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/PerusahaanCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/PerusahaanCont.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/Perusahaan_PegawaiCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/Perusahaan_PegawaiCont.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/PmMasterCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/PmMasterCont.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/ProjectCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/ProjectCont.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/master/PmMasterDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/master/PmMasterDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/Project_paketCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/Project_paketCont.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/TaskCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/TaskCont.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/Task_ReportCont.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/controller/Task_ReportCont.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/PerusahaanDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/PerusahaanDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDaoImp.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDaoImp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/ProjectDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/ProjectDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/ProjectDaoImp.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/ProjectDaoImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Perusahaan.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Perusahaan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Perusahaan_Pegawai.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Perusahaan_Pegawai.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/service/PerusahaanService.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/service/PerusahaanService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/eoffice_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/eoffice_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/Project_paketDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/Project_paketDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/Project_paketDaoImp.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/project/Project_paketDaoImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/TaskDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/TaskDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/TaskDaoImp.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/TaskDaoImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/Task_ReportDao.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/Task_ReportDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/Task_ReportDaoImp.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/dao/task/Task_ReportDaoImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Modul.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Modul.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Project.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Project.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Project_paket.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Project_paket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Task.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Task_Report.class" afterPath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/arifin/pm/model/Task_Report.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/37342d3d-fc9f-40d9-bdd1-f438a4baf03c.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/37342d3d-fc9f-40d9-bdd1-f438a4baf03c.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eoffice.iml" afterPath="$PROJECT_DIR$/eoffice.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/Umum/dao/LokasiDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/Umum/dao/LokasiDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/config/CORSFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/config/CORSFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/config/HibernateConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/config/HibernateConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ModulCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ModulCont.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PerusahaanCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PerusahaanCont.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Perusahaan_PegawaiCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Perusahaan_PegawaiCont.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PmMasterCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PmMasterCont.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ProjectCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ProjectCont.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Project_paketCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Project_paketCont.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/TaskCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/TaskCont.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_ReportCont.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_ReportCont.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDaoImp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDaoImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan_Pegawai.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan_Pegawai.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDaoImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDaoImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDaoImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Modul.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Modul.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project_paket.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project_paket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task_Report.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task_Report.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanService.java" />
     </list>
     <ignored path="eoffice.iws" />
@@ -85,48 +111,6 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Oracle - @128.199.184.210" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Oracle - @128.199.184.210" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Oracle - @128.199.184.210" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="PM_PROJECT_PAKET" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -134,22 +118,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProjectCont.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ProjectCont.java">
+      <file leaf-file-name="TaskCont.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/TaskCont.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            <state relative-caret-position="462">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task_ReportCont.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_ReportCont.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task_ReportDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/37342d3d-fc9f-40d9-bdd1-f438a4baf03c/console.sql">
+      <file leaf-file-name="TaskCheckDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskCheckDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="528">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <marker date="1479991357319" expanded="true" signature="926:1605" ph="SELECT \n su... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,18 +168,30 @@
       <file leaf-file-name="ProjectDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="286">
+              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/37342d3d-fc9f-40d9-bdd1-f438a4baf03c/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PmMasterCont.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PmMasterCont.java">
+      <file leaf-file-name="TaskService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/service/TaskService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,31 +199,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PmMasterDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/master/PmMasterDao.java">
+      <file leaf-file-name="ProjectDaoImp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="3344">
+              <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1479641931575" expanded="true" signature="699:735" ph="SELECT * fro... pm_perusahaan_kategori" />
-                <marker date="1479641931575" expanded="true" signature="963:993" ph="SELECT * fro... pm_project_jenis" />
-                <marker date="1479641931575" expanded="true" signature="1229:1263" ph="SELECT * fro... t_perusahaan_jabatan" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4372#4373#0" expanded="false" />
+                <element signature="e#4439#4440#0" expanded="false" />
+                <marker date="1479995520666" expanded="true" signature="751:1928" ph="Select ROWNU... pm_project" />
+                <marker date="1479995520666" expanded="true" signature="2566:4136" ph="Select ROWNU... pm_project" />
+                <marker date="1479995520666" expanded="true" signature="4572:5797" ph="SELECT\n x.N... PM_PROJECT" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LokasiDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/Umum/dao/LokasiDao.java">
+      <file leaf-file-name="Project_paketDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            <state relative-caret-position="286">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <marker date="1479555435444" expanded="true" signature="733:757" ph="select * fro... t_provinsi" />
-                <marker date="1479555435444" expanded="true" signature="914:951" ph="select * fro... t_kabkot" />
-                <marker date="1479555435444" expanded="true" signature="1113:1155" ph="select * fro... t_kecamatan" />
-                <marker date="1479555435444" expanded="true" signature="1320:1359" ph="select * fro... t_kelurahan" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -227,57 +249,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/ProjectDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/ProjectDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/TaskCont.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/helper/ToSql.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/TaskDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/TaskDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/MasterCont.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/PerusahaanDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/Perusahaan_izinDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_jenisDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_TeamDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaam_kategori.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/master/PmMasterDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project_jenis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/config/RootConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/Umum/model/Provinsi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/Umum/model/Kabkot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/config/HibernateConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/Umum/model/Kecematan.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/helper/Query.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/helper/QueryHelp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/config/WebInit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/config/CORSFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/controller/LokasiCont.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/controller/MasterCont.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/Umum/dao/LokasiDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan_Pegawai.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan_jabatan.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/service/PerusahaanService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanServiceImp.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/master/PmMasterDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PmMasterCont.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PerusahaanCont.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Perusahaan_PegawaiCont.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/Perusahaan_PegawaiDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/Umum/dao/LokasiDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/config/HibernateConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PerusahaanCont.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Project_paketCont.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project_paket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ProjectCont.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ModulDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ModulDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Modul.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ModulCont.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task_check.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_CheckCOnt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task_Report.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/TaskReportService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_ReportCont.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/ModuleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/TaskCont.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskCheckDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ProjectCont.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/37342d3d-fc9f-40d9-bdd1-f438a4baf03c/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arifin/pm/service/TaskService.java" />
       </list>
     </option>
   </component>
@@ -362,6 +384,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -435,74 +460,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arifin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Umum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arifin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Umum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -698,155 +655,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arifin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arifin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arifin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arifin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="abstrac" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="37342d3d-fc9f-40d9-bdd1-f438a4baf03c" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -854,6 +686,9 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ojiepermana\Google Drive\PROJEK\ADFIN\eoffice\src\main\java\com\arifin" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.arifin.pm.model" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.arifin.pm.service" />
@@ -869,6 +704,23 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+          <host-id />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54072" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1369,41 +1221,46 @@
       <workItem from="1479537134018" duration="605000" />
       <workItem from="1479545860131" duration="7022000" />
       <workItem from="1479622442996" duration="15485000" />
-      <workItem from="1479710927457" duration="404000" />
+      <workItem from="1479710927457" duration="15171000" />
+      <workItem from="1479802980298" duration="11300000" />
+      <workItem from="1479877980277" duration="23716000" />
+      <workItem from="1479966497443" duration="21098000" />
+      <workItem from="1480005799116" duration="865000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129911000" />
+    <option name="totallyTimeSpent" value="201657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32092005" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20971185" sideWeight="0.49404117" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20625" sideWeight="0.50422835" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.61962134" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21002132" sideWeight="0.50595886" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36363637" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20971185" sideWeight="0.30464715" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20971185" sideWeight="0.69535285" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20625" sideWeight="0.50422835" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21002132" sideWeight="0.50595886" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1413,6 +1270,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1439,243 +1297,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/model/AuthenticationRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/controller/ProtectedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/model/SpringSecurityUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/filter/AuthenticationTokenFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/EntryPointUnauthorizedHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/config/WebSecurityConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/controller/AuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/service/AppUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/config/RootConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Project_paketCont.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/service/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/Umum/model/Provinsi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/service/AppUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/model/AppUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/config/HibernateConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/Umum/model/Kabkot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/Umum/model/Kelurahan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/Umum/model/Kecematan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/helper/ToSql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/config/WebInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/config/CORSFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_jenisDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_jenisDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/controller/MasterCont.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan_jabatan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/helper/MappingCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/helper/QueryHelp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-          <folding>
-            <marker date="1479460159051" expanded="true" signature="527:587" ph="SELECT count... " />
-            <marker date="1479460159051" expanded="true" signature="527:588" ph="SELECT count... " />
-            <marker date="1479460159051" expanded="true" signature="527:645" ph="SELECT count... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/service/PerusahaanService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanService.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1699,19 +1320,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PmMasterCont.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1720,25 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1479641931575" expanded="true" signature="699:735" ph="SELECT * fro... pm_perusahaan_kategori" />
-            <marker date="1479641931575" expanded="true" signature="963:993" ph="SELECT * fro... pm_project_jenis" />
-            <marker date="1479641931575" expanded="true" signature="1229:1263" ph="SELECT * fro... t_perusahaan_jabatan" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/Umum/dao/LokasiDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <marker date="1479555435444" expanded="true" signature="733:757" ph="select * fro... t_provinsi" />
-            <marker date="1479555435444" expanded="true" signature="914:951" ph="select * fro... t_kabkot" />
-            <marker date="1479555435444" expanded="true" signature="1113:1155" ph="select * fro... t_kecamatan" />
-            <marker date="1479555435444" expanded="true" signature="1320:1359" ph="select * fro... t_kelurahan" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1747,16 +1342,6 @@
         <state relative-caret-position="396">
           <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PerusahaanCont.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1786,47 +1371,265 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/PmProjectPaketEntity.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/config/HibernateConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/PmTaskEntity.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/helper/ToSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/perusahaan/PerusahaanDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+        <state relative-caret-position="330">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project_paket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="320">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/controller/MasterCont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Project_paketCont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/Umum/dao/LokasiDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/PerusahaanCont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/security/service/AppUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_jenisDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ProjectCont.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="1386">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ModulDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/ModulCont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ModulDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Modul.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Perusahaan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task_check.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_CheckCOnt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/model/Task_Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="53" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/service/ModuleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/TaskCont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/service/PerusahaanService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <marker date="1479994831023" expanded="true" signature="1146:1482" ph="select a.*,b... PM_PROJECT_PAKET" />
+            <marker date="1479994831023" expanded="true" signature="1146:1534" ph="select a.*,b... PM_PROJECT_PAKET" />
+            <marker date="1479994831023" expanded="true" signature="1889:2276" ph="select a.*,b... PM_PROJECT_PAKET" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/Project_paketDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
+        <state relative-caret-position="3344">
+          <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
           <folding>
-            <marker date="1479660502358" expanded="true" signature="751:1928" ph="Select ROWNU... pm_project" />
-            <marker date="1479660502358" expanded="true" signature="2566:3755" ph="Select ROWNU... pm_project" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4372#4373#0" expanded="false" />
+            <element signature="e#4439#4440#0" expanded="false" />
+            <marker date="1479995520666" expanded="true" signature="751:1928" ph="Select ROWNU... pm_project" />
+            <marker date="1479995520666" expanded="true" signature="2566:4136" ph="Select ROWNU... pm_project" />
+            <marker date="1479995520666" expanded="true" signature="4572:5797" ph="SELECT\n x.N... PM_PROJECT" />
           </folding>
         </state>
       </provider>
@@ -1834,8 +1637,57 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/37342d3d-fc9f-40d9-bdd1-f438a4baf03c/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/controller/Task_ReportCont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/Task_ReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/task/TaskCheckDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1479991357319" expanded="true" signature="926:1605" ph="SELECT \n su... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/dao/project/ProjectDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arifin/pm/service/TaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,7 +18,7 @@ import java.util.List;
  * Created by ojiepermana on 11/18/2016.
  */
 @Transactional
-@Component
+@Component("LokasiDao")
 public class LokasiDao extends AbstractDao<Integer,Kabkot> {
 
     public List allProv()

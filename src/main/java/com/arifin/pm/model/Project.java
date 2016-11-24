@@ -43,7 +43,7 @@ public class Project implements Serializable {
     private int id_kel;
     private int id_kabkot;
     private int id_prov;
-    private String status_project;
+    private String status_project="progress";
     private long progres_project;
 
     private String sumber_anggaran;

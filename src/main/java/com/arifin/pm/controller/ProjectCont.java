@@ -58,6 +58,21 @@ public class ProjectCont {
 
     }
 
+    @GetMapping(value = "/pm/project/detail_lite/{id}")
+    public ResponseEntity<?> detailProjectLite(@PathVariable("id") Integer id_project)
+    {
+        Project project = projectDao.detailLite(id_project);
+        if(project !=null)
+        {
+            return new ResponseEntity (project, HttpStatus.OK);
+        }
+        else
+        {
+            return new ResponseEntity ("Project Tidak ditemukan", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+    }
+
 
 
 

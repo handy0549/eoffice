@@ -23,6 +23,10 @@ public class Task_Report implements Serializable {
     private String report_status;
     private Date report_tanggal;
     private String report_detail;
+    private long report_progress;
+    private int is_deleted=0;
+    private Date tgl_acc;
+    private int id_perusahaan_pegawai;
 
 
     public int getId_task_report() {
@@ -63,5 +67,37 @@ public class Task_Report implements Serializable {
 
     public void setReport_detail(String report_detail) {
         this.report_detail = report_detail;
+    }
+
+    public long getReport_progress() {
+        return report_progress;
+    }
+
+    public void setReport_progress(long report_progress) {
+        this.report_progress = report_progress;
+    }
+
+    public int getIs_deleted() {
+        return is_deleted;
+    }
+
+    public void setIs_deleted(int is_deleted) {
+        this.is_deleted = is_deleted;
+    }
+
+    public Date getTgl_acc() {
+        return tgl_acc;
+    }
+
+    public void setTgl_acc(Date tgl_acc) {
+        this.tgl_acc = tgl_acc;
+    }
+
+    public int getId_perusahaan_pegawai() {
+        return id_perusahaan_pegawai;
+    }
+
+    public void setId_perusahaan_pegawai(int id_perusahaan_pegawai) {
+        this.id_perusahaan_pegawai = id_perusahaan_pegawai;
     }
 }

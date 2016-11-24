@@ -1,8 +1,6 @@
 package com.arifin.pm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -17,6 +15,8 @@ public class Modul implements Serializable {
 
 
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PM_MODUL_SEQ")
+    @SequenceGenerator(name="PM_MODUL_SEQ", sequenceName="PM_MODUL_SEQ")
     private int id_modul;
     private int id_project;
     private Date created_at_modul;
@@ -26,9 +26,8 @@ public class Modul implements Serializable {
     private Date modul_end;
     private long modul_progres;
     private long modul_penanggung_jawab;
-    private int id_dokumen;
+    private int is_deleted=0;
     private String modul_jenis;
-    private long modul_auto_update;
 
 
     public int getId_modul() {
@@ -103,12 +102,12 @@ public class Modul implements Serializable {
         this.modul_penanggung_jawab = modul_penanggung_jawab;
     }
 
-    public int getId_dokumen() {
-        return id_dokumen;
+    public int getis_deleted() {
+        return is_deleted;
     }
 
-    public void setId_dokumen(int id_dokumen) {
-        this.id_dokumen = id_dokumen;
+    public void setis_deleted(int is_deleted) {
+        this.is_deleted = is_deleted;
     }
 
     public String getModul_jenis() {
@@ -119,11 +118,4 @@ public class Modul implements Serializable {
         this.modul_jenis = modul_jenis;
     }
 
-    public long getModul_auto_update() {
-        return modul_auto_update;
-    }
-
-    public void setModul_auto_update(long modul_auto_update) {
-        this.modul_auto_update = modul_auto_update;
-    }
 }

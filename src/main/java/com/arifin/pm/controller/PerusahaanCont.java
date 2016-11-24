@@ -48,7 +48,7 @@ public class PerusahaanCont {
     @Autowired
     QueryHelp queryHelp;
 
-    @GetMapping( "")
+    @GetMapping("")
     public ResponseEntity<List<Map<String, Object>>> getData() {
 
         List<Map<String, Object>> out = new ArrayList<>();
@@ -73,6 +73,13 @@ public class PerusahaanCont {
         }
 
         return new ResponseEntity<List<Map<String, Object>>>(out, HttpStatus.OK);
+    }
+    @GetMapping("/master")
+    public ResponseEntity getLite() {
+
+        List<Perusahaan> out = perusahaanDao.getLite();
+
+        return new ResponseEntity (out, HttpStatus.OK);
     }
 
 

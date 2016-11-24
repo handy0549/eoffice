@@ -57,6 +57,14 @@ public class PerusahaanDaoImp extends AbstractDao<Integer, Perusahaan> implement
     }
 
     @Override
+    public List<Perusahaan> getLite()
+    {
+        Criteria criteria = getSession().createCriteria(Perusahaan.class);
+        List<Perusahaan> perusahaens =criteria.list();
+        return  perusahaens;
+    }
+
+    @Override
     public boolean create(Perusahaan perusahaan) {
         if(persist(perusahaan))
         {

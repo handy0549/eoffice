@@ -10,4 +10,10 @@ public interface ProjectDao {
     boolean create(Project project);
     boolean update(int id, Project project);
     Object detail(int id);
+    Project detailLite(int id);
+
+
+    //atribut- tools
+    //ambil perusaan kontraktor - supervisi untuk task detail
+    Object getProjectPerusahaan(int id_project);
 }
