@@ -29,14 +29,6 @@ public class Perusahaan_PegawaiCont {
     @Autowired
     private PerusahaanService perusahaanService;
 
-//    @GetMapping("/pm/perusahaan_pegawai")
-//    public ResponseEntity<List<Perusahaan_Pegawai>> getData() {
-//
-//        List<Map<String, Object>> out = new ArrayList<>();
-//        List<Perusahaan_Pegawai> datas = perusahaan_pegawaiDao.getList();
-//
-//        return new ResponseEntity<List<Perusahaan_Pegawai>>(datas, HttpStatus.OK);
-//    }
 
     @GetMapping(value = "/{id_perusahaan}/pegawai")
     public ResponseEntity<?> getPegawai(@PathVariable int id_perusahaan){
@@ -48,6 +40,15 @@ public class Perusahaan_PegawaiCont {
         mappingCore.setTotal(datas.size());
 
         return new ResponseEntity (mappingCore,HttpStatus.OK);
+    }
+
+
+    @GetMapping(value = "/{id_perusahaan}/pegawai_lite")
+    public ResponseEntity<?> getPegawaiLite(@PathVariable int id_perusahaan){
+
+        List pegawais = perusahaan_pegawaiDao.getAllLite(id_perusahaan);
+
+        return new ResponseEntity (pegawais,HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id_perusahaan}/pegawai/{id_perusahaan_pegawai}")

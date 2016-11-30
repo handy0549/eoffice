@@ -34,6 +34,7 @@ public class Project_paket {
 
     private int id_kontraktor_paket;
     private  int id_supervisi_paket;
+    private long ppn;
 
     @Temporal(TemporalType.DATE)
     private Date tgl_created;
@@ -187,5 +188,13 @@ public class Project_paket {
 
     public void setId_supervisi_paket(int id_supervisi_paket) {
         this.id_supervisi_paket = id_supervisi_paket;
+    }
+
+    public long getPpn() {
+        return ppn;
+    }
+
+    public void setPpn(long ppn) {
+        this.ppn = ppn;
     }
 }

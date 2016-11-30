@@ -24,9 +24,10 @@ public class Modul implements Serializable {
     private String modul_desk;
     private Date modul_start;
     private Date modul_end;
-    private long modul_progres;
+    private long modul_progres=0;
     private long modul_penanggung_jawab;
     private int is_deleted=0;
+    private long modul_progress_realisasi=0;
     private String modul_jenis;
 
 
@@ -102,12 +103,20 @@ public class Modul implements Serializable {
         this.modul_penanggung_jawab = modul_penanggung_jawab;
     }
 
-    public int getis_deleted() {
+    public int getIs_deleted() {
         return is_deleted;
     }
 
-    public void setis_deleted(int is_deleted) {
+    public void setIs_deleted(int is_deleted) {
         this.is_deleted = is_deleted;
+    }
+
+    public long getModul_progress_realisasi() {
+        return modul_progress_realisasi;
+    }
+
+    public void setModul_progress_realisasi(long modul_progress_realisasi) {
+        this.modul_progress_realisasi = modul_progress_realisasi;
     }
 
     public String getModul_jenis() {
@@ -117,5 +126,6 @@ public class Modul implements Serializable {
     public void setModul_jenis(String modul_jenis) {
         this.modul_jenis = modul_jenis;
     }
+
 
 }

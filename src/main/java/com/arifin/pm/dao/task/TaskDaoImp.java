@@ -102,4 +102,28 @@ public class TaskDaoImp extends AbstractDao<Integer, Task> implements TaskDao {
         Object rows = query.uniqueResult();
         return rows;
     }
+
+    @Override
+    public Object getAllPreAdd(int id_task) {
+        String Sql = "SELECT\n" +
+                " a.ID_TASK,b.ID_MODUL,\n" +
+                "  c.ID_PROJECT,\n" +
+                "  c.ID_KONTRAKTOR,\n" +
+                "  c.ID_SUPERVISI, " +
+                "   d.ppn \n" +
+                "\n" +
+                "  From PM_TASK a,\n" +
+                "    PM_MODUL b,\n" +
+                "    PM_PROJECT c, \n" +
+                "    PM_PROJECT_PAKET d \n" +
+                "\n" +
+                "WHERE a.ID_MODUL=b.ID_MODUL\n" +
+                "and b.ID_PROJECT=c.ID_PROJECT\n" +
+                "and c.ID_PROJECT_PAKET=d.ID_PROJECT_PAKET\n" +
+                "and  a.ID_TASK =" +id_task;
+        SQLQuery query = getSession().createSQLQuery(Sql);
+                query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+
+        return query.uniqueResult();
+    }
 }

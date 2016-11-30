@@ -58,7 +58,7 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
                  "and a.id_supervisi = y.id_perusahaan ";
 
         Sql=toSql.Where(Sql, param,"a", page);
-
+        Sql+=" ORDER  BY a.id_project DESC ";
 
         SQLQuery query = getSession().createSQLQuery(Sql);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
@@ -132,6 +132,8 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
                 "and a.id_supervisi = y.id_perusahaan " +
                 "and a.id_project=" + id +" ";
 
+
+
         SQLQuery query = getSession().createSQLQuery(Sql);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
 
@@ -149,6 +151,8 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
     @Override
     public Object getProjectPerusahaan(int id_project) {
         String Sql = "SELECT\n" +
+                " a.NAMA_PROJECT, " +
+                "a.ID_PROJECT ," +
                 "  x.NAMA_PERUSAHAAN as k_NAMA_PERUSAHAAN ,\n" +
                 "  x.DIREKTUR_PERUSAHAAN as k_DIREKTUR_PERUSAHAAN,\n" +
                 "  x.EMAIL_PERUSAHAAN as k_EMAIL_PERUSAHAAN,\n" +

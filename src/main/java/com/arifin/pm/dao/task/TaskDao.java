@@ -17,4 +17,6 @@ public interface TaskDao {
     Task detailLite(int id);
     Object detailPreAdd(int id);
 
+    Object getAllPreAdd(int id_task);
+
 }

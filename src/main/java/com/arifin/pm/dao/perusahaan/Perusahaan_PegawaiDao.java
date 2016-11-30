@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface Perusahaan_PegawaiDao {
     List getAll(int id);
+    List getAllLite(int id);
     boolean addPegawai(Perusahaan_Pegawai perusahaan_pegawai);
     Perusahaan_Pegawai getDetailPegawai(int id);
     boolean editPegawai(Perusahaan_Pegawai pegawai);

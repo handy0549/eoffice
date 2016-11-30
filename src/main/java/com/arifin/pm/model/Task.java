@@ -37,6 +37,7 @@ public class Task implements Serializable {
     private long task_progress_realisasi=0;
     private long task_fee;
     private long task_nilai;
+    private String satuan;
 
 
     public int getId_task() {
@@ -181,6 +182,14 @@ public class Task implements Serializable {
 
     public void setTask_nilai(long task_nilai) {
         this.task_nilai = task_nilai;
+    }
+
+    public String getSatuan() {
+        return satuan;
+    }
+
+    public void setSatuan(String satuan) {
+        this.satuan = satuan;
     }
 }
 

@@ -100,4 +100,5 @@ public class Task_Report implements Serializable {
     public void setId_perusahaan_pegawai(int id_perusahaan_pegawai) {
         this.id_perusahaan_pegawai = id_perusahaan_pegawai;
     }
+
 }

@@ -1,8 +1,6 @@
 package com.arifin.pm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -17,10 +15,13 @@ public class Task_Team implements Serializable {
 
 
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PM_TASK_TEAM_SEQ")
+    @SequenceGenerator(name="PM_TASK_TEAM_SEQ", sequenceName="PM_TASK_TEAM_SEQ")
     private int id_task_team;
     private int id_task;
     private int id_perusahaan_pegawai;
-    private String team_status;
+    private  int team_status=1;
+    private String jenis;
 
 
     public int getId_task_team() {
@@ -47,11 +48,19 @@ public class Task_Team implements Serializable {
         this.id_perusahaan_pegawai = id_perusahaan_pegawai;
     }
 
-    public String getTeam_status() {
+    public int getTeam_status() {
         return team_status;
     }
 
-    public void setTeam_status(String team_status) {
+    public void setTeam_status(int team_status) {
         this.team_status = team_status;
+    }
+
+    public String getJenis() {
+        return jenis;
+    }
+
+    public void setJenis(String jenis) {
+        this.jenis = jenis;
     }
 }

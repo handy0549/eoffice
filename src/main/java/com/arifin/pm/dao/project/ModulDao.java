@@ -1,8 +1,10 @@
 package com.arifin.pm.dao.project;
 
 import com.arifin.pm.model.Modul;
+import com.arifin.pm.model.Task;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Handy on 08/11/2016.
@@ -14,6 +16,7 @@ public interface ModulDao {
     Boolean add(Modul modul);
     Boolean edit(Modul modul);
 
-
+    Object getPreAdd(int id_project);
+    Modul upDateModul(Task task);
 
 }

@@ -2,17 +2,16 @@ package com.arifin.pm.controller;
 
 import com.arifin.pm.dao.task.Task_ReportDao;
 import com.arifin.pm.model.Task_Report;
+import com.arifin.pm.service.TaskService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +26,9 @@ public class Task_ReportCont {
     @Autowired
     private Task_ReportDao task_reportDao;
 
+    @Autowired
+    TaskService taskService;
+
     @GetMapping("/{id_task}")
     public ResponseEntity getData(@PathVariable int id_task) {
 
@@ -35,15 +37,11 @@ public class Task_ReportCont {
         return new ResponseEntity(datas, HttpStatus.OK);
     }
 
-    @GetMapping("/detail/{id_task_report)")
+    @GetMapping("/detail/{id_task_report}")
     public ResponseEntity getDetail(@PathVariable int id_task_report)
     {
-        Object report = task_reportDao.getDetail(id_task_report);
-        if(report != null)
-        {
-            return new ResponseEntity(report,HttpStatus.OK);
-        }
-        return new ResponseEntity("data tidak ditemukan", HttpStatus.BAD_REQUEST);
+        Map report = (Map) taskService.getDetailLaporan(id_task_report);
+        return new ResponseEntity(report,HttpStatus.OK);
     }
 
 
@@ -56,6 +54,15 @@ public class Task_ReportCont {
             return new ResponseEntity(report,HttpStatus.OK);
         }
         return new ResponseEntity("data tidak ditemukan",HttpStatus.BAD_REQUEST);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity add(@RequestBody HashMap<String,Map<String,String>> param)
+    {
+        taskService.addReport(param);
+
+        return new ResponseEntity("[]",HttpStatus.OK);
+
     }
 
 }

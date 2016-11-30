@@ -55,6 +55,21 @@ public class ModulCont {
 
     }
 
+    @GetMapping("/pre_add/{id_project}")
+    public ResponseEntity getPreAdd(@PathVariable int id_project)
+    {
+        Object modul = modulDao.getPreAdd(id_project);
+
+        if(modul !=null)
+        {
+            return new ResponseEntity(modul,HttpStatus.OK);
+        }
+        return new ResponseEntity("Modul tidak ditemukan",HttpStatus.SERVICE_UNAVAILABLE);
+
+    }
+
+
+
     @PostMapping("/add")
     public ResponseEntity add(@RequestBody Modul modul)
     {

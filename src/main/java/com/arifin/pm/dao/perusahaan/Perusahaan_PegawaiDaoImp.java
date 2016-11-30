@@ -40,6 +40,15 @@ public class Perusahaan_PegawaiDaoImp extends AbstractDao<Integer, Perusahaan_Pe
     }
 
     @Override
+    public List getAllLite(int id) {
+        List pegawais = getSession().createCriteria(Perusahaan_Pegawai.class)
+                .add(Restrictions.eq("id_perusahaan",id))
+                .add(Restrictions.eq("status_perusahaan_p","ya"))
+                .list();
+        return pegawais;
+    }
+
+    @Override
     public Perusahaan_Pegawai getDetailPegawai(int id)
     {
         Criteria criteria =   getSession().createCriteria(Perusahaan_Pegawai.class);

@@ -39,6 +39,20 @@ public class TaskCont {
 
     }
 
+    //menampilkan ID#######
+    @GetMapping("/detail_id_id/{id_task}")
+    public ResponseEntity getAllPreAdd(@PathVariable int id_task)
+    {
+        Object task= taskDao.getAllPreAdd(id_task);
+
+        if(task !=null)
+        {
+            return new ResponseEntity(task,HttpStatus.OK);
+        }
+        return new ResponseEntity("Modul tidak ditemukan",HttpStatus.SERVICE_UNAVAILABLE);
+
+    }
+
     @GetMapping("/detail/{id_task}")
     public ResponseEntity getDetail(@PathVariable int id_task)
     {
