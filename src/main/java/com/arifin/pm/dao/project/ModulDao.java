@@ -18,5 +18,6 @@ public interface ModulDao {
 
     Object getPreAdd(int id_project);
     Modul upDateModul(Task task);
+    Object getProgressTask(int id_modul);
 
 }

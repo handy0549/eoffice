@@ -44,8 +44,7 @@ public class Project implements Serializable {
     private int id_kabkot;
     private int id_prov;
     private String status_project="progress";
-    private long progres_project;
-
+    private float progres_project=0;
     private String sumber_anggaran;
     private long pagu_anggaran;
     private Date created_at;
@@ -147,6 +146,14 @@ public class Project implements Serializable {
         this.id_project_paket = id_project_paket;
     }
 
+    public String getNama_project() {
+        return nama_project;
+    }
+
+    public void setNama_project(String nama_project) {
+        this.nama_project = nama_project;
+    }
+
     public String getAnggaran_nilai() {
         return anggaran_nilai;
     }
@@ -211,11 +218,11 @@ public class Project implements Serializable {
         this.status_project = status_project;
     }
 
-    public long getProgres_project() {
+    public float getProgres_project() {
         return progres_project;
     }
 
-    public void setProgres_project(long progres_project) {
+    public void setProgres_project(float progres_project) {
         this.progres_project = progres_project;
     }
 
@@ -241,13 +248,5 @@ public class Project implements Serializable {
 
     public void setCreated_at(Date created_at) {
         this.created_at = created_at;
-    }
-
-    public String getNama_project() {
-        return nama_project;
-    }
-
-    public void setNama_project(String nama_project) {
-        this.nama_project = nama_project;
     }
 }

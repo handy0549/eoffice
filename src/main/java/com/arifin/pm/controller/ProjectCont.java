@@ -57,6 +57,20 @@ public class ProjectCont {
         }
 
     }
+    @GetMapping(value = "/pm/project/serapan/{id}")
+    public ResponseEntity<?> serapan_anggaran(@PathVariable("id") Integer id_project)
+    {
+        Object project = projectDao.getReportSerapanAnggaranTask(id_project);
+        if(project !=null)
+        {
+            return new ResponseEntity (project, HttpStatus.OK);
+        }
+        else
+        {
+            return new ResponseEntity ("Project Tidak ditemukan", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+    }
 
     @GetMapping(value = "/pm/project/detail_lite/{id}")
     public ResponseEntity<?> detailProjectLite(@PathVariable("id") Integer id_project)
@@ -72,9 +86,6 @@ public class ProjectCont {
         }
 
     }
-
-
-
 
 
 //    @RequestBody -> string, map, bisa hashmap / @

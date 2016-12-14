@@ -1,5 +1,6 @@
 package com.arifin.pm.dao.project;
 
+import com.arifin.pm.model.Modul;
 import com.arifin.pm.model.Project;
 
 import java.util.List;
@@ -16,4 +17,7 @@ public interface ProjectDao {
     //atribut- tools
     //ambil perusaan kontraktor - supervisi untuk task detail
     Object getProjectPerusahaan(int id_project);
+    Object getReportSerapanAnggaranTask(int id_project);
+
+    Project UpdateTaskProject(Modul modul);
 }

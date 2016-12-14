@@ -2,6 +2,7 @@ package com.arifin.pm.dao.project;
 
 import com.arifin.abstrac.AbstractDao;
 import com.arifin.helper.ToSql;
+import com.arifin.pm.model.Modul;
 import com.arifin.pm.model.Project;
 import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
@@ -21,6 +22,9 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
 
     @Autowired
     ToSql toSql;
+
+    @Autowired
+    ModulDao modulDao;
 
     @Override
     public List  getAll(Map<String,String > param, Boolean page) {
@@ -105,6 +109,7 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
                 "f.PPK , " +
                 "f.ID_KONTRAKTOR_PAKET , " +
                 "f.ID_SUPERVISI_PAKET, " +
+                "f.PPN , " +
 
                 "g.project_jenis, " +
                 "x.nama_perusahaan as kontraktor, " +
@@ -182,5 +187,57 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
 
         return query.uniqueResult();
+    }
+
+    @Override
+    public Object getReportSerapanAnggaranTask(int id_project) {
+        String Sql =" SELECT\n" +
+                "\n" +
+                "  count(c.ID_TASK) as total_task,\n" +
+                "  sum(c.TASK_NILAI*c.TASK_FEE) as total_serapan_anggaran,\n" +
+                "  sum(c.TASK_PROGRESS_REALISASI/100*b.MODUL_PROGRES) as total_progress_realisasi\n" +
+                "\n" +
+                "  from PM_PROJECT a\n" +
+                "LEFT JOIN PM_MODUL b on (a.ID_PROJECT=b.ID_PROJECT and b.IS_DELETED < 1)\n" +
+                "LEFT JOIN PM_TASK c on (b.ID_MODUL=c.ID_MODUL and b.IS_DELETED < 1)\n" +
+                "WHERE a.ID_PROJECT = "+ id_project + "\n" +
+                " GROUP BY a.ID_PROJECT ";
+        SQLQuery query = getSession().createSQLQuery(Sql);
+        query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+        Object row = query.uniqueResult();
+        return row;
+    }
+
+
+    @Override
+    public Project UpdateTaskProject(Modul modul) {
+        Project project = getMaxProject(modul.getId_project());
+
+        if(project.getProgres_project() <= 100)
+        {
+            Object projectProgress = modulDao.getPreAdd(modul.getId_project());
+            //System.out.println(projectProgress.size() + " " + projectProgress);
+            Map row = (Map)projectProgress;
+
+            System.out.println("dibawah 100");
+            String Sql =" Update PM_PROJECT set PROGRES_PROJECT = "+ row.get("MODUL_PROGRESS_REALISASI") +"\n" +
+                    "WHERE ID_PROJECT=" + modul.getId_project();
+            SQLQuery query = getSession().createSQLQuery(Sql);
+            query.executeUpdate();
+            return project;
+        }
+        else
+        {
+            return null;
+        }
+
+
+    }
+
+    private Project getMaxProject(int id_project)
+    {
+        Project project = (Project) getSession().get(Project.class,id_project);
+        System.out.println("project realisai" + project.getProgres_project());
+        return project;
     }
 }

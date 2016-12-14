@@ -1,5 +1,6 @@
 package com.arifin.config;
 
+import com.arifin.security.filter.AuthenticationTokenFilter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -26,8 +27,8 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
     @Override
     protected Filter[] getServletFilters() {
         Filter [] singleton = {
-                new CORSFilter()
-                //new AuthenticationTokenFilter()
+//                new CORSFilter()
+                new AuthenticationTokenFilter()
         };
         return singleton;
     }

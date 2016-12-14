@@ -6,6 +6,7 @@ import com.arifin.pm.model.Project;
 import com.arifin.pm.model.Task;
 import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -48,6 +49,7 @@ public class TaskDaoImp extends AbstractDao<Integer, Task> implements TaskDao {
     public List<Task> getAllModul(int id_modul) {
         Criteria criteria = createEntityCriteria()
                 .add(Restrictions.eq("id_modul",id_modul));
+                criteria.addOrder(Order.asc("task_start"));
         return criteria.list();
     }
 
@@ -126,4 +128,6 @@ public class TaskDaoImp extends AbstractDao<Integer, Task> implements TaskDao {
 
         return query.uniqueResult();
     }
+
+
 }

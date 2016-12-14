@@ -23,7 +23,8 @@ public class Task_ReportDaoImp extends AbstractDao<Integer, Task_Report> impleme
     @Override
     public List<Object[]> getAll(int id_task) {
         String Sql = "SELECT a.*,\n" +
-                "  c.NAMA_PEGAWAI_P ,\n" +
+                "  c.NAMA_PEGAWAI_P ," +
+                "to_char(a.REPORT_TANGGAL, 'yyyy-mm-dd') as tgl_laporan  ,\n" +
                 "(SELECT Sum(b.REPORT_PROGRESS)\n" +
                 "FROM   PM_TASK_REPORT b\n" +
                 "WHERE  a.ID_TASK_REPORT >= b.ID_TASK_REPORT " +
@@ -34,7 +35,6 @@ public class Task_ReportDaoImp extends AbstractDao<Integer, Task_Report> impleme
                 "WHERE  a.ID_PERUSAHAAN_PEGAWAI=c.ID_PERUSAHAAN_PEGAWAI " +
                 "and a.ID_TASK= " + id_task + " " +
                 "ORDER BY a.ID_TASK_REPORT ASC ";
-
 
         SQLQuery query = getSession().createSQLQuery(Sql);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);

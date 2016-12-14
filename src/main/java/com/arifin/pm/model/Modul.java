@@ -29,6 +29,7 @@ public class Modul implements Serializable {
     private int is_deleted=0;
     private long modul_progress_realisasi=0;
     private String modul_jenis;
+    private int urutan=0;
 
 
     public int getId_modul() {
@@ -128,4 +129,11 @@ public class Modul implements Serializable {
     }
 
 
+    public int getUrutan() {
+        return urutan;
+    }
+
+    public void setUrutan(int urutan) {
+        this.urutan = urutan;
+    }
 }

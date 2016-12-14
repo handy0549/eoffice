@@ -6,6 +6,7 @@ import com.arifin.pm.dao.task.TaskCheckDao;
 import com.arifin.pm.dao.task.TaskDao;
 import com.arifin.pm.dao.task.Task_ReportDao;
 import com.arifin.pm.dao.task.Task_report_media_dao;
+import com.arifin.pm.model.Modul;
 import com.arifin.pm.model.Task;
 import com.arifin.pm.model.Task_Report;
 import com.arifin.pm.model.Task_report_media;
@@ -78,7 +79,11 @@ public class TaskService {
             Task task = task_reportDao.upDateTask(param.get("laporan"));
             if(task !=null)
             {
-                modulDao.upDateModul(task);
+                Modul modul = modulDao.upDateModul(task);
+                if(modul !=null)
+                {
+                    projectDao.UpdateTaskProject(modul);
+                }
             }
         }
 

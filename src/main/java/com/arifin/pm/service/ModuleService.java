@@ -37,10 +37,12 @@ public class ModuleService {
         {
             //task loop
             List<Task> tasks = taskDao.getAllModul(x.getId_modul());
+            Object rekap_modul = modulDao.getProgressTask(x.getId_modul());
 
             Map<String,Object> map = new HashMap<>();
                 map.put("modul", x);
                 map.put("task", tasks);
+                map.put("rekap_modul", rekap_modul);
 
             datas.add(map);
         }
