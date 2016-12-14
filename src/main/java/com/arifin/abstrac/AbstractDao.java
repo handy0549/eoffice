@@ -1,5 +1,5 @@
 package com.arifin.abstrac;
-
+//versi beta 1
 import java.io.Serializable;
 
 import java.lang.reflect.ParameterizedType;
