@@ -52,14 +52,25 @@ public class ModulDaoImp extends AbstractDao<Integer, Modul> implements ModulDao
 
     @Override
     public Object getPreAdd(int id_project) {
-        String Sql =" SELECT\n" +
-                "  sum(a.MODUL_PROGRES) as total,\n" +
-                "  sum(a.MODUL_PROGRESS_REALISASI/100*a.MODUL_PROGRES) as MODUL_PROGRESS_REALISASI,\n" +
-                "  sum(a.MODUL_PROGRES) as MODUL_PROGRES " +
-                "  FROM PM_PROJECT x\n" +
-                "    LEFT JOIN PM_MODUL a on (a.ID_PROJECT=x.ID_PROJECT and a.is_deleted=0 )  \n" +
-                "    where x.ID_PROJECT="+ id_project + "\n" +
-                "GROUP BY x.ID_PROJECT\n ";
+//        String Sql =" SELECT\n" +
+//                "  sum(a.MODUL_PROGRES) as total,\n" +
+//                "  sum(a.MODUL_PROGRESS_REALISASI/100* a.MODUL_PROGRES) as MODUL_PROGRESS_REALISASI,\n" +
+//                "  sum(a.MODUL_PROGRES) as MODUL_PROGRES " +
+//                "  FROM PM_PROJECT x\n" +
+//                "    LEFT JOIN PM_MODUL a on (a.ID_PROJECT=x.ID_PROJECT and a.is_deleted=0 )  \n" +
+//                "    where x.ID_PROJECT="+ id_project + "\n" +
+//                "GROUP BY x.ID_PROJECT\n ";
+
+        String Sql = "SELECT\n" +
+                "max(a.ID_PROJECT) as id_project, \n" +
+                "sum(c.bobot) as total_bobot,\n" +
+                "sum(c.TASK_PROGRESS_REALISASI/100*c.BOBOT) as projec_progres_realisai\n" +
+                "\n" +
+                "FROM PM_PROJECT a\n" +
+                "LEFT JOIN PM_MODUL b on (a.ID_PROJECT=b.ID_PROJECT and b.IS_DELETED < 1)\n" +
+                "LEFT JOIN PM_TASK c on (b.ID_MODUL=c.ID_MODUL and c.IS_DELETED < 1)\n" +
+                "WHERE a.ID_PROJECT = " + id_project +"\n" +
+                "GROUP BY a.ID_PROJECT";
 
         SQLQuery query = getSession().createSQLQuery(Sql);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
@@ -104,8 +115,8 @@ public class ModulDaoImp extends AbstractDao<Integer, Modul> implements ModulDao
     public Object getProgressTask(int id_modul)
     {
         String Sql = "SELECT count(b.ID_TASK) as TOTAL_TASK,\n" +
-                "sum(b.TASK_PROGRESS) as TOTAL_PROGRESS,\n" +
-                "  sum(b.TASK_PROGRESS_REALISASI/100*b.TASK_PROGRESS) as TOTAL_TASK_PROGRESS_REALISASI, \n" +
+                "sum(b.BOBOT) as TOTAL_PROGRESS,\n" +
+                "  sum(b.TASK_PROGRESS_REALISASI/100*b.BOBOT) as TOTAL_TASK_PROGRESS_REALISASI, \n" +
                 "sum(b.TASK_FEE*b.TASK_NILAI) as total_biaya_task \n" +
                 "from\n" +
                 "  PM_MODUL a\n" +

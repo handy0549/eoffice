@@ -35,6 +35,8 @@ public class Project_paket {
     private int id_kontraktor_paket;
     private  int id_supervisi_paket;
     private long ppn;
+    private String id_prov;
+    private String id_kabkot;
 
     @Temporal(TemporalType.DATE)
     private Date tgl_created;
@@ -196,5 +198,21 @@ public class Project_paket {
 
     public void setPpn(long ppn) {
         this.ppn = ppn;
+    }
+
+    public String getId_prov() {
+        return id_prov;
+    }
+
+    public void setId_prov(String id_prov) {
+        this.id_prov = id_prov;
+    }
+
+    public String getId_kabkot() {
+        return id_kabkot;
+    }
+
+    public void setId_kabkot(String id_kabkot) {
+        this.id_kabkot = id_kabkot;
     }
 }

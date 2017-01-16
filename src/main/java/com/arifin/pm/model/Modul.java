@@ -128,7 +128,6 @@ public class Modul implements Serializable {
         this.modul_jenis = modul_jenis;
     }
 
-
     public int getUrutan() {
         return urutan;
     }

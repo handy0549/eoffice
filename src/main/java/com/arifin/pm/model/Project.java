@@ -39,10 +39,10 @@ public class Project implements Serializable {
     private String anggaran_nilai;
     private String lon;
     private String lat;
-    private int id_kec;
-    private int id_kel;
-    private int id_kabkot;
-    private int id_prov;
+    private String id_kec;
+    private String id_kel;
+    private String id_kabkot;
+    private String id_prov;
     private String status_project="progress";
     private float progres_project=0;
     private String sumber_anggaran;
@@ -178,35 +178,35 @@ public class Project implements Serializable {
         this.lat = lat;
     }
 
-    public int getId_kec() {
+    public String getId_kec() {
         return id_kec;
     }
 
-    public void setId_kec(int id_kec) {
+    public void setId_kec(String id_kec) {
         this.id_kec = id_kec;
     }
 
-    public int getId_kel() {
+    public String getId_kel() {
         return id_kel;
     }
 
-    public void setId_kel(int id_kel) {
+    public void setId_kel(String id_kel) {
         this.id_kel = id_kel;
     }
 
-    public int getId_kabkot() {
+    public String getId_kabkot() {
         return id_kabkot;
     }
 
-    public void setId_kabkot(int id_kabkot) {
+    public void setId_kabkot(String id_kabkot) {
         this.id_kabkot = id_kabkot;
     }
 
-    public int getId_prov() {
+    public String getId_prov() {
         return id_prov;
     }
 
-    public void setId_prov(int id_prov) {
+    public void setId_prov(String id_prov) {
         this.id_prov = id_prov;
     }
 
