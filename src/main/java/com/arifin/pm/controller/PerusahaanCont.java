@@ -10,6 +10,7 @@ import com.arifin.Umum.model.Kabkot;
 import com.arifin.Umum.model.Kecematan;
 import com.arifin.Umum.model.Kelurahan;
 import com.arifin.Umum.model.Provinsi;
+import com.arifin.helper.LowerCaseStrategy;
 import com.arifin.helper.MappingCore;
 import com.arifin.helper.QueryHelp;
 import com.arifin.pm.dao.perusahaan.PerusahaanDao;
@@ -78,7 +79,6 @@ public class PerusahaanCont {
     public ResponseEntity getLite() {
 
         List<Perusahaan> out = perusahaanDao.getLite();
-
         return new ResponseEntity (out, HttpStatus.OK);
     }
 

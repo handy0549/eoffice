@@ -38,6 +38,7 @@ public class Task implements Serializable {
     private long task_fee;
     private long task_nilai;
     private String satuan;
+    private String  bobot="0";
 
 
     public int getId_task() {
@@ -64,13 +65,7 @@ public class Task implements Serializable {
         this.id_user = id_user;
     }
 
-    public int getis_deleted() {
-        return is_deleted;
-    }
 
-    public void setis_deleted(int is_deleted) {
-        this.is_deleted = is_deleted;
-    }
 
     public Date getTask_start() {
         return task_start;
@@ -190,6 +185,24 @@ public class Task implements Serializable {
 
     public void setSatuan(String satuan) {
         this.satuan = satuan;
+    }
+
+
+
+    public String getBobot() {
+        return bobot;
+    }
+
+    public void setBobot(String bobot) {
+        this.bobot = bobot;
+    }
+
+    public int getIs_deleted() {
+        return is_deleted;
+    }
+
+    public void setIs_deleted(int is_deleted) {
+        this.is_deleted = is_deleted;
     }
 }
 

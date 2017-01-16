@@ -1,6 +1,7 @@
 package com.arifin.pm.controller;
 
 import com.arifin.helper.MappingCore;
+import com.arifin.pm.dao.GrafikDao;
 import com.arifin.pm.dao.project.ProjectDao;
 import com.arifin.pm.model.Project;
 import org.slf4j.Logger;
@@ -20,14 +21,17 @@ import java.util.Map;
  */
 @Controller
 @RestController
+@RequestMapping("/pm/project")
 public class ProjectCont {
     private final Logger LOG = LoggerFactory.getLogger(PerusahaanCont.class);
 
     @Autowired
     ProjectDao projectDao;
+    @Autowired
+    GrafikDao grafikDao;
 
 
-    @GetMapping("/pm/project")
+    @GetMapping("")
     public ResponseEntity<MappingCore> getProjectFilter(@RequestParam Map<String,String> param)
     {
 
@@ -43,7 +47,7 @@ public class ProjectCont {
         return new ResponseEntity<MappingCore>(obj, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/pm/project/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<?> detailProject(@PathVariable("id") Integer id_project)
     {
         Object project = projectDao.detail(id_project);
@@ -57,7 +61,7 @@ public class ProjectCont {
         }
 
     }
-    @GetMapping(value = "/pm/project/serapan/{id}")
+    @GetMapping(value = "/serapan/{id}")
     public ResponseEntity<?> serapan_anggaran(@PathVariable("id") Integer id_project)
     {
         Object project = projectDao.getReportSerapanAnggaranTask(id_project);
@@ -72,7 +76,7 @@ public class ProjectCont {
 
     }
 
-    @GetMapping(value = "/pm/project/detail_lite/{id}")
+    @GetMapping(value = "/detail_lite/{id}")
     public ResponseEntity<?> detailProjectLite(@PathVariable("id") Integer id_project)
     {
         Project project = projectDao.detailLite(id_project);
@@ -89,7 +93,7 @@ public class ProjectCont {
 
 
 //    @RequestBody -> string, map, bisa hashmap / @
-    @PostMapping(value = "/pm/project/add")
+    @PostMapping(value = "/add")
     public ResponseEntity saveProject(@RequestBody Project json)
     {
         if(!projectDao.create(json))
@@ -98,7 +102,7 @@ public class ProjectCont {
         }
         return new ResponseEntity (json, HttpStatus.CREATED);
     }
-    @PostMapping(value = "/pm/project/edit/{id_project}")
+    @PostMapping(value = "/edit/{id_project}")
     public ResponseEntity editProject(@PathVariable int id_project, @RequestBody Project json)
     {
         if(!projectDao.update(id_project, json))
@@ -107,7 +111,16 @@ public class ProjectCont {
         }
         return new ResponseEntity (json, HttpStatus.CREATED);
     }
+    
+    
+    //GRAFIK
+    @GetMapping("/grafik/kurva_s/{id_project}")
+    public ResponseEntity getKurvaS(@PathVariable int id_project)
+    {
+        List kurva = grafikDao.getLaporanPerTask(id_project);
 
+        return ResponseEntity.ok(kurva);
+    }
 
 
 
