@@ -4,6 +4,7 @@ import com.arifin.helper.MappingCore;
 import com.arifin.pm.dao.GrafikDao;
 import com.arifin.pm.dao.project.ProjectDao;
 import com.arifin.pm.model.Project;
+import com.arifin.pm.service.ProjectService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,9 @@ public class ProjectCont {
     ProjectDao projectDao;
     @Autowired
     GrafikDao grafikDao;
+
+    @Autowired
+    ProjectService projectService;
 
 
     @GetMapping("")
@@ -114,6 +118,14 @@ public class ProjectCont {
     
     
     //GRAFIK
+    @GetMapping("/grafik/timeline/{id_project}")
+    public ResponseEntity getTimeline(@PathVariable int id_project)
+    {
+        Object timelie = projectService.getTimeline(id_project);
+
+        return ResponseEntity.ok(timelie);
+    }
+
     @GetMapping("/grafik/kurva_s/{id_project}")
     public ResponseEntity getKurvaS(@PathVariable int id_project)
     {

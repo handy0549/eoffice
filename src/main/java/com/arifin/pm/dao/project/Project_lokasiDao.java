@@ -33,6 +33,7 @@ public class Project_lokasiDao extends AbstractDao<Integer,Project_lokasi>{
                 query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
         List rows = query.list();
         return rows;
+
     }
 
     public Project_lokasi getDetailLite(int id_lokasi)
