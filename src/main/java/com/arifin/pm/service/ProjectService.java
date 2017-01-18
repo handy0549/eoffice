@@ -97,7 +97,7 @@ public class ProjectService {
                         for(int i=0; i < interval; i++ )
                         {
                             Map<String,Object> taskParam_bobot = new HashMap<>();
-                             if(rencana_awal==awal || rencana_awal < awal && rencana_akhir > awal )
+                            if(rencana_awal==awal || rencana_awal < awal && rencana_akhir > awal )
                             {
                                 indek++;
                                 taskParam.put("ren_val",indek);
