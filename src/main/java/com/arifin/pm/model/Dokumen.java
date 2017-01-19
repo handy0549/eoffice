@@ -15,14 +15,19 @@ import java.util.Date;
 public class Dokumen implements Serializable {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PM_DOKUMEN_SEQ")
+    @SequenceGenerator(name="PM_DOKUMEN_SEQ", sequenceName="PM_DOKUMEN_SEQ")
     private int id_dokumen;
     private String jenis_dokumen;
-    private long dokumen_untuk;
+    private int dokumen_untuk;
     private String dokumen;
     private String keterangan;
     private String lokasi_file;
     private String jenis_file;
     private String nama_file;
+    private String nomor;
+    private Date tgl_upload;
+    private int id_param;
 
 
 
@@ -42,11 +47,11 @@ public class Dokumen implements Serializable {
         this.jenis_dokumen = jenis_dokumen;
     }
 
-    public long getDokumen_untuk() {
+    public int getDokumen_untuk() {
         return dokumen_untuk;
     }
 
-    public void setDokumen_untuk(long dokumen_untuk) {
+    public void setDokumen_untuk(int dokumen_untuk) {
         this.dokumen_untuk = dokumen_untuk;
     }
 
@@ -90,4 +95,27 @@ public class Dokumen implements Serializable {
         this.nama_file = nama_file;
     }
 
+    public String getNomor() {
+        return nomor;
+    }
+
+    public void setNomor(String nomor) {
+        this.nomor = nomor;
+    }
+
+    public Date getTgl_upload() {
+        return tgl_upload;
+    }
+
+    public void setTgl_upload(Date tgl_upload) {
+        this.tgl_upload = tgl_upload;
+    }
+
+    public int getId_param() {
+        return id_param;
+    }
+
+    public void setId_param(int id_param) {
+        this.id_param = id_param;
+    }
 }
