@@ -1,9 +1,11 @@
 package com.arifin.pm.service;
 
 import com.arifin.pm.dao.project.ModulDao;
+import com.arifin.pm.dao.project.ProjectDao;
 import com.arifin.pm.dao.task.TaskDao;
 import com.arifin.pm.dao.task.TaskTimeline;
 import com.arifin.pm.model.Modul;
+import com.arifin.pm.model.Project;
 import com.arifin.pm.model.Task;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
 
 /**
  * Created by ojiepermana on 1/18/2017.
@@ -33,6 +33,9 @@ public class ProjectService {
     TaskDao taskDao;
 
     @Autowired
+    ProjectDao projectDao;
+
+    @Autowired
     ModulDao modulDao;
 
     public Object getTimeline(int id_project)
@@ -40,6 +43,30 @@ public class ProjectService {
         List<Map<String, String>> intervalMinggus = taskTimeline.getIntervalMinggu(id_project);
 
         Map<String,Object> timelie = new HashMap<>();
+
+        //loop tanggal peride
+        Project project = projectDao.detailLite(id_project);
+
+        Date startDate = project.getTanggal_mulai();
+        Date endDate = project.getBatas_waktu();
+
+        SimpleDateFormat sm = new SimpleDateFormat("MM");
+        String strDate = sm.format(startDate);
+
+
+        Calendar startCalendar = new GregorianCalendar();
+        startCalendar.setTime(startDate);
+        Calendar endCalendar = new GregorianCalendar();
+        endCalendar.setTime(endDate);
+
+        int diffYear = endCalendar.get(Calendar.YEAR) - startCalendar.get(Calendar.YEAR);
+        int diffMonth = diffYear * 12 + endCalendar.get(Calendar.MONTH) - startCalendar.get(Calendar.MONTH);
+
+        timelie.put("bulan_mulai",strDate);
+        timelie.put("bulan_interval",diffMonth);
+
+
+        /*------------ --> */
 
 
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
