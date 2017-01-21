@@ -100,6 +100,10 @@ public class TaskTimeline extends AbstractDao<Integer,Project> {
     {
         String Sql=" SELECT\n" +
                 "to_char(a.TANGGAL_MULAI - 7/24,'WW') as mulai, -- bulan\n" +
+                "to_char(a.TANGGAL_MULAI,'yyyy-mm-dd') as tgl_mulai,\n" +
+                "to_char(a.TANGGAL_MULAI,'dd') as tgl_mulai_hari,\n" +
+                "to_char(a.BATAS_WAKTU,'yyyy-mm-dd') as tgl_akhir,\n" +
+                "to_char(a.BATAS_WAKTU,'dd') as tgl_akhir_hari,\n" +
                 "to_char(a.TANGGAL_MULAI - 7/24,'YYYY') as mulai_tahun, -- bulan\n" +
                 "to_char(a.BATAS_WAKTU - 7/24,'WW') as selesai, -- bulan\n" +
                 "to_char(a.BATAS_WAKTU - 7/24,'YYYY') as selesai_tahun -- bulan\n" +

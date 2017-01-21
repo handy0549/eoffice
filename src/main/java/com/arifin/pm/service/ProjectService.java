@@ -92,7 +92,7 @@ public class ProjectService {
                 taskParam.put("nilai",task.getTask_nilai());
                 taskParam.put("fee",task.getTask_fee());
                 taskParam.put("start",task.getTask_start());
-                taskParam.put("start",task.getTask_end());
+                taskParam.put("end",task.getTask_end());
                 taskParam.put("satuan",task.getSatuan());
                 taskParam.put("realisai",task.getTask_progress_realisasi());
                 taskParam.put("ren_val",1);
