@@ -109,6 +109,12 @@ public class ProjectCont {
     @PostMapping(value = "/edit/{id_project}")
     public ResponseEntity editProject(@PathVariable int id_project, @RequestBody Project json)
     {
+        Project projectCheck = projectDao.detailLite(id_project);
+        if(projectCheck.getIs_lock() > 0)
+        {
+            return new ResponseEntity ("error, tidak ada aksess", HttpStatus.NO_CONTENT);
+        }
+
         if(!projectDao.update(id_project, json))
         {
             return new ResponseEntity ("error", HttpStatus.NO_CONTENT);
@@ -121,16 +127,15 @@ public class ProjectCont {
     @GetMapping("/grafik/timeline/{id_project}")
     public ResponseEntity getTimeline(@PathVariable int id_project)
     {
-        Object timelie = projectService.getTimeline(id_project);
+        Object timelie = projectService.getTimelineHarian(id_project);
 
         return ResponseEntity.ok(timelie);
     }
 
-    @GetMapping("/grafik/kurva_s/{id_project}")
+    @GetMapping("/grafik/kurva/{id_project}")
     public ResponseEntity getKurvaS(@PathVariable int id_project)
     {
-        List kurva = grafikDao.getLaporanPerTask(id_project);
-
+        Object kurva = projectService.getKurvas(id_project);
         return ResponseEntity.ok(kurva);
     }
 

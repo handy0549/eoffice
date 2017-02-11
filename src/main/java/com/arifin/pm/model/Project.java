@@ -24,11 +24,8 @@ public class Project implements Serializable {
     private int id_supervisi;
     private int id_owner;
     private int id_user;
-
-//    @Temporal(TemporalType.DATE)
     @Temporal(TemporalType.TIMESTAMP)
     private Date tanggal_mulai;
-
     private Date tanggal_selesai;
     private Date batas_waktu;
     private long id_penanggung_jawab;
@@ -48,6 +45,39 @@ public class Project implements Serializable {
     private String sumber_anggaran;
     private long pagu_anggaran;
     private Date created_at;
+    private int is_addendum=0;
+    private int is_lock=0;
+
+    public Object clone()
+    {
+        Project obj = new Project();
+        obj.setId_kontraktor(this.id_kontraktor);
+        obj.setId_supervisi(this.id_supervisi);
+        obj.setId_owner(this.id_owner);
+        obj.setId_user(this.id_user);
+        obj.setTanggal_mulai(this.tanggal_mulai);
+        obj.setTanggal_selesai(this.tanggal_selesai);
+        obj.setBatas_waktu(this.batas_waktu);
+        obj.setId_penanggung_jawab(this.id_penanggung_jawab);
+        obj.setLokasi_project(this.lokasi_project);
+        obj.setId_project_jenis(this.id_project_jenis);
+        obj.setId_project_paket(this.id_project_paket);
+        obj.setNama_project(this.nama_project);
+        obj.setAnggaran_nilai(this.anggaran_nilai);
+        obj.setLon(this.lon);
+        obj.setLat(this.lat);
+        obj.setId_kec(this.id_kec);
+        obj.setId_kel(this.id_kel);
+        obj.setId_kabkot(this.id_kabkot);
+        obj.setId_prov(this.id_prov);
+        obj.setStatus_project(this.status_project);
+        obj.setProgres_project(progres_project);
+        obj.setSumber_anggaran(this.sumber_anggaran);
+        obj.setPagu_anggaran(this.pagu_anggaran);
+        obj.setCreated_at(this.created_at);
+
+        return obj;
+    }
 
 
     public int getId_project() {
@@ -248,5 +278,22 @@ public class Project implements Serializable {
 
     public void setCreated_at(Date created_at) {
         this.created_at = created_at;
+    }
+
+
+    public int getIs_addendum() {
+        return is_addendum;
+    }
+
+    public void setIs_addendum(int is_addendum) {
+        this.is_addendum = is_addendum;
+    }
+
+    public int getIs_lock() {
+        return is_lock;
+    }
+
+    public void setIs_lock(int is_lock) {
+        this.is_lock = is_lock;
     }
 }

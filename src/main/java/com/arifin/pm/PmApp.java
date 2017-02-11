@@ -5,4 +5,5 @@ package com.arifin.pm;
  */
 public class PmApp {
     public static String BASE_URL = "/pm";
+    public static String UPLOAD_LOCATION="C:/mytemp/";
 }

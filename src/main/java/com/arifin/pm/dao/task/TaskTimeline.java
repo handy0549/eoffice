@@ -118,5 +118,33 @@ public class TaskTimeline extends AbstractDao<Integer,Project> {
         return rows;
     }
 
+    //##
+    public List getTimelineProgress(int id_modul)
+    {
+        String Sql="SELECT * from (\n" +
+                "  SELECT\n" +
+                "    to_char(a.REPORT_TANGGAL - 7 / 24, 'IW') as minggu,\n" +
+                "    sum(a.REPORT_PROGRESS) AS progress,\n" +
+                "    max(to_char(a.REPORT_TANGGAL, 'YYYY-MM-DD')) as tanggal\n" +
+                "  FROM\n" +
+                "    PM_TASK_REPORT a,\n" +
+                "    PM_TASK b,\n" +
+                "    PM_MODUL c\n" +
+                "\n" +
+                "  WHERE a.ID_TASK = b.ID_TASK\n" +
+                "        AND b.ID_MODUL = c.ID_MODUL\n" +
+                "        AND b.id_modul= "+ id_modul +" \n" +
+                "\n" +
+                "  GROUP BY to_char(a.REPORT_TANGGAL - 7 / 24, 'IW'), to_char(a.REPORT_TANGGAL - 7 / 24, 'YYYY')\n" +
+                ") ORDER BY minggu";
+
+        SQLQuery query = getSession().createSQLQuery(Sql);
+        query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+        List rows = query.list();
+
+        return rows;
+    }
+
+
 
 }

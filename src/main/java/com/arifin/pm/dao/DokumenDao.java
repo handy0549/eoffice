@@ -24,6 +24,11 @@ public class DokumenDao extends AbstractDao<Integer,Dokumen>{
         return (List<Dokumen>) criteria.list();
     }
 
+    public Dokumen getDetail(int id_dokumen)
+    {
+        return getById(id_dokumen);
+    }
+
     public Boolean add(Dokumen dokumen)
     {
         persist(dokumen);

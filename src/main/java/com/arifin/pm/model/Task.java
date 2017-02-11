@@ -26,7 +26,6 @@ public class Task implements Serializable {
     private Date task_end;
     private String status_task="open";
     private long prioritas=0;
-
     private Date task_selesai;
     private String task;
     private String task_desk;
@@ -34,11 +33,38 @@ public class Task implements Serializable {
     private String task_jenis;
     private long task_auto_update;
     private long task_progress;
-    private long task_progress_realisasi=0;
+    private String task_progress_realisasi="0";
     private long task_fee;
     private long task_nilai;
     private String satuan;
     private String  bobot="0";
+
+    public Object clone()
+    {
+        Task task = new Task();
+        task.setId_modul(this.id_modul);
+        task.setId_user(this.id_user);
+        task.setIs_deleted(this.is_deleted);
+        task.setTask_start(this.task_start);
+        task.setTask_end(this.task_end);
+        task.setStatus_task(this.status_task);
+        task.setPrioritas(this.prioritas);
+        task.setTask_selesai(this.task_selesai);
+        task.setTask(this.task);
+        task.setTask_desk(this.task_desk);
+        task.setTask_catatan(this.task_catatan);
+        task.setTask_jenis(this.task_jenis);
+        task.setTask_auto_update(this.task_auto_update);
+        task.setTask_progress(this.task_progress);
+        task.setTask_progress_realisasi(this.task_progress_realisasi);
+        task.setTask_fee(this.task_fee);
+        task.setTask_nilai(this.task_nilai);
+        task.setSatuan(this.satuan);
+        task.setBobot(this.bobot);
+
+        return task;
+
+    }
 
 
     public int getId_task() {
@@ -155,11 +181,11 @@ public class Task implements Serializable {
         this.task_progress = task_progress;
     }
 
-    public long getTask_progress_realisasi() {
+    public String getTask_progress_realisasi() {
         return task_progress_realisasi;
     }
 
-    public void setTask_progress_realisasi(long task_progress_realisasi) {
+    public void setTask_progress_realisasi(String task_progress_realisasi) {
         this.task_progress_realisasi = task_progress_realisasi;
     }
 

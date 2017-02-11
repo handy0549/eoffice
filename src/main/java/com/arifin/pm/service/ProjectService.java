@@ -1,12 +1,15 @@
 package com.arifin.pm.service;
 
+import com.arifin.helper.QueryHelp;
+import com.arifin.pm.dao.GrafikDao;
+import com.arifin.pm.dao.project.AddendumDao;
 import com.arifin.pm.dao.project.ModulDao;
 import com.arifin.pm.dao.project.ProjectDao;
 import com.arifin.pm.dao.task.TaskDao;
 import com.arifin.pm.dao.task.TaskTimeline;
-import com.arifin.pm.model.Modul;
-import com.arifin.pm.model.Project;
-import com.arifin.pm.model.Task;
+import com.arifin.pm.dao.task.Task_ReportDao;
+import com.arifin.pm.dao.task.Task_report_media_dao;
+import com.arifin.pm.model.*;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -33,11 +36,27 @@ public class ProjectService {
     TaskDao taskDao;
 
     @Autowired
+    Task_ReportDao task_reportDao;
+
+    @Autowired
+    Task_report_media_dao task_report_media_dao;
+
+    @Autowired
     ProjectDao projectDao;
+
+    @Autowired
+    AddendumDao addendumDao;
 
     @Autowired
     ModulDao modulDao;
 
+    @Autowired
+    GrafikDao grafikDao;
+
+    @Autowired
+    QueryHelp help;
+
+    //Lama, ga dipake
     public Object getTimeline(int id_project)
     {
         List<Map<String, String>> intervalMinggus = taskTimeline.getIntervalMinggu(id_project);
@@ -160,5 +179,107 @@ public class ProjectService {
         timelie.put("datas",datas);
         timelie.put("minggu",jml_mingu);
         return timelie;
+    }
+
+    public Object getTimelineHarian(int id_project)
+    {
+        Project project = projectDao.detailLite(id_project);
+
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        Map<String,Object> timelie = new HashMap<>();
+        timelie.put("project",project);
+
+        List<Object> datas = new ArrayList<Object>();
+        List<Modul> moduls = modulDao.getList(id_project);
+        for (Modul modul:moduls)
+        {
+            Map<String,Object> modulParam = new HashMap<>();
+            List<Task> task = taskDao.getAllModul(modul.getId_modul());
+            List report = taskTimeline.getTimelineProgress(modul.getId_modul());
+
+            modulParam.put("modul",modul);
+            modulParam.put("task",task);
+            modulParam.put("report",report);
+            datas.add(modulParam);
+
+        }
+        timelie.put("datas",datas);
+        return timelie;
+    }
+
+    public Object getKurvas(int id_project)
+    {
+        Project project = projectDao.detailLite(id_project);
+
+        Map<String,Object> kurva = new HashMap<>();
+        kurva.put("project",project);
+
+        List task = grafikDao.getKurvaProjectTask(id_project);
+        kurva.put("task",task);
+        List progress = grafikDao.getKurvaProjectProgres(id_project);
+        kurva.put("progress",progress);
+
+        kurva.put("datas","asdsa");
+        return kurva;
+    }
+
+    //ADENDUM
+
+    public boolean createdAddendum(Addendum addendum)
+    {
+        int id_project = addendum.getId_project();
+        //copy project
+        Project project = projectDao.detailLite(id_project);
+        Project clone = (Project) project.clone();
+        clone.setIs_addendum(1);
+        clone.setIs_lock(1);
+        projectDao.create(clone);
+
+        //set status Project lock open
+        project.setIs_lock(0);
+        projectDao.update(id_project,project);
+
+        //copy Modul
+        List<Modul> moduls= modulDao.getList(id_project);
+        for (Modul modul:moduls)
+        {
+            //System.out.println("1------------" + clone.getId_project());
+            Modul cloneModul = (Modul) modul.clone();
+            cloneModul.setId_project(clone.getId_project());
+            modulDao.add(cloneModul);
+
+            //copy task
+            List<Task> tasks = taskDao.getAllModul(modul.getId_modul());
+            for (Task task:tasks)
+            {
+                Task cloneTask = (Task) task.clone();
+                cloneTask.setId_modul(cloneModul.getId_modul());
+                taskDao.create(cloneTask);
+
+                List<Task_Report> reports = task_reportDao.getAllLite(task.getId_task());
+                for (Task_Report report:reports)
+                {
+                    Task_Report cloneReport = (Task_Report) report.clone();
+                    cloneReport.setId_task(cloneTask.getId_task());
+                    task_reportDao.addLite(cloneReport);
+
+                    List<Task_report_media> medias = task_report_media_dao.getAllReport(report.getId_task_report());
+                    for (Task_report_media media:medias)
+                    {
+                        Task_report_media cloneMedia = (Task_report_media) media.clone();
+                        cloneMedia.setId_task_report(cloneReport.getId_task_report());
+                        task_report_media_dao.add(cloneMedia);
+                    }
+                }
+
+            }
+        }
+        addendum.setId_project(id_project);
+        addendum.setId_child_project(clone.getId_project());
+        addendum.setId_user(help.getIdUser());
+
+        addendumDao.Add(addendum);
+
+        return true;
     }
 }

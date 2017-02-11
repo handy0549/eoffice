@@ -59,7 +59,9 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
                  "and a.id_project_paket = f.id_project_paket " +
                  "and a.id_project_jenis = g.id_project_jenis " +
                  "and a.id_kontraktor =x.id_perusahaan " +
-                 "and a.id_supervisi = y.id_perusahaan ";
+                 "and a.id_supervisi = y.id_perusahaan " +
+                 "and a.is_deleted_project = 0 " +
+                 "and a.is_addendum=0 ";
 
         Sql=toSql.Where(Sql, param,"a", page);
         Sql+=" ORDER  BY a.id_project DESC ";
@@ -75,9 +77,17 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
     public boolean create(Project project) {
          if(persist(project))
          {
-            return true;
+             System.out.println("1------------" + project.getId_project());
+             return true;
          }
          return false;
+    }
+
+    @Override
+    public boolean save(Project project) {
+
+        getSession().save(project);
+        return true;
     }
 
     @Override
@@ -215,14 +225,25 @@ public class ProjectDaoImp extends AbstractDao<Integer,Project> implements Proje
 
         if(project.getProgres_project() <= 100)
         {
-            Object projectProgress = modulDao.getPreAdd(modul.getId_project());
-            //System.out.println(projectProgress.size() + " " + projectProgress);
-            Map row = (Map)projectProgress;
+            String Sql ="SELECT\n" +
+                    "  sum(b.TASK_PROGRESS_REALISASI) as realisasi \n" +
+                    "\n" +
+                    "  from PM_MODUL a,\n" +
+                    "    PM_TASK b\n" +
+                    "WHERE a.ID_MODUL=b.ID_MODUL\n" +
+                    "and a.ID_PROJECT=" + modul.getId_project() +
+                    "    and a.IS_DELETED = 0\n" +
+                    "    and b.IS_DELETED =0\n" +
+                    "group by a.ID_PROJECT ";
+            SQLQuery ambil_task = getSession().createSQLQuery(Sql);
+            ambil_task.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+            Object row = ambil_task.uniqueResult();
+            Map rowMap = (Map) row;
+            System.out.println(rowMap.get("REALISASI") +"----------->");
 
-            System.out.println("dibawah 100");
-            String Sql =" Update PM_PROJECT set PROGRES_PROJECT = "+ row.get("MODUL_PROGRESS_REALISASI") +"\n" +
-                    "WHERE ID_PROJECT=" + modul.getId_project();
-            SQLQuery query = getSession().createSQLQuery(Sql);
+            String Sql2 =" UPDATE PM_PROJECT set PROGRES_PROJECT ="+ rowMap.get("REALISASI") +"  \n" +
+                    "WHERE  ID_PROJECT=" + modul.getId_project();
+            SQLQuery query = getSession().createSQLQuery(Sql2);
             query.executeUpdate();
             return project;
         }

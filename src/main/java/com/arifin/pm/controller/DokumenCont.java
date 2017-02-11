@@ -41,8 +41,6 @@ import java.util.*;
 public class DokumenCont {
     private final Logger LOG = LoggerFactory.getLogger(DokumenCont.class);
 
-    private static String UPLOAD_LOCATION="C:/ARIFIN/";
-
 
     @Autowired
     DokumenDao dokumenDao;
@@ -58,6 +56,20 @@ public class DokumenCont {
         List<Dokumen> datas = dokumenDao.getList(jenis,id_param);
 
         return new  ResponseEntity<List<Dokumen>>(datas, HttpStatus.OK);
+    }
+
+    @GetMapping("/detail/{id_dokumen}")
+    public ResponseEntity getDetail(@PathVariable("id_dokumen") int id_dokumen)
+    {
+        Dokumen dokumen = dokumenDao.getDetail(id_dokumen);
+        return ResponseEntity.ok(dokumen);
+    }
+    @PostMapping("/edit")
+    public ResponseEntity Edit(@RequestBody Dokumen dokumen)
+    {
+        dokumenDao.edit(dokumen);
+        dokumen = dokumenDao.getDetail(dokumen.getId_dokumen());
+        return ResponseEntity.ok(dokumen);
     }
 
     @GetMapping("/download/{id_dokumen}")

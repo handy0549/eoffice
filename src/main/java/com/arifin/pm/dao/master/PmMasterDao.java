@@ -25,6 +25,22 @@ public class PmMasterDao extends AbstractDao<Integer,Perusahaam_kategori>  {
         return list;
     }
 
+    public Perusahaam_kategori getDetail(int id_perusahaan_kategori)
+    {
+        return  getByKey(id_perusahaan_kategori);
+    }
+
+    public boolean addPerusahaanKategori(Perusahaam_kategori kategori)
+    {
+        persist(kategori);
+        return true;
+    }
+    public boolean editPerusahaanKategori(Perusahaam_kategori kategori)
+    {
+        update(kategori);
+        return true;
+    }
+
 
     public List<Project_jenis> listProjectJenis() {
 

@@ -64,5 +64,12 @@ public class Task_ReportCont {
         return new ResponseEntity("[]",HttpStatus.OK);
 
     }
+    @PostMapping("/add_lite")
+    public ResponseEntity addLite(@RequestBody Task_Report param)
+    {
+        Task_Report report = taskService.addReportLite(param);
+        return new ResponseEntity(report,HttpStatus.OK);
+
+    }
 
 }

@@ -1,8 +1,6 @@
 package com.arifin.pm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by ojiepermana on 11/9/2016.
@@ -10,12 +8,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "PM_PERUSAHAAN_KATEGORI")
 public class Perusahaam_kategori {
+
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PM_PRUSAHAAN_KATEGORI_SEQ")
+    @SequenceGenerator(name="PM_PRUSAHAAN_KATEGORI_SEQ", sequenceName="PM_PRUSAHAAN_KATEGORI_SEQ")
     private int id_perusahaan_kategori;
     private String keyword;
     private String kategori;
     private String deskripsi;
-    private String status;
+    private String status="ok";
 
 
     public int getId_perusahaan_kategori() {

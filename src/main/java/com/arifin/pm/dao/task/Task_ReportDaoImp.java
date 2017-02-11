@@ -5,6 +5,7 @@ import com.arifin.pm.model.Task;
 import com.arifin.pm.model.Task_Report;
 import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,6 +40,13 @@ public class Task_ReportDaoImp extends AbstractDao<Integer, Task_Report> impleme
         SQLQuery query = getSession().createSQLQuery(Sql);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
         return  query.list();
+    }
+
+    @Override
+    public List<Task_Report> getAllLite(int id_task) {
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.eq("id_task",id_task));
+        return criteria.list();
     }
 
     @Override
@@ -120,6 +128,12 @@ public class Task_ReportDaoImp extends AbstractDao<Integer, Task_Report> impleme
 
         return false;
     }
+    @Override
+    public boolean addLite(Task_Report report)
+    {
+        persist(report);
+        return true;
+    }
 
     @Override
     public boolean edit(Map report) {
@@ -130,7 +144,7 @@ public class Task_ReportDaoImp extends AbstractDao<Integer, Task_Report> impleme
     public Task upDateTask(Map<String,String> param) {
         Task task = getMaxTask(Integer.parseInt(param.get("id_task")) );
 
-        if(task.getTask_progress_realisasi() <= 100)
+        if(Integer.parseInt(task.getTask_progress_realisasi()) <= 100)
         {
             System.out.println("dibawah 100");
             String Sql =" Update PM_TASK set TASK_PROGRESS_REALISASI = TASK_PROGRESS_REALISASI + "+ param.get("report_progress") +"\n" +
@@ -143,8 +157,26 @@ public class Task_ReportDaoImp extends AbstractDao<Integer, Task_Report> impleme
         {
             return null;
         }
+    }
 
+    @Override
+    public Task upDateTaskLite(Task_Report param) {
+        Task task = getMaxTask(param.getId_task());
 
+        if(Double.parseDouble(task.getTask_progress_realisasi()) <= 100)
+        {
+
+            System.out.println("dibawah 100");
+            String Sql =" Update PM_TASK set TASK_PROGRESS_REALISASI = TASK_PROGRESS_REALISASI + ("+ param.getReport_progress() +" * BOBOT/100)\n" +
+                    "WHERE ID_TASK=" + param.getId_task();
+            SQLQuery query = getSession().createSQLQuery(Sql);
+            query.executeUpdate();
+            return task;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     private Task getMaxTask(int id_task)

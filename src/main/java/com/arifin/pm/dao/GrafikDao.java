@@ -45,5 +45,62 @@ public class GrafikDao extends AbstractDao<Integer,Project>{
         return rows;
     }
 
+    //#untuk projek
+    public List getKurvaProjectProgres(int id_project)
+    {
+        String Sql="SELECT * from (\n" +
+                "  SELECT\n" +
+                "    to_char(a.REPORT_TANGGAL - 7 / 24, 'IW') as minggu,\n" +
+                "    sum((a.REPORT_PROGRESS/100)*b.BOBOT) AS progress, \n" +
+                "    max(a.REPORT_TANGGAL) as REPORT_TANGGAL,\n" +
+                "    max(to_char(a.REPORT_TANGGAL, 'YYYY-MM-DD')) as tanggal\n" +
+                "  FROM\n" +
+                "    PM_TASK_REPORT a,\n" +
+                "    PM_TASK b,\n" +
+                "    PM_MODUL c,\n" +
+                "    PM_PROJECT d\n" +
+                "\n" +
+                "  WHERE a.ID_TASK = b.ID_TASK\n" +
+                "        AND b.ID_MODUL = c.ID_MODUL\n" +
+                "    and  c.ID_PROJECT=d.ID_PROJECT\n" +
+                "     and d.ID_PROJECT=" + id_project +"\n" +
+                "\n" +
+                "\n" +
+                "  GROUP BY to_char(a.REPORT_TANGGAL - 7 / 24, 'IW'), to_char(a.REPORT_TANGGAL - 7 / 24, 'YYYY')\n" +
+                ") ORDER BY REPORT_TANGGAL";
+
+        SQLQuery query = getSession().createSQLQuery(Sql);
+        query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+        List rows = query.list();
+
+        return rows;
+    }
+
+    public List getKurvaProjectTask(int id_project)
+    {
+        String Sql=" SELECT * from (\n" +
+                "  SELECT\n" +
+                "    to_char(b.TASK_START - 7 / 24, 'IW') as minggu,\n" +
+                "    sum(b.BOBOT) AS bobot,\n" +
+                "    max(b.TASK_START) as task_start,\n" +
+                "    max(b.TASK_END) as task_end\n" +
+                "  FROM\n" +
+                "    PM_TASK b,\n" +
+                "    PM_MODUL c\n" +
+                "\n" +
+                "  WHERE   b.ID_MODUL = c.ID_MODUL\n" +
+                "    and c.ID_PROJECT="+ id_project +"\n" +
+                "\n" +
+                "\n" +
+                "  GROUP BY to_char(b.TASK_START - 7 / 24, 'IW'), to_char(b.TASK_START - 7 / 24, 'YYYY')\n" +
+                ") ORDER BY task_start";
+
+        SQLQuery query = getSession().createSQLQuery(Sql);
+        query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+        List rows = query.list();
+
+        return rows;
+    }
+
     
 }

@@ -29,7 +29,7 @@ public class Task_report_media_dao extends AbstractDao<Integer,Task_report_media
     //PR--
     public List getAlltask(int id_task)
     {
-        String Sql="SELECT  --a.*,\n" +
+        String Sql="SELECT  a.*,\n" +
                 "    c.NAMA_PEGAWAI_P,\n" +
                 "    b.REPORT_TANGGAL\n" +
                 "\n" +
@@ -46,6 +46,18 @@ public class Task_report_media_dao extends AbstractDao<Integer,Task_report_media
         List data = query.list();
 
         return data;
+    }
+
+    public Task_report_media getDetail(int id_media)
+    {
+        return getByKey(id_media);
+    }
+
+    public boolean add(Task_report_media media)
+    {
+        media.setFilenyo("");
+        getSession().persist(media);
+        return true;
     }
 
 }

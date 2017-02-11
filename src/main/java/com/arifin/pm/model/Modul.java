@@ -31,6 +31,24 @@ public class Modul implements Serializable {
     private String modul_jenis;
     private int urutan=0;
 
+    public Object clone()
+    {
+        Modul modul = new Modul();
+        modul.setId_project(this.id_project);
+        modul.setCreated_at_modul(this.created_at_modul);
+        modul.setModul(this.modul);
+        modul.setModul_desk(this.modul_desk);
+        modul.setModul_start(this.modul_start);
+        modul.setModul_end(this.modul_end);
+        modul.setModul_progres(this.modul_progres);
+        modul.setModul_progress_realisasi(this.modul_progress_realisasi);
+        modul.setIs_deleted(this.is_deleted);
+        modul.setModul_jenis(this.modul_jenis);
+        modul.setUrutan(this.urutan);
+
+        return modul;
+    }
+
 
     public int getId_modul() {
         return id_modul;

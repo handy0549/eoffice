@@ -99,6 +99,26 @@ public class TaskService {
         return false;
     }
 
+    public Task_Report addReportLite(Task_Report param)
+    {
+        //insert report
+        if(task_reportDao.addLite(param))
+        {
+            //update task
+            Task task = task_reportDao.upDateTaskLite(param);
+            if(task !=null)
+            {
+                Modul modul = modulDao.upDateModul(task);
+                if(modul !=null)
+                {
+                    projectDao.UpdateTaskProject(modul);
+                }
+            }
+        }
+
+        return param;
+    }
+
 
 
 }

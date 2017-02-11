@@ -4,6 +4,7 @@ import com.arifin.Acl.Model.User_akses;
 import com.arifin.abstrac.AbstractDao;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -11,8 +12,9 @@ import java.util.List;
 /**
  * Created by ojiepermana on 12/2/2016.
  */
-@Component
+//@Component
 @Transactional
+@Repository
 public class User_aksesDao extends AbstractDao<Integer,User_akses> {
     public List<User_akses> getAll(int id_modul)
     {

@@ -1,6 +1,7 @@
 package com.arifin.Acl.Model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -9,11 +10,11 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "USERS", schema = "EOFFICE", catalog = "")
-@org.hibernate.annotations.Entity(
-        dynamicUpdate = true
-)
+//@org.hibernate.annotations.Entity(
+//        dynamicUpdate = true
+//)
 
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="USERS_SEQ")

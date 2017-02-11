@@ -23,4 +23,9 @@ public class QueryHelp extends AbstractDao<Integer,Perusahaan> {
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
         return query.uniqueResult();
     }
+
+    public int getIdUser()
+    {
+        return 1;
+    }
 }

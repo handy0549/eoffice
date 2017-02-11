@@ -17,9 +17,23 @@ public class Task_report_media {
     private int id_task_report;
     private String nama_file;
     private String tipe;
-    private String file_nyo;
+    private String jenis_file;
     private Date tgl_upload;
-    private String lokasi_file;
+    private String note;
+    private String filenyo;
+
+    public Object clone()
+    {
+        Task_report_media media = new Task_report_media();
+        media.setId_task_report(this.id_task_report);
+        media.setNama_file(this.nama_file);
+        media.setTipe(this.tipe);
+        media.setJenis_file(this.jenis_file);
+        media.setNote(this.note);
+        media.setFilenyo("");
+
+        return media;
+    }
 
 
     public int getId_media() {
@@ -46,13 +60,7 @@ public class Task_report_media {
         this.tipe = tipe;
     }
 
-    public String getFile_nyo() {
-        return file_nyo;
-    }
 
-    public void setFile_nyo(String file_nyo) {
-        this.file_nyo = file_nyo;
-    }
 
     public Date getTgl_upload() {
         return tgl_upload;
@@ -62,13 +70,7 @@ public class Task_report_media {
         this.tgl_upload = tgl_upload;
     }
 
-    public String getLokasi_file() {
-        return lokasi_file;
-    }
 
-    public void setLokasi_file(String lokasi_file) {
-        this.lokasi_file = lokasi_file;
-    }
 
     public int getId_task_report() {
         return id_task_report;
@@ -76,5 +78,29 @@ public class Task_report_media {
 
     public void setId_task_report(int id_task_report) {
         this.id_task_report = id_task_report;
+    }
+
+    public String getJenis_file() {
+        return jenis_file;
+    }
+
+    public void setJenis_file(String jenis_file) {
+        this.jenis_file = jenis_file;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public String getFilenyo() {
+        return filenyo;
+    }
+
+    public void setFilenyo(String filenyo) {
+        this.filenyo = filenyo;
     }
 }

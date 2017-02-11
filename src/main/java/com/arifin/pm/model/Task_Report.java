@@ -1,8 +1,6 @@
 package com.arifin.pm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -18,16 +16,32 @@ public class Task_Report implements Serializable {
 
 
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PM_TASK_REPORT_SEQ")
+    @SequenceGenerator(name="PM_TASK_REPORT_SEQ", sequenceName="PM_TASK_REPORT_SEQ")
     private int id_task_report;
     private int id_task;
     private String report_status;
     private Date report_tanggal;
     private String report_detail;
-    private long report_progress;
+    private String report_progress;
     private int is_deleted=0;
     private Date tgl_acc;
     private int id_perusahaan_pegawai;
 
+    public Object clone()
+    {
+        Task_Report report = new Task_Report();
+        report.setId_task(this.id_task);
+        report.setReport_status(this.report_status);
+        report.setReport_tanggal(this.report_tanggal);
+        report.setReport_detail(this.report_detail);
+        report.setReport_progress(this.report_progress);
+        report.setIs_deleted(this.is_deleted);
+        report.setTgl_acc(this.tgl_acc);
+        report.setId_perusahaan_pegawai(this.id_perusahaan_pegawai);
+
+        return report;
+    }
 
     public int getId_task_report() {
         return id_task_report;
@@ -69,11 +83,11 @@ public class Task_Report implements Serializable {
         this.report_detail = report_detail;
     }
 
-    public long getReport_progress() {
+    public String getReport_progress() {
         return report_progress;
     }
 
-    public void setReport_progress(long report_progress) {
+    public void setReport_progress(String report_progress) {
         this.report_progress = report_progress;
     }
 
