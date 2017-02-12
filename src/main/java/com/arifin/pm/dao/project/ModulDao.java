@@ -20,4 +20,6 @@ public interface ModulDao {
     Modul upDateModul(Task task);
     Object getProgressTask(int id_modul);
 
+    boolean deleted(Modul modul);
+
 }

@@ -129,5 +129,11 @@ public class TaskDaoImp extends AbstractDao<Integer, Task> implements TaskDao {
         return query.uniqueResult();
     }
 
+    @Override
+    public boolean deleted(Task task) {
+        getSession().delete(task);
+        return true;
+    }
+
 
 }

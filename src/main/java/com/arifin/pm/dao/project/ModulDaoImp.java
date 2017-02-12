@@ -127,4 +127,10 @@ public class ModulDaoImp extends AbstractDao<Integer, Modul> implements ModulDao
         Object row =  query.uniqueResult();
         return row;
     }
+
+    @Override
+    public boolean deleted(Modul modul) {
+        getSession().delete(modul);
+        return true;
+    }
 }

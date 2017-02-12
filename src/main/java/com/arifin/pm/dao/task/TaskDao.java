@@ -19,4 +19,6 @@ public interface TaskDao {
 
     Object getAllPreAdd(int id_task);
 
+    boolean deleted(Task task);
+
 }

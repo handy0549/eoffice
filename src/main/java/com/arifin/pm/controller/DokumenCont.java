@@ -4,6 +4,7 @@ package com.arifin.pm.controller;
 import com.arifin.Umum.dao.FileValidator;
 import com.arifin.Umum.dao.MultiFileValidator;
 import com.arifin.Umum.model.FileBucket;
+import com.arifin.pm.PmApp;
 import com.arifin.pm.dao.DokumenDao;
 import com.arifin.pm.model.Dokumen;
 
@@ -47,6 +48,8 @@ public class DokumenCont {
 
     @Autowired
     ServletContext context;
+    @Autowired
+    PmApp app;
 
 
     @GetMapping("/{jenis}/{id_param}")
@@ -80,7 +83,7 @@ public class DokumenCont {
 
         Dokumen dokumen = dokumenDao.getById(id_dokumen);
         String fileName = dokumen.getNama_file();
-        String dataDirectory = context.getRealPath("") + "/Document/";
+        String dataDirectory = app.UPLOAD_LOCATION + "/Document/" + dokumen.getId_param() + "/";
 
         Path file = Paths.get(dataDirectory, fileName);
         if (Files.exists(file))
@@ -107,14 +110,21 @@ public class DokumenCont {
         String filename = "upload.xlsx";
         if (!file.isEmpty()) {
             try {
-                String uploadPath = context.getRealPath("") + "/Document/";
-                FileCopyUtils.copy(file.getBytes(), new File(uploadPath + file.getOriginalFilename()));
 
                 String namaFile = file.getOriginalFilename();
                 ObjectMapper mapper = new ObjectMapper();
                 try {
+
+
                     Dokumen dokumen = mapper.readValue(dokumens, Dokumen.class);
                     System.out.println(dokumen.toString());
+
+                    String uploadPath = app.UPLOAD_LOCATION + "/Document/" + dokumen.getId_param() + "/";
+                    FileCopyUtils.copy(file.getBytes(), new File(uploadPath + file.getOriginalFilename()));
+
+                    File fileLokasi = new File(uploadPath);
+                    if (!fileLokasi.exists())
+                        fileLokasi.mkdirs();
 
                     //masuan ka DB
                     Dokumen document = new Dokumen();

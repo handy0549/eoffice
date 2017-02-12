@@ -1,5 +1,6 @@
 package com.arifin.pm.controller;
 
+import com.arifin.pm.PmApp;
 import com.arifin.pm.dao.task.Task_report_media_dao;
 import com.arifin.pm.model.Task_report_media;
 import org.hibernate.SQLQuery;
@@ -25,6 +26,9 @@ public class Task_mediaCont {
 
     @Autowired
     Task_report_media_dao mediaDao;
+
+    @Autowired
+    PmApp app;
 
     private static String UPLOAD_LOCATION="C:/mytemp/";
 
@@ -54,7 +58,7 @@ public class Task_mediaCont {
             //This will decode the String which is encoded by using Base64 class
             byte[] imageByte= Base64.getMimeDecoder().decode(media.getFilenyo());
 
-            String dir = UPLOAD_LOCATION + "media/" + media.getId_task_report();
+            String dir = app.UPLOAD_LOCATION + "media/" + media.getId_task_report();
             File file = new File(dir);
             if (!file.exists())
                 file.mkdirs();
