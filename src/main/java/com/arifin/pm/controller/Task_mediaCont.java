@@ -64,6 +64,7 @@ public class Task_mediaCont {
                 file.mkdirs();
 
             String uploadPath = dir  + "/" + media.getNama_file();
+
             new FileOutputStream(uploadPath).write(imageByte);
             System.out.println("berhasil--------------->");
         }

@@ -4,9 +4,9 @@
     <schema id="1" name="EOFFICE">
       <object-id>55</object-id>
       <created-timestamp>2016-10-11.00:05:55</created-timestamp>
-      <modified-timestamp>2017-02-12.12:08:37</modified-timestamp>
+      <modified-timestamp>2017-03-20.20:43:16</modified-timestamp>
       <visible>1</visible>
-      <introspection-timestamp>2017-02-12.16:59:13</introspection-timestamp>
+      <introspection-timestamp>2017-03-20.21:59:58</introspection-timestamp>
     </schema>
     <schema id="2" name="PUBLIC">
       <object-id>1</object-id>
@@ -285,7 +285,15 @@
       <increment-by>1</increment-by>
       <next-value>101</next-value>
     </sequence>
-    <sequence id="65" parent="1" name="USERS_AKSES_SEQ">
+    <sequence id="65" parent="1" name="S_FN_POST">
+      <object-id>59495</object-id>
+      <created-timestamp>2017-03-20.20:36:53</created-timestamp>
+      <modified-timestamp>2017-03-20.20:36:53</modified-timestamp>
+      <min-value>1</min-value>
+      <increment-by>1</increment-by>
+      <next-value>1</next-value>
+    </sequence>
+    <sequence id="66" parent="1" name="USERS_AKSES_SEQ">
       <object-id>52127</object-id>
       <created-timestamp>2016-12-01.22:55:01</created-timestamp>
       <modified-timestamp>2016-12-01.22:55:01</modified-timestamp>
@@ -293,7 +301,7 @@
       <increment-by>1</increment-by>
       <next-value>21</next-value>
     </sequence>
-    <sequence id="66" parent="1" name="USERS_AKSESS">
+    <sequence id="67" parent="1" name="USERS_AKSESS">
       <object-id>52125</object-id>
       <created-timestamp>2016-12-01.22:54:24</created-timestamp>
       <modified-timestamp>2016-12-01.22:54:24</modified-timestamp>
@@ -301,7 +309,7 @@
       <increment-by>1</increment-by>
       <next-value>1</next-value>
     </sequence>
-    <sequence id="67" parent="1" name="USERS_GROUP_DETAIL_SEQ">
+    <sequence id="68" parent="1" name="USERS_GROUP_DETAIL_SEQ">
       <object-id>52128</object-id>
       <created-timestamp>2016-12-01.22:55:10</created-timestamp>
       <modified-timestamp>2016-12-01.22:55:10</modified-timestamp>
@@ -309,7 +317,7 @@
       <increment-by>1</increment-by>
       <next-value>1</next-value>
     </sequence>
-    <sequence id="68" parent="1" name="USERS_GROUP_SEQ">
+    <sequence id="69" parent="1" name="USERS_GROUP_SEQ">
       <object-id>52126</object-id>
       <created-timestamp>2016-12-01.22:54:49</created-timestamp>
       <modified-timestamp>2016-12-01.22:54:49</modified-timestamp>
@@ -317,7 +325,7 @@
       <increment-by>1</increment-by>
       <next-value>41</next-value>
     </sequence>
-    <sequence id="69" parent="1" name="USERS_MODUL_SEQ">
+    <sequence id="70" parent="1" name="USERS_MODUL_SEQ">
       <object-id>52129</object-id>
       <created-timestamp>2016-12-01.22:55:18</created-timestamp>
       <modified-timestamp>2016-12-01.22:55:18</modified-timestamp>
@@ -325,7 +333,7 @@
       <increment-by>1</increment-by>
       <next-value>41</next-value>
     </sequence>
-    <sequence id="70" parent="1" name="USERS_SEQ">
+    <sequence id="71" parent="1" name="USERS_SEQ">
       <object-id>52134</object-id>
       <created-timestamp>2016-12-01.23:49:44</created-timestamp>
       <modified-timestamp>2016-12-01.23:49:44</modified-timestamp>
@@ -333,206 +341,277 @@
       <increment-by>1</increment-by>
       <next-value>21</next-value>
     </sequence>
-    <table id="71" parent="1" name="PM_ADDENDUM">
+    <table id="72" parent="1" name="FN_POST">
+      <object-id>59493</object-id>
+      <created-timestamp>2017-03-20.20:35:31</created-timestamp>
+      <modified-timestamp>2017-03-20.20:43:16</modified-timestamp>
+      <organization>HEAP</organization>
+    </table>
+    <table id="73" parent="1" name="PM_ADDENDUM">
       <object-id>56172</object-id>
       <created-timestamp>2017-01-30.08:03:42</created-timestamp>
       <modified-timestamp>2017-02-03.01:09:00</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="72" parent="1" name="PM_DOKUMEN">
+    <table id="74" parent="1" name="PM_DOKUMEN">
       <object-id>50210</object-id>
       <created-timestamp>2016-11-04.00:25:24</created-timestamp>
       <modified-timestamp>2017-01-19.10:09:20</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="73" parent="1" name="PM_MODUL">
+    <table id="75" parent="1" name="PM_MODUL">
       <object-id>50202</object-id>
       <created-timestamp>2016-11-04.00:03:51</created-timestamp>
       <modified-timestamp>2017-02-10.17:35:57</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="74" parent="1" name="PM_PERUSAHAAN">
+    <table id="76" parent="1" name="PM_PERUSAHAAN">
       <object-id>37324</object-id>
       <created-timestamp>2016-10-11.00:05:55</created-timestamp>
       <modified-timestamp>2016-11-18.19:47:34</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="75" parent="1" name="PM_PERUSAHAAN_IZIN">
+    <table id="77" parent="1" name="PM_PERUSAHAAN_IZIN">
       <object-id>37326</object-id>
       <created-timestamp>2016-10-11.00:08:44</created-timestamp>
       <modified-timestamp>2016-11-12.20:13:27</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="76" parent="1" name="PM_PERUSAHAAN_KATEGORI">
+    <table id="78" parent="1" name="PM_PERUSAHAAN_KATEGORI">
       <object-id>50559</object-id>
       <created-timestamp>2016-11-09.15:03:07</created-timestamp>
       <modified-timestamp>2016-11-15.21:51:50</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="77" parent="1" name="PM_PERUSAHAAN_PEGAWAI">
+    <table id="79" parent="1" name="PM_PERUSAHAAN_PEGAWAI">
       <object-id>50098</object-id>
       <created-timestamp>2016-11-01.23:01:26</created-timestamp>
       <modified-timestamp>2016-11-20.17:25:41</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="78" parent="1" name="PM_PROJECT">
+    <table id="80" parent="1" name="PM_PROJECT">
       <object-id>50200</object-id>
       <created-timestamp>2016-11-03.22:43:36</created-timestamp>
       <modified-timestamp>2017-02-11.13:09:38</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="79" parent="1" name="PM_PROJECT_CAIR">
+    <table id="81" parent="1" name="PM_PROJECT_CAIR">
       <object-id>51769</object-id>
       <created-timestamp>2016-11-26.03:02:28</created-timestamp>
       <modified-timestamp>2017-02-10.17:36:43</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="80" parent="1" name="PM_PROJECT_JENIS">
+    <table id="82" parent="1" name="PM_PROJECT_JENIS">
       <object-id>50641</object-id>
       <created-timestamp>2016-11-10.13:05:06</created-timestamp>
       <modified-timestamp>2016-11-20.23:56:42</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="81" parent="1" name="PM_PROJECT_LOKASI">
+    <table id="83" parent="1" name="PM_PROJECT_LOKASI">
       <object-id>51761</object-id>
       <created-timestamp>2016-11-25.17:20:18</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:01</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="82" parent="1" name="PM_PROJECT_PAKET">
+    <table id="84" parent="1" name="PM_PROJECT_PAKET">
       <object-id>50639</object-id>
       <created-timestamp>2016-11-10.12:29:57</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:11</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="83" parent="1" name="PM_TASK">
+    <table id="85" parent="1" name="PM_TASK">
       <object-id>50204</object-id>
       <created-timestamp>2016-11-04.00:11:34</created-timestamp>
       <modified-timestamp>2017-02-12.12:08:37</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="84" parent="1" name="PM_TASK_CHECK">
+    <table id="86" parent="1" name="PM_TASK_CHECK">
       <object-id>51672</object-id>
       <created-timestamp>2016-11-24.13:04:37</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:28</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="85" parent="1" name="PM_TASK_REPORT">
+    <table id="87" parent="1" name="PM_TASK_REPORT">
       <object-id>50206</object-id>
       <created-timestamp>2016-11-04.00:14:51</created-timestamp>
-      <modified-timestamp>2017-02-10.17:37:36</modified-timestamp>
+      <modified-timestamp>2017-02-13.00:43:28</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="86" parent="1" name="PM_TASK_REPORT_MEDIA">
+    <table id="88" parent="1" name="PM_TASK_REPORT_MEDIA">
       <object-id>51676</object-id>
       <created-timestamp>2016-11-24.22:10:50</created-timestamp>
-      <modified-timestamp>2017-02-10.17:37:44</modified-timestamp>
+      <modified-timestamp>2017-02-13.00:45:27</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="87" parent="1" name="PM_TASK_TEAM">
+    <table id="89" parent="1" name="PM_TASK_TEAM">
       <object-id>50208</object-id>
       <created-timestamp>2016-11-04.00:19:04</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:57</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="88" parent="1" name="T_KABKOT">
+    <table id="90" parent="1" name="T_KABKOT">
       <object-id>50192</object-id>
       <created-timestamp>2016-11-02.21:43:10</created-timestamp>
       <modified-timestamp>2016-11-02.21:43:10</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="89" parent="1" name="T_KECAMATAN">
+    <table id="91" parent="1" name="T_KECAMATAN">
       <object-id>50189</object-id>
       <created-timestamp>2016-11-02.21:34:26</created-timestamp>
       <modified-timestamp>2016-11-02.21:34:26</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="90" parent="1" name="T_KELURAHAN">
+    <table id="92" parent="1" name="T_KELURAHAN">
       <object-id>50195</object-id>
       <created-timestamp>2016-11-02.21:44:34</created-timestamp>
       <modified-timestamp>2016-11-02.21:44:34</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="91" parent="1" name="T_PERUSAHAAN_JABATAN">
+    <table id="93" parent="1" name="T_PERUSAHAAN_JABATAN">
       <object-id>51429</object-id>
       <created-timestamp>2016-11-20.16:51:52</created-timestamp>
       <modified-timestamp>2016-11-20.16:51:52</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="92" parent="1" name="T_PROVINSI">
+    <table id="94" parent="1" name="T_PROVINSI">
       <object-id>50198</object-id>
       <created-timestamp>2016-11-02.21:46:58</created-timestamp>
       <modified-timestamp>2016-11-02.21:46:58</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="93" parent="1" name="USERS">
+    <table id="95" parent="1" name="USERS">
       <object-id>51090</object-id>
       <created-timestamp>2016-11-16.12:09:32</created-timestamp>
       <modified-timestamp>2016-12-02.15:39:36</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="94" parent="1" name="USERS_AKSES">
+    <table id="96" parent="1" name="USERS_AKSES">
       <object-id>52119</object-id>
       <created-timestamp>2016-12-01.22:39:15</created-timestamp>
       <modified-timestamp>2016-12-02.17:46:15</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="95" parent="1" name="USERS_GROUP">
+    <table id="97" parent="1" name="USERS_GROUP">
       <object-id>52117</object-id>
       <created-timestamp>2016-12-01.22:36:09</created-timestamp>
       <modified-timestamp>2016-12-01.22:59:52</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="96" parent="1" name="USERS_GROUP_DETAIL">
+    <table id="98" parent="1" name="USERS_GROUP_DETAIL">
       <object-id>52121</object-id>
       <created-timestamp>2016-12-01.22:50:51</created-timestamp>
       <modified-timestamp>2016-12-02.16:56:11</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <table id="97" parent="1" name="USERS_MODUL">
+    <table id="99" parent="1" name="USERS_MODUL">
       <object-id>52123</object-id>
       <created-timestamp>2016-12-01.22:53:56</created-timestamp>
       <modified-timestamp>2016-12-02.20:33:51</modified-timestamp>
       <organization>HEAP</organization>
     </table>
-    <column id="98" parent="71" name="ID_ADDENDUM">
+    <column id="100" parent="72" name="ID_POST">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR2(20)|0</data-type>
+    </column>
+    <column id="101" parent="72" name="TITLE">
+      <data-type>VARCHAR2(2000)|0</data-type>
+    </column>
+    <column id="102" parent="72" name="ID_MEDIA">
+      <data-type>VARCHAR2(20)|0</data-type>
+    </column>
+    <column id="103" parent="72" name="JENIS">
+      <data-type>VARCHAR2(20)|0</data-type>
+    </column>
+    <column id="104" parent="72" name="KEYWORD">
+      <data-type>VARCHAR2(2000)|0</data-type>
+    </column>
+    <column id="105" parent="72" name="CONTENT">
+      <data-type>VARCHAR2(3000)|0</data-type>
+    </column>
+    <column id="106" parent="72" name="ID_USER">
+      <data-type>NUMBER(*)|0</data-type>
+    </column>
+    <column id="107" parent="72" name="CREATED_AT">
+      <data-type>TIMESTAMP(6)|0</data-type>
+      <default-expression>sysdate 
+</default-expression>
+    </column>
+    <column id="108" parent="72" name="UPDATED_AT">
+      <data-type>TIMESTAMP(6)|0</data-type>
+      <default-expression>sysdate 
+</default-expression>
+    </column>
+    <column id="109" parent="72" name="STATUS">
+      <data-type>VARCHAR2(20)|0</data-type>
+      <default-expression>&apos;y&apos; 
+</default-expression>
+    </column>
+    <column id="110" parent="72" name="VALIDASI">
+      <data-type>VARCHAR2(20)|0</data-type>
+      <default-expression>0 
+</default-expression>
+    </column>
+    <index id="111" parent="72" name="FN_POST_PK">
+      <object-id>59494</object-id>
+      <created-timestamp>2017-03-20.20:35:31</created-timestamp>
+      <modified-timestamp>2017-03-20.20:35:31</modified-timestamp>
+      <columns>ID_POST</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+      <tablespace-name>USERS</tablespace-name>
+    </index>
+    <key id="112" parent="72" name="FN_POST_PK">
+      <modified-timestamp>2017-03-20.20:35:31</modified-timestamp>
+      <columns>ID_POST</columns>
+      <initially-deferred>1</initially-deferred>
+      <underlying-index>FN_POST_PK</underlying-index>
+      <primary>1</primary>
+    </key>
+    <trigger id="113" parent="72" name="T_FN_POST">
+      <object-id>59496</object-id>
+      <created-timestamp>2017-03-20.20:42:31</created-timestamp>
+      <modified-timestamp>2017-03-20.20:43:16</modified-timestamp>
+      <trig-events>I</trig-events>
+      <trig-turn>BEFORE_ROW</trig-turn>
+    </trigger>
+    <column id="114" parent="73" name="ID_ADDENDUM">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="99" parent="71" name="ID_PROJECT">
+    <column id="115" parent="73" name="ID_PROJECT">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="100" parent="71" name="ADDENDUM_KE">
+    <column id="116" parent="73" name="ADDENDUM_KE">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>1 
 </default-expression>
     </column>
-    <column id="101" parent="71" name="NOMOR_ADDENDUM">
+    <column id="117" parent="73" name="NOMOR_ADDENDUM">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="102" parent="71" name="TANGGAL_ADDENDUM">
+    <column id="118" parent="73" name="TANGGAL_ADDENDUM">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="103" parent="71" name="TANGGAL_ACC_ADDENDUM">
+    <column id="119" parent="73" name="TANGGAL_ACC_ADDENDUM">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="104" parent="71" name="KETERANGAN_ADDENDUM">
+    <column id="120" parent="73" name="KETERANGAN_ADDENDUM">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="105" parent="71" name="ID_USER">
+    <column id="121" parent="73" name="ID_USER">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>1 
 </default-expression>
     </column>
-    <column id="106" parent="71" name="IS_DELETED">
+    <column id="122" parent="73" name="IS_DELETED">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0 
 </default-expression>
     </column>
-    <column id="107" parent="71" name="ID_CHILD_PROJECT">
+    <column id="123" parent="73" name="ID_CHILD_PROJECT">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="108" parent="71" name="PM_ADDENDUM_PK">
+    <index id="124" parent="73" name="PM_ADDENDUM_PK">
       <object-id>56173</object-id>
       <created-timestamp>2017-01-30.08:03:42</created-timestamp>
       <modified-timestamp>2017-01-30.08:03:42</modified-timestamp>
@@ -541,57 +620,57 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="109" parent="71" name="PM_ADDENDUM_PK">
+    <key id="125" parent="73" name="PM_ADDENDUM_PK">
       <modified-timestamp>2017-01-30.08:03:42</modified-timestamp>
       <columns>ID_ADDENDUM</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_ADDENDUM_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="110" parent="71" name="PM_ADDENDUM_TRI">
+    <trigger id="126" parent="73" name="PM_ADDENDUM_TRI">
       <object-id>56413</object-id>
       <created-timestamp>2017-02-03.01:09:00</created-timestamp>
       <modified-timestamp>2017-02-03.01:09:00</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="111" parent="72" name="ID_DOKUMEN">
+    <column id="127" parent="74" name="ID_DOKUMEN">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="112" parent="72" name="JENIS_DOKUMEN">
+    <column id="128" parent="74" name="JENIS_DOKUMEN">
       <comment>perusahaan,kontrka,dll</comment>
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="113" parent="72" name="DOKUMEN_UNTUK">
+    <column id="129" parent="74" name="DOKUMEN_UNTUK">
       <comment>id_jenis</comment>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="114" parent="72" name="DOKUMEN">
+    <column id="130" parent="74" name="DOKUMEN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="115" parent="72" name="KETERANGAN">
+    <column id="131" parent="74" name="KETERANGAN">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="116" parent="72" name="LOKASI_FILE">
+    <column id="132" parent="74" name="LOKASI_FILE">
       <data-type>VARCHAR2(1000)|0</data-type>
     </column>
-    <column id="117" parent="72" name="JENIS_FILE">
+    <column id="133" parent="74" name="JENIS_FILE">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="118" parent="72" name="NAMA_FILE">
+    <column id="134" parent="74" name="NAMA_FILE">
       <data-type>VARCHAR2(1000)|0</data-type>
     </column>
-    <column id="119" parent="72" name="TGL_UPLOAD">
+    <column id="135" parent="74" name="TGL_UPLOAD">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="120" parent="72" name="ID_PARAM">
+    <column id="136" parent="74" name="ID_PARAM">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="121" parent="72" name="NOMOR">
+    <column id="137" parent="74" name="NOMOR">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <index id="122" parent="72" name="PM_DOKUMEN_PK">
+    <index id="138" parent="74" name="PM_DOKUMEN_PK">
       <object-id>50211</object-id>
       <created-timestamp>2016-11-04.00:25:24</created-timestamp>
       <modified-timestamp>2016-11-04.00:25:24</modified-timestamp>
@@ -600,71 +679,71 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="123" parent="72" name="PM_DOKUMEN_PK">
+    <key id="139" parent="74" name="PM_DOKUMEN_PK">
       <modified-timestamp>2016-11-04.00:25:24</modified-timestamp>
       <columns>ID_DOKUMEN</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_DOKUMEN_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="124" parent="72" name="PM_DOKUMN_TRI">
+    <trigger id="140" parent="74" name="PM_DOKUMN_TRI">
       <object-id>55309</object-id>
       <created-timestamp>2017-01-19.10:09:20</created-timestamp>
       <modified-timestamp>2017-01-19.10:09:20</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="125" parent="73" name="ID_MODUL">
+    <column id="141" parent="75" name="ID_MODUL">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="126" parent="73" name="ID_PROJECT">
+    <column id="142" parent="75" name="ID_PROJECT">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="127" parent="73" name="CREATED_AT_MODUL">
+    <column id="143" parent="75" name="CREATED_AT_MODUL">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="128" parent="73" name="MODUL">
+    <column id="144" parent="75" name="MODUL">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="129" parent="73" name="MODUL_DESK">
+    <column id="145" parent="75" name="MODUL_DESK">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="130" parent="73" name="MODUL_START">
+    <column id="146" parent="75" name="MODUL_START">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="131" parent="73" name="MODUL_END">
+    <column id="147" parent="75" name="MODUL_END">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="132" parent="73" name="MODUL_PROGRES">
+    <column id="148" parent="75" name="MODUL_PROGRES">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="133" parent="73" name="MODUL_PENANGGUNG_JAWAB">
+    <column id="149" parent="75" name="MODUL_PENANGGUNG_JAWAB">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="134" parent="73" name="IS_DELETED">
+    <column id="150" parent="75" name="IS_DELETED">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="135" parent="73" name="MODUL_JENIS">
+    <column id="151" parent="75" name="MODUL_JENIS">
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <column id="136" parent="73" name="NILAI_SATUAN">
+    <column id="152" parent="75" name="NILAI_SATUAN">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="137" parent="73" name="JUMLAH_SATUAN">
+    <column id="153" parent="75" name="JUMLAH_SATUAN">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="138" parent="73" name="MODUL_PROGRESS_REALISASI">
+    <column id="154" parent="75" name="MODUL_PROGRESS_REALISASI">
       <data-type>NUMBER(20,5)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="139" parent="73" name="URUTAN">
+    <column id="155" parent="75" name="URUTAN">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <index id="140" parent="73" name="PM_MODUL_PK">
+    <index id="156" parent="75" name="PM_MODUL_PK">
       <object-id>50203</object-id>
       <created-timestamp>2016-11-04.00:03:51</created-timestamp>
       <modified-timestamp>2017-02-10.17:35:57</modified-timestamp>
@@ -673,76 +752,76 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="141" parent="73" name="PM_MODUL_PK">
+    <key id="157" parent="75" name="PM_MODUL_PK">
       <modified-timestamp>2016-11-04.00:03:51</modified-timestamp>
       <columns>ID_MODUL</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_MODUL_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="142" parent="73" name="OM_MODUL_TRI">
+    <trigger id="158" parent="75" name="OM_MODUL_TRI">
       <object-id>50928</object-id>
       <created-timestamp>2016-11-14.11:16:45</created-timestamp>
       <modified-timestamp>2016-11-14.11:16:45</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="143" parent="74" name="ID_PERUSAHAAN">
+    <column id="159" parent="76" name="ID_PERUSAHAAN">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="144" parent="74" name="NAMA_PERUSAHAAN">
+    <column id="160" parent="76" name="NAMA_PERUSAHAAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="145" parent="74" name="ALAMAT_PERUSAHAAN">
+    <column id="161" parent="76" name="ALAMAT_PERUSAHAAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="146" parent="74" name="EMAIL_PERUSAHAAN">
+    <column id="162" parent="76" name="EMAIL_PERUSAHAAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="147" parent="74" name="TELFON_PERUSAHAAN">
+    <column id="163" parent="76" name="TELFON_PERUSAHAAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="148" parent="74" name="DIREKTUR_PERUSAHAAN">
+    <column id="164" parent="76" name="DIREKTUR_PERUSAHAAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="149" parent="74" name="ID_KEL">
+    <column id="165" parent="76" name="ID_KEL">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="150" parent="74" name="ID_KEC">
+    <column id="166" parent="76" name="ID_KEC">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="151" parent="74" name="ID_KABKOT">
+    <column id="167" parent="76" name="ID_KABKOT">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="152" parent="74" name="ID_PROV">
+    <column id="168" parent="76" name="ID_PROV">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="153" parent="74" name="KODE_POS">
+    <column id="169" parent="76" name="KODE_POS">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="154" parent="74" name="ID_USER">
+    <column id="170" parent="76" name="ID_USER">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="155" parent="74" name="NPWP">
+    <column id="171" parent="76" name="NPWP">
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <column id="156" parent="74" name="FAX">
+    <column id="172" parent="76" name="FAX">
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <column id="157" parent="74" name="WEB">
+    <column id="173" parent="76" name="WEB">
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <column id="158" parent="74" name="STATUS_PERUSAHAAN">
+    <column id="174" parent="76" name="STATUS_PERUSAHAAN">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="159" parent="74" name="CREATED_AT">
+    <column id="175" parent="76" name="CREATED_AT">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="160" parent="74" name="ID_PERUSAHAAN_KATEGORI">
+    <column id="176" parent="76" name="ID_PERUSAHAAN_KATEGORI">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="161" parent="74" name="PRO_M_KONTRAKTOR_PK">
+    <index id="177" parent="76" name="PRO_M_KONTRAKTOR_PK">
       <object-id>37325</object-id>
       <created-timestamp>2016-10-11.00:05:55</created-timestamp>
       <modified-timestamp>2016-11-18.19:45:48</modified-timestamp>
@@ -751,55 +830,55 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="162" parent="74" name="PRO_M_KONTRAKTOR_PK">
+    <key id="178" parent="76" name="PRO_M_KONTRAKTOR_PK">
       <modified-timestamp>2016-10-11.00:05:55</modified-timestamp>
       <columns>ID_PERUSAHAAN</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PRO_M_KONTRAKTOR_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="163" parent="74" name="PM_PERUSAHAAN_TRI">
+    <trigger id="179" parent="76" name="PM_PERUSAHAAN_TRI">
       <object-id>50828</object-id>
       <created-timestamp>2016-11-18.19:47:34</created-timestamp>
       <modified-timestamp>2016-11-18.19:47:34</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="164" parent="75" name="ID_PERUSAHAAN_IZIN">
+    <column id="180" parent="77" name="ID_PERUSAHAAN_IZIN">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="165" parent="75" name="ID_PERUSAHAAN">
+    <column id="181" parent="77" name="ID_PERUSAHAAN">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="166" parent="75" name="NO_IZIN">
+    <column id="182" parent="77" name="NO_IZIN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="167" parent="75" name="JENIS_IZIN">
+    <column id="183" parent="77" name="JENIS_IZIN">
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <column id="168" parent="75" name="AWAL_IZIN">
+    <column id="184" parent="77" name="AWAL_IZIN">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="169" parent="75" name="AKHIR_IZIN">
+    <column id="185" parent="77" name="AKHIR_IZIN">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="170" parent="75" name="NO_SK">
+    <column id="186" parent="77" name="NO_SK">
       <data-type>VARCHAR2(500)|0</data-type>
     </column>
-    <column id="171" parent="75" name="RESTRIBUSI">
+    <column id="187" parent="77" name="RESTRIBUSI">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="172" parent="75" name="PERUNTUKAN">
+    <column id="188" parent="77" name="PERUNTUKAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="173" parent="75" name="CREATED_AT">
+    <column id="189" parent="77" name="CREATED_AT">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="174" parent="75" name="ID_DOKUMEN">
+    <column id="190" parent="77" name="ID_DOKUMEN">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="175" parent="75" name="PRO_T_KONTRAKTOR_IZIN_PK">
+    <index id="191" parent="77" name="PRO_T_KONTRAKTOR_IZIN_PK">
       <object-id>37327</object-id>
       <created-timestamp>2016-10-11.00:08:44</created-timestamp>
       <modified-timestamp>2016-10-11.00:08:44</modified-timestamp>
@@ -808,37 +887,37 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="176" parent="75" name="PRO_T_KONTRAKTOR_IZIN_PK">
+    <key id="192" parent="77" name="PRO_T_KONTRAKTOR_IZIN_PK">
       <modified-timestamp>2016-10-11.00:08:44</modified-timestamp>
       <columns>ID_PERUSAHAAN_IZIN</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PRO_T_KONTRAKTOR_IZIN_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="177" parent="75" name="M_PERUSAHAAN_IZIN_TRI">
+    <trigger id="193" parent="77" name="M_PERUSAHAAN_IZIN_TRI">
       <object-id>50829</object-id>
       <created-timestamp>2016-11-12.20:13:27</created-timestamp>
       <modified-timestamp>2016-11-12.20:13:27</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="178" parent="76" name="ID_PERUSAHAAN_KATEGORI">
+    <column id="194" parent="78" name="ID_PERUSAHAAN_KATEGORI">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="179" parent="76" name="KATEGORI">
+    <column id="195" parent="78" name="KATEGORI">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="180" parent="76" name="STATUS">
+    <column id="196" parent="78" name="STATUS">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="181" parent="76" name="DESKRIPSI">
+    <column id="197" parent="78" name="DESKRIPSI">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="182" parent="76" name="KEYWORD">
+    <column id="198" parent="78" name="KEYWORD">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <index id="183" parent="76" name="PM_PERUSAHAAN_KATEGORI_PK">
+    <index id="199" parent="78" name="PM_PERUSAHAAN_KATEGORI_PK">
       <object-id>50560</object-id>
       <created-timestamp>2016-11-09.15:03:07</created-timestamp>
       <modified-timestamp>2016-11-09.15:03:07</modified-timestamp>
@@ -847,69 +926,69 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="184" parent="76" name="PM_PERUSAHAAN_KATEGORI_PK">
+    <key id="200" parent="78" name="PM_PERUSAHAAN_KATEGORI_PK">
       <modified-timestamp>2016-11-09.15:03:08</modified-timestamp>
       <columns>ID_PERUSAHAAN_KATEGORI</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_PERUSAHAAN_KATEGORI_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="185" parent="76" name="PM_PERUSAHAAN_KATEGORI_TRI">
+    <trigger id="201" parent="78" name="PM_PERUSAHAAN_KATEGORI_TRI">
       <object-id>50830</object-id>
       <created-timestamp>2016-11-12.20:13:54</created-timestamp>
       <modified-timestamp>2016-11-15.21:52:20</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="186" parent="77" name="ID_PERUSAHAAN_PEGAWAI">
+    <column id="202" parent="79" name="ID_PERUSAHAAN_PEGAWAI">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="187" parent="77" name="ID_PERUSAHAAN">
+    <column id="203" parent="79" name="ID_PERUSAHAAN">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="188" parent="77" name="NAMA_PEGAWAI_P">
+    <column id="204" parent="79" name="NAMA_PEGAWAI_P">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="189" parent="77" name="ID_JABATAN_P">
+    <column id="205" parent="79" name="ID_JABATAN_P">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="190" parent="77" name="JENIS_IDENTITAS_P">
+    <column id="206" parent="79" name="JENIS_IDENTITAS_P">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="191" parent="77" name="NOMOR_IDENTITAS_P">
+    <column id="207" parent="79" name="NOMOR_IDENTITAS_P">
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <column id="192" parent="77" name="ALAMAT_P">
+    <column id="208" parent="79" name="ALAMAT_P">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="193" parent="77" name="NO_HP_P">
+    <column id="209" parent="79" name="NO_HP_P">
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <column id="194" parent="77" name="EMAIL_P">
+    <column id="210" parent="79" name="EMAIL_P">
       <data-type>VARCHAR2(40)|0</data-type>
     </column>
-    <column id="195" parent="77" name="TGL_LAHIR_P">
+    <column id="211" parent="79" name="TGL_LAHIR_P">
       <comment>alter session set nls_date_format = &apos;dd/MON/yyyy hh24:mi:ss&apos;</comment>
       <data-type>DATE|0</data-type>
     </column>
-    <column id="196" parent="77" name="TEMPAT_LAHIR_P">
+    <column id="212" parent="79" name="TEMPAT_LAHIR_P">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="197" parent="77" name="BAGIAN_BIDANG_P">
+    <column id="213" parent="79" name="BAGIAN_BIDANG_P">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="198" parent="77" name="KODE_POS_P">
+    <column id="214" parent="79" name="KODE_POS_P">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="199" parent="77" name="STATUS_PERUSAHAAN_P">
+    <column id="215" parent="79" name="STATUS_PERUSAHAAN_P">
       <data-type>VARCHAR2(20)|0</data-type>
       <default-expression>&apos;ya&apos;</default-expression>
     </column>
-    <column id="200" parent="77" name="NIP">
+    <column id="216" parent="79" name="NIP">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <index id="201" parent="77" name="PM_PERUSAHAAN_PEGAWAI_PK">
+    <index id="217" parent="79" name="PM_PERUSAHAAN_PEGAWAI_PK">
       <object-id>50099</object-id>
       <created-timestamp>2016-11-01.23:01:26</created-timestamp>
       <modified-timestamp>2016-11-01.23:01:26</modified-timestamp>
@@ -918,111 +997,111 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="202" parent="77" name="PM_PERUSAHAAN_PEGAWAI_PK">
+    <key id="218" parent="79" name="PM_PERUSAHAAN_PEGAWAI_PK">
       <modified-timestamp>2016-11-01.23:01:26</modified-timestamp>
       <columns>ID_PERUSAHAAN_PEGAWAI</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_PERUSAHAAN_PEGAWAI_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="203" parent="77" name="PM_PERUSAHAAN_PEGAWAI">
+    <trigger id="219" parent="79" name="PM_PERUSAHAAN_PEGAWAI">
       <object-id>50831</object-id>
       <created-timestamp>2016-11-12.20:15:41</created-timestamp>
       <modified-timestamp>2016-11-12.20:15:41</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="204" parent="78" name="ID_PROJECT">
+    <column id="220" parent="80" name="ID_PROJECT">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="205" parent="78" name="ID_KONTRAKTOR">
+    <column id="221" parent="80" name="ID_KONTRAKTOR">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="206" parent="78" name="ID_SUPERVISI">
+    <column id="222" parent="80" name="ID_SUPERVISI">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="207" parent="78" name="ID_OWNER">
+    <column id="223" parent="80" name="ID_OWNER">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="208" parent="78" name="ID_USER">
+    <column id="224" parent="80" name="ID_USER">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="209" parent="78" name="TANGGAL_MULAI">
+    <column id="225" parent="80" name="TANGGAL_MULAI">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="210" parent="78" name="TANGGAL_SELESAI">
+    <column id="226" parent="80" name="TANGGAL_SELESAI">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="211" parent="78" name="BATAS_WAKTU">
+    <column id="227" parent="80" name="BATAS_WAKTU">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="212" parent="78" name="ID_PENANGGUNG_JAWAB">
+    <column id="228" parent="80" name="ID_PENANGGUNG_JAWAB">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="213" parent="78" name="LOKASI_PROJECT">
+    <column id="229" parent="80" name="LOKASI_PROJECT">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="214" parent="78" name="ID_PROJECT_JENIS">
+    <column id="230" parent="80" name="ID_PROJECT_JENIS">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="215" parent="78" name="NAMA_PROJECT">
+    <column id="231" parent="80" name="NAMA_PROJECT">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="216" parent="78" name="ANGGARAN_NILAI">
+    <column id="232" parent="80" name="ANGGARAN_NILAI">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="217" parent="78" name="LON">
+    <column id="233" parent="80" name="LON">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="218" parent="78" name="LAT">
+    <column id="234" parent="80" name="LAT">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="219" parent="78" name="ID_KEC">
+    <column id="235" parent="80" name="ID_KEC">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="220" parent="78" name="ID_KEL">
+    <column id="236" parent="80" name="ID_KEL">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="221" parent="78" name="ID_KABKOT">
+    <column id="237" parent="80" name="ID_KABKOT">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="222" parent="78" name="ID_PROV">
+    <column id="238" parent="80" name="ID_PROV">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="223" parent="78" name="STATUS_PROJECT">
+    <column id="239" parent="80" name="STATUS_PROJECT">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="224" parent="78" name="PROGRES_PROJECT">
+    <column id="240" parent="80" name="PROGRES_PROJECT">
       <data-type>NUMBER(35,4)|0</data-type>
     </column>
-    <column id="225" parent="78" name="CREATED_AT">
+    <column id="241" parent="80" name="CREATED_AT">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="226" parent="78" name="SUMBER_ANGGARAN">
+    <column id="242" parent="80" name="SUMBER_ANGGARAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="227" parent="78" name="PAGU_ANGGARAN">
+    <column id="243" parent="80" name="PAGU_ANGGARAN">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="228" parent="78" name="ID_PROJECT_PAKET">
+    <column id="244" parent="80" name="ID_PROJECT_PAKET">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="229" parent="78" name="IS_ADDENDUM">
+    <column id="245" parent="80" name="IS_ADDENDUM">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="230" parent="78" name="IS_LOCK">
+    <column id="246" parent="80" name="IS_LOCK">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="231" parent="78" name="IS_DELETED_PROJECT">
+    <column id="247" parent="80" name="IS_DELETED_PROJECT">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <index id="232" parent="78" name="PM_PROJECT_PK">
+    <index id="248" parent="80" name="PM_PROJECT_PK">
       <object-id>50201</object-id>
       <created-timestamp>2016-11-03.22:43:36</created-timestamp>
       <modified-timestamp>2017-02-10.17:36:34</modified-timestamp>
@@ -1031,60 +1110,60 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="233" parent="78" name="PM_PROJECT_PK">
+    <key id="249" parent="80" name="PM_PROJECT_PK">
       <modified-timestamp>2016-11-03.22:43:36</modified-timestamp>
       <columns>ID_PROJECT</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_PROJECT_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="234" parent="78" name="PM_PROJECT_TRI">
+    <trigger id="250" parent="80" name="PM_PROJECT_TRI">
       <object-id>50815</object-id>
       <created-timestamp>2016-11-12.20:00:42</created-timestamp>
       <modified-timestamp>2016-11-12.20:16:08</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="235" parent="79" name="ID_CAIR">
+    <column id="251" parent="81" name="ID_CAIR">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="236" parent="79" name="PENCAIRAN_KE">
+    <column id="252" parent="81" name="PENCAIRAN_KE">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="237" parent="79" name="JUMLAH_CAIR">
+    <column id="253" parent="81" name="JUMLAH_CAIR">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="238" parent="79" name="PROGRESS">
+    <column id="254" parent="81" name="PROGRESS">
       <data-type>NUMBER(35,5)|0</data-type>
     </column>
-    <column id="239" parent="79" name="REALISASI_PROGRESS">
+    <column id="255" parent="81" name="REALISASI_PROGRESS">
       <data-type>NUMBER(35,5)|0</data-type>
     </column>
-    <column id="240" parent="79" name="REALISASI_CAIR">
+    <column id="256" parent="81" name="REALISASI_CAIR">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="241" parent="79" name="REALISASI_TANGGAL">
+    <column id="257" parent="81" name="REALISASI_TANGGAL">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="242" parent="79" name="IS_DELETED">
+    <column id="258" parent="81" name="IS_DELETED">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="243" parent="79" name="ID_USER">
+    <column id="259" parent="81" name="ID_USER">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="244" parent="79" name="KETERANGAN">
+    <column id="260" parent="81" name="KETERANGAN">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="245" parent="79" name="RENCANA_TANGGAL">
+    <column id="261" parent="81" name="RENCANA_TANGGAL">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="246" parent="79" name="ID_PROJECT">
+    <column id="262" parent="81" name="ID_PROJECT">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="247" parent="79" name="PM_PROJECT_CAIR_PK">
+    <index id="263" parent="81" name="PM_PROJECT_CAIR_PK">
       <object-id>51770</object-id>
       <created-timestamp>2016-11-26.03:02:29</created-timestamp>
       <modified-timestamp>2017-02-10.17:36:43</modified-timestamp>
@@ -1093,31 +1172,31 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="248" parent="79" name="PM_PROJECT_CAIR_PK">
+    <key id="264" parent="81" name="PM_PROJECT_CAIR_PK">
       <modified-timestamp>2016-11-26.03:02:29</modified-timestamp>
       <columns>ID_CAIR</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_PROJECT_CAIR_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="249" parent="79" name="PM_PROJECT_CAIR_TRI">
+    <trigger id="265" parent="81" name="PM_PROJECT_CAIR_TRI">
       <object-id>51956</object-id>
       <created-timestamp>2016-11-28.13:41:31</created-timestamp>
       <modified-timestamp>2016-11-28.13:41:31</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="250" parent="80" name="ID_PROJECT_JENIS">
+    <column id="266" parent="82" name="ID_PROJECT_JENIS">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="251" parent="80" name="PROJECT_JENIS">
+    <column id="267" parent="82" name="PROJECT_JENIS">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="252" parent="80" name="KETERANGAN">
+    <column id="268" parent="82" name="KETERANGAN">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <index id="253" parent="80" name="PM_PROJECT_JENIS_PK">
+    <index id="269" parent="82" name="PM_PROJECT_JENIS_PK">
       <object-id>51509</object-id>
       <created-timestamp>2016-11-20.23:56:42</created-timestamp>
       <modified-timestamp>2016-11-20.23:56:42</modified-timestamp>
@@ -1126,43 +1205,43 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="254" parent="80" name="PM_PROJECT_JENIS_PK">
+    <key id="270" parent="82" name="PM_PROJECT_JENIS_PK">
       <modified-timestamp>2016-11-20.23:56:42</modified-timestamp>
       <columns>ID_PROJECT_JENIS</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_PROJECT_JENIS_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="255" parent="80" name="PM_PROJECT_JENIS_TRI">
+    <trigger id="271" parent="82" name="PM_PROJECT_JENIS_TRI">
       <object-id>50832</object-id>
       <created-timestamp>2016-11-12.20:16:23</created-timestamp>
       <modified-timestamp>2016-11-12.20:16:23</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="256" parent="81" name="ID_LOKASI">
+    <column id="272" parent="83" name="ID_LOKASI">
       <mandatory>1</mandatory>
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="257" parent="81" name="ID_PROJECT">
+    <column id="273" parent="83" name="ID_PROJECT">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="258" parent="81" name="ID_KEC">
+    <column id="274" parent="83" name="ID_KEC">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="259" parent="81" name="ID_KEL">
+    <column id="275" parent="83" name="ID_KEL">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="260" parent="81" name="KETERANGAN">
+    <column id="276" parent="83" name="KETERANGAN">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="261" parent="81" name="LON">
+    <column id="277" parent="83" name="LON">
       <data-type>NUMBER(38,5)|0</data-type>
     </column>
-    <column id="262" parent="81" name="LAT">
+    <column id="278" parent="83" name="LAT">
       <data-type>NUMBER(30,5)|0</data-type>
     </column>
-    <index id="263" parent="81" name="PM_PROJECT_LOKASI_PK">
+    <index id="279" parent="83" name="PM_PROJECT_LOKASI_PK">
       <object-id>51766</object-id>
       <created-timestamp>2016-11-25.17:20:18</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:01</modified-timestamp>
@@ -1171,90 +1250,90 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="264" parent="81" name="PM_PROJECT_LOKASI_PK">
+    <key id="280" parent="83" name="PM_PROJECT_LOKASI_PK">
       <modified-timestamp>2016-11-25.17:20:18</modified-timestamp>
       <columns>ID_LOKASI</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_PROJECT_LOKASI_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="265" parent="81" name="PM_PROJECT_LOKASI_TRI">
+    <trigger id="281" parent="83" name="PM_PROJECT_LOKASI_TRI">
       <object-id>51768</object-id>
       <created-timestamp>2016-11-25.17:21:45</created-timestamp>
       <modified-timestamp>2016-11-25.17:21:45</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="266" parent="82" name="ID_PROJECT_PAKET">
+    <column id="282" parent="84" name="ID_PROJECT_PAKET">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="267" parent="82" name="NAMA_PAKET">
+    <column id="283" parent="84" name="NAMA_PAKET">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="268" parent="82" name="KETERANGAN_PAKET">
+    <column id="284" parent="84" name="KETERANGAN_PAKET">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="269" parent="82" name="INDUK_PAKET">
+    <column id="285" parent="84" name="INDUK_PAKET">
       <data-type>VARCHAR2(20)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="270" parent="82" name="TAHUN_ANGGARAN_PAKET">
+    <column id="286" parent="84" name="TAHUN_ANGGARAN_PAKET">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="271" parent="82" name="PAGU_ANGGARAN_PAKET">
+    <column id="287" parent="84" name="PAGU_ANGGARAN_PAKET">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="272" parent="82" name="NILAI_KONTRAK">
+    <column id="288" parent="84" name="NILAI_KONTRAK">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="273" parent="82" name="NO_KONTRAK">
+    <column id="289" parent="84" name="NO_KONTRAK">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="274" parent="82" name="TGL_KONTRAK">
+    <column id="290" parent="84" name="TGL_KONTRAK">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="275" parent="82" name="PPK">
+    <column id="291" parent="84" name="PPK">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="276" parent="82" name="ID_USER">
+    <column id="292" parent="84" name="ID_USER">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="277" parent="82" name="STATUS_LOCK">
+    <column id="293" parent="84" name="STATUS_LOCK">
       <comment>ya,no</comment>
       <data-type>VARCHAR2(20)|0</data-type>
       <default-expression>&apos;no&apos;</default-expression>
     </column>
-    <column id="278" parent="82" name="TGL_CREATED">
+    <column id="294" parent="84" name="TGL_CREATED">
       <data-type>TIMESTAMP(6)|0</data-type>
     </column>
-    <column id="279" parent="82" name="IS_DELETED">
+    <column id="295" parent="84" name="IS_DELETED">
       <comment>ya,no</comment>
       <data-type>VARCHAR2(20)|0</data-type>
       <default-expression>&apos;no&apos;</default-expression>
     </column>
-    <column id="280" parent="82" name="ID_KONTRAKTOR_PAKET">
+    <column id="296" parent="84" name="ID_KONTRAKTOR_PAKET">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="281" parent="82" name="ID_SUPERVISI_PAKET">
+    <column id="297" parent="84" name="ID_SUPERVISI_PAKET">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="282" parent="82" name="PROGRESS_PAKET">
+    <column id="298" parent="84" name="PROGRESS_PAKET">
       <data-type>NUMBER(20,5)|0</data-type>
     </column>
-    <column id="283" parent="82" name="PPN">
+    <column id="299" parent="84" name="PPN">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>10</default-expression>
     </column>
-    <column id="284" parent="82" name="ID_PROV">
+    <column id="300" parent="84" name="ID_PROV">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="285" parent="82" name="ID_KABKOT">
+    <column id="301" parent="84" name="ID_KABKOT">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <index id="286" parent="82" name="PM_PROJECT_PAKET_PK">
+    <index id="302" parent="84" name="PM_PROJECT_PAKET_PK">
       <object-id>50640</object-id>
       <created-timestamp>2016-11-10.12:29:57</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:11</modified-timestamp>
@@ -1263,89 +1342,89 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="287" parent="82" name="PM_PROJECT_PAKET_PK">
+    <key id="303" parent="84" name="PM_PROJECT_PAKET_PK">
       <modified-timestamp>2016-11-10.12:29:57</modified-timestamp>
       <columns>ID_PROJECT_PAKET</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_PROJECT_PAKET_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="288" parent="82" name="PM_PROJECT_PAKET">
+    <trigger id="304" parent="84" name="PM_PROJECT_PAKET">
       <object-id>50833</object-id>
       <created-timestamp>2016-11-12.20:16:40</created-timestamp>
       <modified-timestamp>2016-11-12.20:16:40</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="289" parent="83" name="ID_TASK">
+    <column id="305" parent="85" name="ID_TASK">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="290" parent="83" name="ID_MODUL">
+    <column id="306" parent="85" name="ID_MODUL">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="291" parent="83" name="ID_USER">
+    <column id="307" parent="85" name="ID_USER">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="292" parent="83" name="IS_DELETED">
+    <column id="308" parent="85" name="IS_DELETED">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="293" parent="83" name="TASK_START">
+    <column id="309" parent="85" name="TASK_START">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="294" parent="83" name="TASK_END">
+    <column id="310" parent="85" name="TASK_END">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="295" parent="83" name="STATUS_TASK">
+    <column id="311" parent="85" name="STATUS_TASK">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="296" parent="83" name="PRIORITAS">
+    <column id="312" parent="85" name="PRIORITAS">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="297" parent="83" name="TASK_SELESAI">
+    <column id="313" parent="85" name="TASK_SELESAI">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="298" parent="83" name="TASK">
+    <column id="314" parent="85" name="TASK">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="299" parent="83" name="TASK_DESK">
+    <column id="315" parent="85" name="TASK_DESK">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="300" parent="83" name="TASK_CATATAN">
+    <column id="316" parent="85" name="TASK_CATATAN">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="301" parent="83" name="TASK_JENIS">
+    <column id="317" parent="85" name="TASK_JENIS">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="302" parent="83" name="TASK_AUTO_UPDATE">
+    <column id="318" parent="85" name="TASK_AUTO_UPDATE">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0 
 </default-expression>
     </column>
-    <column id="303" parent="83" name="TASK_PROGRESS">
+    <column id="319" parent="85" name="TASK_PROGRESS">
       <data-type>NUMBER(38,9)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="304" parent="83" name="TASK_PROGRESS_REALISASI">
+    <column id="320" parent="85" name="TASK_PROGRESS_REALISASI">
       <data-type>NUMBER(38,9)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="305" parent="83" name="TASK_FEE">
+    <column id="321" parent="85" name="TASK_FEE">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="306" parent="83" name="TASK_NILAI">
+    <column id="322" parent="85" name="TASK_NILAI">
       <comment>1-3</comment>
       <data-type>NUMBER(30,5)|0</data-type>
       <default-expression>1</default-expression>
     </column>
-    <column id="307" parent="83" name="SATUAN">
+    <column id="323" parent="85" name="SATUAN">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="308" parent="83" name="BOBOT">
+    <column id="324" parent="85" name="BOBOT">
       <data-type>NUMBER(38,9)|0</data-type>
     </column>
-    <index id="309" parent="83" name="PM_TASK_PK">
+    <index id="325" parent="85" name="PM_TASK_PK">
       <object-id>50205</object-id>
       <created-timestamp>2016-11-04.00:11:34</created-timestamp>
       <modified-timestamp>2017-02-12.12:08:02</modified-timestamp>
@@ -1354,51 +1433,51 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="310" parent="83" name="PM_TASK_PK">
+    <key id="326" parent="85" name="PM_TASK_PK">
       <modified-timestamp>2016-11-04.00:11:34</modified-timestamp>
       <columns>ID_TASK</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_TASK_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="311" parent="83" name="PM_TASK_TRI">
+    <trigger id="327" parent="85" name="PM_TASK_TRI">
       <object-id>50834</object-id>
       <created-timestamp>2016-11-12.20:16:58</created-timestamp>
       <modified-timestamp>2016-11-12.20:16:58</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="312" parent="84" name="ID_TASK_CHECK">
+    <column id="328" parent="86" name="ID_TASK_CHECK">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="313" parent="84" name="TASK_CHECK">
+    <column id="329" parent="86" name="TASK_CHECK">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="314" parent="84" name="DESK_CHECK">
+    <column id="330" parent="86" name="DESK_CHECK">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="315" parent="84" name="STATUS_CHECK">
+    <column id="331" parent="86" name="STATUS_CHECK">
       <data-type>VARCHAR2(20)|0</data-type>
       <default-expression>&apos;open&apos; 
 </default-expression>
     </column>
-    <column id="316" parent="84" name="TGL_CHECK">
+    <column id="332" parent="86" name="TGL_CHECK">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="317" parent="84" name="CATATAN_CHECK">
+    <column id="333" parent="86" name="CATATAN_CHECK">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="318" parent="84" name="IS_DELETED">
+    <column id="334" parent="86" name="IS_DELETED">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0 
 </default-expression>
     </column>
-    <column id="319" parent="84" name="ID_TASK">
+    <column id="335" parent="86" name="ID_TASK">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="320" parent="84" name="PM_TASK_CHECK_PK">
+    <index id="336" parent="86" name="PM_TASK_CHECK_PK">
       <object-id>51673</object-id>
       <created-timestamp>2016-11-24.13:04:37</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:28</modified-timestamp>
@@ -1407,141 +1486,141 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="321" parent="84" name="PM_TASK_CHECK_PK">
+    <key id="337" parent="86" name="PM_TASK_CHECK_PK">
       <modified-timestamp>2016-11-24.13:04:37</modified-timestamp>
       <columns>ID_TASK_CHECK</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_TASK_CHECK_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="322" parent="84" name="PM_TASK_CHECK_TRI">
+    <trigger id="338" parent="86" name="PM_TASK_CHECK_TRI">
       <object-id>51675</object-id>
       <created-timestamp>2016-11-24.13:13:10</created-timestamp>
       <modified-timestamp>2016-11-24.13:13:10</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="323" parent="85" name="ID_TASK_REPORT">
+    <column id="339" parent="87" name="ID_TASK_REPORT">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="324" parent="85" name="ID_TASK">
+    <column id="340" parent="87" name="ID_TASK">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="325" parent="85" name="REPORT_STATUS">
+    <column id="341" parent="87" name="REPORT_STATUS">
       <data-type>VARCHAR2(20)|0</data-type>
       <default-expression>1</default-expression>
     </column>
-    <column id="326" parent="85" name="REPORT_TANGGAL">
+    <column id="342" parent="87" name="REPORT_TANGGAL">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="327" parent="85" name="REPORT_DETAIL">
+    <column id="343" parent="87" name="REPORT_DETAIL">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="328" parent="85" name="REPORT_PROGRESS">
+    <column id="344" parent="87" name="REPORT_PROGRESS">
       <data-type>NUMBER(20,3)|0</data-type>
     </column>
-    <column id="329" parent="85" name="IS_DELETED">
+    <column id="345" parent="87" name="IS_DELETED">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="330" parent="85" name="TGL_ACC">
+    <column id="346" parent="87" name="TGL_ACC">
       <data-type>DATE|0</data-type>
     </column>
-    <column id="331" parent="85" name="ID_PERUSAHAAN_PEGAWAI">
+    <column id="347" parent="87" name="ID_PERUSAHAAN_PEGAWAI">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="332" parent="85" name="PM_TASK_REPORT_PK">
+    <index id="348" parent="87" name="PM_TASK_REPORT_PK">
       <object-id>50207</object-id>
       <created-timestamp>2016-11-04.00:14:52</created-timestamp>
-      <modified-timestamp>2017-02-10.17:37:36</modified-timestamp>
+      <modified-timestamp>2017-02-13.00:43:28</modified-timestamp>
       <columns>ID_TASK_REPORT</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="333" parent="85" name="PM_TASK_REPORT_PK">
+    <key id="349" parent="87" name="PM_TASK_REPORT_PK">
       <modified-timestamp>2016-11-04.00:14:52</modified-timestamp>
       <columns>ID_TASK_REPORT</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_TASK_REPORT_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="334" parent="85" name="PM_TASK_REPORT_TRI">
+    <trigger id="350" parent="87" name="PM_TASK_REPORT_TRI">
       <object-id>50835</object-id>
       <created-timestamp>2016-11-12.20:17:19</created-timestamp>
       <modified-timestamp>2016-11-12.20:17:19</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="335" parent="86" name="ID_MEDIA">
+    <column id="351" parent="88" name="ID_MEDIA">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="336" parent="86" name="ID_TASK_REPORT">
+    <column id="352" parent="88" name="ID_TASK_REPORT">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="337" parent="86" name="NAMA_FILE">
+    <column id="353" parent="88" name="NAMA_FILE">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="338" parent="86" name="TIPE">
+    <column id="354" parent="88" name="TIPE">
       <data-type>VARCHAR2(52)|0</data-type>
     </column>
-    <column id="339" parent="86" name="NOTE">
+    <column id="355" parent="88" name="NOTE">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="340" parent="86" name="TGL_UPLOAD">
+    <column id="356" parent="88" name="TGL_UPLOAD">
       <data-type>TIMESTAMP(6)|0</data-type>
       <default-expression>sysdate</default-expression>
     </column>
-    <column id="341" parent="86" name="JENIS_FILE">
+    <column id="357" parent="88" name="JENIS_FILE">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="342" parent="86" name="FILENYO">
+    <column id="358" parent="88" name="FILENYO">
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <index id="343" parent="86" name="PM_TASK_REPORT_MEDIA_PK">
+    <index id="359" parent="88" name="PM_TASK_REPORT_MEDIA_PK">
       <object-id>51677</object-id>
       <created-timestamp>2016-11-24.22:10:51</created-timestamp>
-      <modified-timestamp>2017-02-10.17:37:44</modified-timestamp>
+      <modified-timestamp>2017-02-13.00:45:27</modified-timestamp>
       <columns>ID_MEDIA</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="344" parent="86" name="PM_TASK_REPORT_MEDIA_PK">
+    <key id="360" parent="88" name="PM_TASK_REPORT_MEDIA_PK">
       <modified-timestamp>2016-11-24.22:10:51</modified-timestamp>
       <columns>ID_MEDIA</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_TASK_REPORT_MEDIA_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="345" parent="86" name="PM_TASK_REPORT_MEDIA_TRI">
+    <trigger id="361" parent="88" name="PM_TASK_REPORT_MEDIA_TRI">
       <object-id>51679</object-id>
       <created-timestamp>2016-11-24.22:12:20</created-timestamp>
       <modified-timestamp>2016-11-24.22:12:20</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="346" parent="87" name="ID_TASK_TEAM">
+    <column id="362" parent="89" name="ID_TASK_TEAM">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="347" parent="87" name="ID_TASK">
+    <column id="363" parent="89" name="ID_TASK">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="348" parent="87" name="ID_PERUSAHAAN_PEGAWAI">
+    <column id="364" parent="89" name="ID_PERUSAHAAN_PEGAWAI">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="349" parent="87" name="TEAM_STATUS">
+    <column id="365" parent="89" name="TEAM_STATUS">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="350" parent="87" name="JENIS">
+    <column id="366" parent="89" name="JENIS">
       <data-type>VARCHAR2(20)|0</data-type>
       <default-expression>&apos;kontraktor&apos;</default-expression>
     </column>
-    <index id="351" parent="87" name="PM_TASK_TEAM_PK">
+    <index id="367" parent="89" name="PM_TASK_TEAM_PK">
       <object-id>50209</object-id>
       <created-timestamp>2016-11-04.00:19:04</created-timestamp>
       <modified-timestamp>2017-02-10.17:37:57</modified-timestamp>
@@ -1550,33 +1629,33 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="352" parent="87" name="PM_TASK_TEAM_PK">
+    <key id="368" parent="89" name="PM_TASK_TEAM_PK">
       <modified-timestamp>2016-11-04.00:19:04</modified-timestamp>
       <columns>ID_TASK_TEAM</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>PM_TASK_TEAM_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="353" parent="87" name="PM_TASK_TEAM_TRI">
+    <trigger id="369" parent="89" name="PM_TASK_TEAM_TRI">
       <object-id>50836</object-id>
       <created-timestamp>2016-11-12.20:17:39</created-timestamp>
       <modified-timestamp>2016-11-12.20:17:39</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="354" parent="88" name="ID_PROV">
+    <column id="370" parent="90" name="ID_PROV">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="355" parent="88" name="ID_KABKOT">
+    <column id="371" parent="90" name="ID_KABKOT">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="356" parent="88" name="NAMA_KABKOT">
+    <column id="372" parent="90" name="NAMA_KABKOT">
       <mandatory>1</mandatory>
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <index id="357" parent="88" name="SYS_C0013483">
+    <index id="373" parent="90" name="SYS_C0013483">
       <name-surrogate>1</name-surrogate>
       <object-id>50193</object-id>
       <created-timestamp>2016-11-02.21:43:10</created-timestamp>
@@ -1586,7 +1665,7 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <index id="358" parent="88" name="ID_PROV">
+    <index id="374" parent="90" name="ID_PROV">
       <object-id>50194</object-id>
       <created-timestamp>2016-11-02.21:43:10</created-timestamp>
       <modified-timestamp>2016-11-02.21:43:10</modified-timestamp>
@@ -1594,7 +1673,7 @@
       <desc-columns></desc-columns>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="359" parent="88" name="SYS_C0013483">
+    <key id="375" parent="90" name="SYS_C0013483">
       <name-surrogate>1</name-surrogate>
       <modified-timestamp>2016-11-02.21:43:10</modified-timestamp>
       <columns>ID_KABKOT</columns>
@@ -1602,19 +1681,19 @@
       <underlying-index>SYS_C0013483</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="360" parent="89" name="ID_KABKOT">
+    <column id="376" parent="91" name="ID_KABKOT">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="361" parent="89" name="ID_KEC">
+    <column id="377" parent="91" name="ID_KEC">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="362" parent="89" name="NAMA_KEC">
+    <column id="378" parent="91" name="NAMA_KEC">
       <mandatory>1</mandatory>
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <index id="363" parent="89" name="SYS_C0013479">
+    <index id="379" parent="91" name="SYS_C0013479">
       <name-surrogate>1</name-surrogate>
       <object-id>50190</object-id>
       <created-timestamp>2016-11-02.21:34:26</created-timestamp>
@@ -1624,7 +1703,7 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <index id="364" parent="89" name="ID_KABKOT">
+    <index id="380" parent="91" name="ID_KABKOT">
       <object-id>50191</object-id>
       <created-timestamp>2016-11-02.21:34:26</created-timestamp>
       <modified-timestamp>2016-11-02.21:34:26</modified-timestamp>
@@ -1632,7 +1711,7 @@
       <desc-columns></desc-columns>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="365" parent="89" name="SYS_C0013479">
+    <key id="381" parent="91" name="SYS_C0013479">
       <name-surrogate>1</name-surrogate>
       <modified-timestamp>2016-11-02.21:34:26</modified-timestamp>
       <columns>ID_KEC</columns>
@@ -1640,19 +1719,19 @@
       <underlying-index>SYS_C0013479</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="366" parent="90" name="ID_KEC">
+    <column id="382" parent="92" name="ID_KEC">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="367" parent="90" name="ID_KEL">
+    <column id="383" parent="92" name="ID_KEL">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="368" parent="90" name="NAMA_KEL">
+    <column id="384" parent="92" name="NAMA_KEL">
       <mandatory>1</mandatory>
       <data-type>VARCHAR2(80)|0</data-type>
     </column>
-    <index id="369" parent="90" name="SYS_C0013487">
+    <index id="385" parent="92" name="SYS_C0013487">
       <name-surrogate>1</name-surrogate>
       <object-id>50196</object-id>
       <created-timestamp>2016-11-02.21:44:34</created-timestamp>
@@ -1662,7 +1741,7 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <index id="370" parent="90" name="FK_ID_KEC">
+    <index id="386" parent="92" name="FK_ID_KEC">
       <object-id>50197</object-id>
       <created-timestamp>2016-11-02.21:44:34</created-timestamp>
       <modified-timestamp>2016-11-02.21:44:34</modified-timestamp>
@@ -1670,7 +1749,7 @@
       <desc-columns></desc-columns>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="371" parent="90" name="SYS_C0013487">
+    <key id="387" parent="92" name="SYS_C0013487">
       <name-surrogate>1</name-surrogate>
       <modified-timestamp>2016-11-02.21:44:34</modified-timestamp>
       <columns>ID_KEL</columns>
@@ -1678,17 +1757,17 @@
       <underlying-index>SYS_C0013487</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="372" parent="91" name="ID_JABATAN_P">
+    <column id="388" parent="93" name="ID_JABATAN_P">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="373" parent="91" name="JABATAN">
+    <column id="389" parent="93" name="JABATAN">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="374" parent="91" name="INDUK">
+    <column id="390" parent="93" name="INDUK">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="375" parent="91" name="T_PERUSAHAAN_JABATAN_PK">
+    <index id="391" parent="93" name="T_PERUSAHAAN_JABATAN_PK">
       <object-id>51430</object-id>
       <created-timestamp>2016-11-20.16:51:52</created-timestamp>
       <modified-timestamp>2016-11-20.16:51:52</modified-timestamp>
@@ -1697,22 +1776,22 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="376" parent="91" name="T_PERUSAHAAN_JABATAN_PK">
+    <key id="392" parent="93" name="T_PERUSAHAAN_JABATAN_PK">
       <modified-timestamp>2016-11-20.16:51:52</modified-timestamp>
       <columns>ID_JABATAN_P</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>T_PERUSAHAAN_JABATAN_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="377" parent="92" name="ID_PROV">
+    <column id="393" parent="94" name="ID_PROV">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="378" parent="92" name="NAMA_PROV">
+    <column id="394" parent="94" name="NAMA_PROV">
       <mandatory>1</mandatory>
       <data-type>VARCHAR2(50)|0</data-type>
     </column>
-    <index id="379" parent="92" name="SYS_C0013490">
+    <index id="395" parent="94" name="SYS_C0013490">
       <name-surrogate>1</name-surrogate>
       <object-id>50199</object-id>
       <created-timestamp>2016-11-02.21:46:58</created-timestamp>
@@ -1722,7 +1801,7 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="380" parent="92" name="SYS_C0013490">
+    <key id="396" parent="94" name="SYS_C0013490">
       <name-surrogate>1</name-surrogate>
       <modified-timestamp>2016-11-02.21:46:58</modified-timestamp>
       <columns>ID_PROV</columns>
@@ -1730,51 +1809,51 @@
       <underlying-index>SYS_C0013490</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="381" parent="93" name="ID">
+    <column id="397" parent="95" name="ID">
       <mandatory>1</mandatory>
       <data-type>NUMBER(10)|0</data-type>
     </column>
-    <column id="382" parent="93" name="NAME">
+    <column id="398" parent="95" name="NAME">
       <data-type>VARCHAR2(255)|0</data-type>
     </column>
-    <column id="383" parent="93" name="EMAIL">
+    <column id="399" parent="95" name="EMAIL">
       <data-type>VARCHAR2(255)|0</data-type>
     </column>
-    <column id="384" parent="93" name="PASSWORD">
+    <column id="400" parent="95" name="PASSWORD">
       <data-type>VARCHAR2(60)|0</data-type>
     </column>
-    <column id="385" parent="93" name="REMEMBER_TOKEN">
+    <column id="401" parent="95" name="REMEMBER_TOKEN">
       <data-type>VARCHAR2(100)|0</data-type>
     </column>
-    <column id="386" parent="93" name="CREATED_AT">
+    <column id="402" parent="95" name="CREATED_AT">
       <data-type>TIMESTAMP(6)|0</data-type>
     </column>
-    <column id="387" parent="93" name="UPDATED_AT">
+    <column id="403" parent="95" name="UPDATED_AT">
       <data-type>TIMESTAMP(6)|0</data-type>
     </column>
-    <column id="388" parent="93" name="ID_LOKASI">
+    <column id="404" parent="95" name="ID_LOKASI">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="389" parent="93" name="ID_GROUPS">
+    <column id="405" parent="95" name="ID_GROUPS">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="390" parent="93" name="STATUS">
+    <column id="406" parent="95" name="STATUS">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>1
 </default-expression>
     </column>
-    <column id="391" parent="93" name="AUTHORITIES">
+    <column id="407" parent="95" name="AUTHORITIES">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="392" parent="93" name="JENIS">
+    <column id="408" parent="95" name="JENIS">
       <comment>perusahaan, pegawai</comment>
       <data-type>VARCHAR2(20)|0</data-type>
     </column>
-    <column id="393" parent="93" name="ID_PEGAWAI">
+    <column id="409" parent="95" name="ID_PEGAWAI">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <index id="394" parent="93" name="USERS_PK">
+    <index id="410" parent="95" name="USERS_PK">
       <object-id>52136</object-id>
       <created-timestamp>2016-12-02.15:39:36</created-timestamp>
       <modified-timestamp>2016-12-02.15:39:36</modified-timestamp>
@@ -1783,34 +1862,34 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="395" parent="93" name="USERS_PK">
+    <key id="411" parent="95" name="USERS_PK">
       <modified-timestamp>2016-12-02.15:39:36</modified-timestamp>
       <columns>ID</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>USERS_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="396" parent="93" name="USERS_TRI">
+    <trigger id="412" parent="95" name="USERS_TRI">
       <object-id>52135</object-id>
       <created-timestamp>2016-12-01.23:50:02</created-timestamp>
       <modified-timestamp>2016-12-01.23:50:02</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="397" parent="94" name="ID_AKSES">
+    <column id="413" parent="96" name="ID_AKSES">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="398" parent="94" name="URL">
+    <column id="414" parent="96" name="URL">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="399" parent="94" name="URL_DETAIL">
+    <column id="415" parent="96" name="URL_DETAIL">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="400" parent="94" name="ID_MODUL">
+    <column id="416" parent="96" name="ID_MODUL">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <index id="401" parent="94" name="USERS_AKSES_PK">
+    <index id="417" parent="96" name="USERS_AKSES_PK">
       <object-id>52120</object-id>
       <created-timestamp>2016-12-01.22:39:15</created-timestamp>
       <modified-timestamp>2016-12-01.22:39:15</modified-timestamp>
@@ -1819,36 +1898,36 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="402" parent="94" name="USERS_AKSES_PK">
+    <key id="418" parent="96" name="USERS_AKSES_PK">
       <modified-timestamp>2016-12-01.22:39:15</modified-timestamp>
       <columns>ID_AKSES</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>USERS_AKSES_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="403" parent="94" name="USERS_AKSES">
+    <trigger id="419" parent="96" name="USERS_AKSES">
       <object-id>52130</object-id>
       <created-timestamp>2016-12-01.22:59:22</created-timestamp>
       <modified-timestamp>2016-12-01.22:59:22</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="404" parent="95" name="ID_GROUP">
+    <column id="420" parent="97" name="ID_GROUP">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="405" parent="95" name="NAMA_GROUP">
+    <column id="421" parent="97" name="NAMA_GROUP">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="406" parent="95" name="KETERANGAN_GROUP">
+    <column id="422" parent="97" name="KETERANGAN_GROUP">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <column id="407" parent="95" name="IS_DELETED">
+    <column id="423" parent="97" name="IS_DELETED">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>0 
 </default-expression>
     </column>
-    <index id="408" parent="95" name="USERS_GROUP_PK">
+    <index id="424" parent="97" name="USERS_GROUP_PK">
       <object-id>52118</object-id>
       <created-timestamp>2016-12-01.22:36:09</created-timestamp>
       <modified-timestamp>2016-12-01.22:36:09</modified-timestamp>
@@ -1857,39 +1936,39 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="409" parent="95" name="USERS_GROUP_PK">
+    <key id="425" parent="97" name="USERS_GROUP_PK">
       <modified-timestamp>2016-12-01.22:36:09</modified-timestamp>
       <columns>ID_GROUP</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>USERS_GROUP_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="410" parent="95" name="USERS_GROUP_TRI">
+    <trigger id="426" parent="97" name="USERS_GROUP_TRI">
       <object-id>52131</object-id>
       <created-timestamp>2016-12-01.22:59:52</created-timestamp>
       <modified-timestamp>2016-12-01.22:59:52</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="411" parent="96" name="ID_GROUP_DETAIL">
+    <column id="427" parent="98" name="ID_GROUP_DETAIL">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="412" parent="96" name="ID_GROUP">
+    <column id="428" parent="98" name="ID_GROUP">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="413" parent="96" name="ID_AKSES">
+    <column id="429" parent="98" name="ID_AKSES">
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="414" parent="96" name="TAMBAH">
-      <data-type>NUMBER(*)|0</data-type>
-      <default-expression>1</default-expression>
-    </column>
-    <column id="415" parent="96" name="UBAH">
+    <column id="430" parent="98" name="TAMBAH">
       <data-type>NUMBER(*)|0</data-type>
       <default-expression>1</default-expression>
     </column>
-    <index id="416" parent="96" name="USERS_GROUP_DETAIL_PK">
+    <column id="431" parent="98" name="UBAH">
+      <data-type>NUMBER(*)|0</data-type>
+      <default-expression>1</default-expression>
+    </column>
+    <index id="432" parent="98" name="USERS_GROUP_DETAIL_PK">
       <object-id>52122</object-id>
       <created-timestamp>2016-12-01.22:50:51</created-timestamp>
       <modified-timestamp>2016-12-01.22:50:51</modified-timestamp>
@@ -1898,31 +1977,31 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="417" parent="96" name="USERS_GROUP_DETAIL_PK">
+    <key id="433" parent="98" name="USERS_GROUP_DETAIL_PK">
       <modified-timestamp>2016-12-01.22:50:51</modified-timestamp>
       <columns>ID_GROUP_DETAIL</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>USERS_GROUP_DETAIL_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="418" parent="96" name="USERS_GROUP_DETAIL_TRI">
+    <trigger id="434" parent="98" name="USERS_GROUP_DETAIL_TRI">
       <object-id>52132</object-id>
       <created-timestamp>2016-12-01.23:00:19</created-timestamp>
       <modified-timestamp>2016-12-01.23:00:19</modified-timestamp>
       <trig-events>I</trig-events>
       <trig-turn>BEFORE_ROW</trig-turn>
     </trigger>
-    <column id="419" parent="97" name="ID_MODUL">
+    <column id="435" parent="99" name="ID_MODUL">
       <mandatory>1</mandatory>
       <data-type>NUMBER(*)|0</data-type>
     </column>
-    <column id="420" parent="97" name="MODUL">
+    <column id="436" parent="99" name="MODUL">
       <data-type>VARCHAR2(200)|0</data-type>
     </column>
-    <column id="421" parent="97" name="KETERANGAN_MODUL">
+    <column id="437" parent="99" name="KETERANGAN_MODUL">
       <data-type>VARCHAR2(2000)|0</data-type>
     </column>
-    <index id="422" parent="97" name="USERS_MODUL_PK">
+    <index id="438" parent="99" name="USERS_MODUL_PK">
       <object-id>52124</object-id>
       <created-timestamp>2016-12-01.22:53:56</created-timestamp>
       <modified-timestamp>2016-12-01.22:53:56</modified-timestamp>
@@ -1931,14 +2010,14 @@
       <unique>1</unique>
       <tablespace-name>USERS</tablespace-name>
     </index>
-    <key id="423" parent="97" name="USERS_MODUL_PK">
+    <key id="439" parent="99" name="USERS_MODUL_PK">
       <modified-timestamp>2016-12-01.22:53:56</modified-timestamp>
       <columns>ID_MODUL</columns>
       <initially-deferred>1</initially-deferred>
       <underlying-index>USERS_MODUL_PK</underlying-index>
       <primary>1</primary>
     </key>
-    <trigger id="424" parent="97" name="USERS_MODUL_TRI">
+    <trigger id="440" parent="99" name="USERS_MODUL_TRI">
       <object-id>52133</object-id>
       <created-timestamp>2016-12-01.23:00:38</created-timestamp>
       <modified-timestamp>2016-12-02.20:39:35</modified-timestamp>
